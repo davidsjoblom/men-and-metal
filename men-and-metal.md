@@ -28,6 +28,8 @@ A model is considered to have Line of Sight to another model if a straight unint
 ### Measuring Distance
 All distances are measured in inches. 
 Distance between two models are measured in a straight line between the closest points of their respective bases.
+
+Players are free to measure any distance at any time.
 ### Dice
 All dice used are ten-sided dice referred to as a D10, singular, or D10s, plural.
 Sometimes a specific amount may be specified as a prefix, e.g. 2D10 calls for two D10s to be rolled.
@@ -93,7 +95,7 @@ A unit's Discipline determines the Target Number for Rally tests.
 	2. Suppression Checks
 6. End phase
 	1. Score Victory Points
-	2.  Check Victory Conditions
+	2. Check Victory Conditions
 ### Command Phase
 Both players privately assign each of their non-suppressed units either an Advance, an Overwatch or a Sprint order and their suppressed units either a Move or a Shoot order.
 All Orders are then made public.
@@ -131,7 +133,7 @@ A unit with a Sprint order may preform a Move action in the the Movement phase b
 After moving remove the Sprint order token.
 ### Move Order
 A unit with a Move order may preform a Move action in the the Movement phase.
-After shooting remove the Move order token.
+After moving remove the Move order token.
 ### Shoot Order
 A unit with a Shoot order may preform a Shooting action in the Shooting phase.
 After shooting remove the Shoot order token.
@@ -150,6 +152,15 @@ Models may not be moved through enemy models.
 ### Moving Through Terrain
 Terrain may affects movement depending on the type of terrain and Unit type of the model.
 ## Shooting
+### Shooting Action
+1. Select shooting unit
+2. Nominate target enemy unit
+3. Check Range, Line of Sight and Cover
+4. Calculate Target Number
+5. Roll to hit
+6. Place Pins and mark casualties
+### Shooting Modifiers
+### Removing Casualties
 ## Morale
 ### Rally Tests
 When a unit takes a Rally test the controlling player rolls a number of D10s equal to the amount of pins on that unit.
