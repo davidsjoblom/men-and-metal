@@ -82,10 +82,15 @@ Are also used to track unit actions during the turn by being 'consumed' when the
 Pin markers are used to track the level of stress a unit is experiencing by placing an number of them next to the unit.
 Players should bring their own visually distinct pin markers in order to make tracking pinning levels easy for their opponent.
 
-### 1.12. Objective makers <!-- no toc -->
+### 1.11.3. Objective makers <!-- no toc -->
 
 Objective markers are used to specify a point or a terrain feature on the battlefield as Objectives.
 These are used in Scenarios to score Victory points.
+
+### 1.11.4. Targeting Arrows <!-- no toc -->
+
+Targeting arrows are used to declare targets when shooting.
+They are placed in front of units preforming shooting actions during a phase and point towards their declared target.
 
 # 2. Unit Characteristics
 
@@ -188,7 +193,6 @@ Eligible units are units with Advance, Sprint or Move orders.
 ## 3.3. Overwatch Phase
 
 Both players declare targets for each of their units with assigned Overwatch orders.
-The Starting player
 This is ideally done by the players in turn, starting with the player with the initiative, vocally declaring and placing targeting arrows in front of shooting units pointing towards their targets.
 
 The Starting player performs Shooting actions with all his eligible units.
