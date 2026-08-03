@@ -175,30 +175,62 @@ Resolve determines the Target Number for Rally tests.
 
 ## 3.1. Command Phase
 
-Both players privately assign each of their non-suppressed units either an Advance, an Overwatch or a Sprint order and their suppressed units either a Move or a Shoot order.
-All Orders are then made public.
+### 3.1.1. Assign Order Tokens
 
-Both players now each rolls a D10.
+Both players begin the Command phase by privately assigning all their units a single Order token each.
+A unit may normally be assigned either an Advance, Overwatch or Sprint order token.
+If a unit is Suppressed then it may only be assigned either a Shoot or a Move order token instead.
+Order tokens are placed face down next to their assigned units.
+
+When both players are done all Order tokens are made public by flipping them face up.
+Any unit that players forgot to assign an Order token before they were made public are automatically assigned a Shoot order token
+
+### 3.1.2. Determine Starting Player
+
+After Orders are assigned both players rolls a D10 each.
 The player with the highest roll becomes the Starting player for this Round.
+In case of a tie the player that was the Second player during the previous round becomes the Starting player for this Round.
 The other player becomes the Second player for this Round.
-In case of a tie the player that was the Second player last round becomes the Starting player for this Round and vice versa.
-In case of a tie and it being the roll for the first round, both players reroll until a non-tie result is achieved.
+If its the roll for the first round then ties are rerolled.
 
 ## 3.2. Movement Phase
 
-The Starting player performs Move actions with all his eligible units.
-Then the Second player performs Move actions with all his eligible units.
-Eligible units are units with Advance, Sprint or Move orders.
+The Starting player moves all his eligible units.
+Then the Second player moves all his eligible units.
+Eligible units are units assigned Advance, Sprint or Move orders.
+See the Movement section for details on how to move units.
 
 ## 3.3. Overwatch Phase
 
-Both players declare targets for each of their units with assigned Overwatch orders.
-This is ideally done by the players in turn, starting with the player with the initiative, vocally declaring and placing targeting arrows in front of shooting units pointing towards their targets.
+During the Overwatch phase units assigned Overwatch orders get to shoot before other units with basic Shoot orders.
+All shooting during this phase is considered simultaneous and all targets are declared before any dice are rolled.
 
-The Starting player performs Shooting actions with all his eligible units.
-Then the Second player performs Shooting actions with all his eligible units.
-Eligible units are units with Overwatch orders.
-All Shooting actions during the Overwatch phase are considered simultaneous.
+### Declare Targets
+
+The Starting player declares targets for each of his units assigned Overwatch orders.
+Then the Second player does the same.
+Targets are declared by verbally calling them out and placing Targeting arrows in front of each shooting unit pointing towards their target.
+Each unit may only target a single enemy unit.
+It is important that both players are fully aware of what units are being targeted.
+
+If a player forgets to declare a target for a unit with an Overwatch order before dice are rolled to resolve shooting during this phase then that unit automatically targets the closest enemy unit that it has Line of Sight to.
+
+### Resolve Shooting
+
+The Starting player shoots with all his units assigned Overwatch orders against their declared targets.
+Then the Second player does the same.
+After shooting with a unit remove its Overwatch order, see the Shooting section for details on how to shoot with units.
+Note that casualties are not removed at this point but instead the number of casualties inflicted is marked next to the targeting arrow of the shooting unit.
+Inflicted Pins however are placed immediately.
+
+### Remove Casualties
+
+After all units with Overwatch orders have shot it is time to remove casualties.
+Starting with the Starting player, both players now remove models from their units up to the amount of casualties they suffered during shooting.
+Only models that were within range and Line of Sight of the unit causing the casualties are eligible to be removed. 
+
+If a unit suffered casualties from multiple units then casualties has to be removed in such a way as to maximize the number of models removed. 
+Should the number of available models eligible to be removed be less than the inflicted casualties then the excess is disregarded. 
 
 ## 3.4. Shooting Phase
 
@@ -273,7 +305,9 @@ Terrain may affects movement depending on the type of terrain and Unit type of t
 
 ## 6.1. Shooting Action
 
-1. Nominate target enemy unit
+When shooting with a unit a number of steps has to be taken in sequence.
+
+1. _Nominate target enemy unit_
 2. Check Range, Line of Sight and Cover
 3. Calculate Target Number
 4. Roll to hit
