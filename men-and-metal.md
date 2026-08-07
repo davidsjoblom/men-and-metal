@@ -6,8 +6,8 @@ Men & Metal - Wargame Rules <!-- no toc -->
 
 A model consists of 2 parts; the base and the miniature:
 
-- The base is a flat circle or rectangle of a specific dimension dictated by which specific unit the model represents.
-- The miniature, or miniatures, are mounted on the base and visually indicate which specific unit the model represents.
+- The base is a round plate of a specific dimension depending on the unit represented.
+- The miniature, or miniatures, are mounted on the base and visually indicate the unit represented.
 
 ## 1.2. Model Interpretation
 
@@ -21,7 +21,7 @@ Infantry are typically organized into units of 6 and vehicles into units of 3.
 
 ## 1.4. Unit Cohesion
 
-All units have a Cohesion Distance.
+All units have a Cohesion distance.
 Typically 1" for infantry units and 2" for vehicle units.
 
 A unit is considered to maintain Unit Cohesion when both of these conditions are fulfilled:
@@ -41,35 +41,40 @@ The standard board size is 48" by 72".
 
 ### 1.6.1. Battlefield Interpretation <!-- no toc -->
 
-For all rules purposes the battlefield is a 2D plane.
-The physical elevation of models does not matter.
+For all rules purposes the battlefield is considered a 2D plane.
 
 ## 1.7. Line of Sight
 
-A model is considered to have Line of Sight to another model if a straight uninterrupted line can be drawn from any point of its base to the base of the target model.
+A model is considered to have Line of Sight to another model if an uninterrupted straight line can be drawn from any point of its base to the base of the other model.
+
+A unit is considered to have Line of Sight to another unit if at least one model in the unit has Line of Sight to at least one model in the other unit.
 
 ## 1.8. Measuring Distance
 
-All distances are measured in inches.
 Distance between two models are measured in a straight line between the closest points of their respective bases.
+Distance between two units is the distance between the two closest models from each the unit.
 
+A unit is considered to be within a specified distance of something if the distance of its closest model is equal to or less than the specified distance.
+
+Note that the vertical position of the physical models is ignored, all models are considered to be at the same level when measuring distance.  
+All distances are measured in inches.
 Players are free to measure any distance at any time.
 
 ## 1.9. Dice
 
-All dice used are ten-sided dice referred to as a D10, singular, or D10s, plural.
-Sometimes a specific amount may be specified as a prefix, e.g. 2D10 calls for two D10s to be rolled.
+All dice used are ten-sided dice referred to as a D10.
+An added prefix refers to a number of dice, e.g. 2D10 calls for two D10s to be rolled.
 
 ## 1.10. Target Number
 
-The Target Number (TN) is the value a rolled D10 needs to equal or be less than to be considered a success.
+The Target Number, TN, is the value a rolled D10 needs to equal or be less than to be considered a success.
 A roll that exceeds the TN is considered a fail.
 A TN is calculated by taking the base TN and applying the relevant modifiers to it, e.g. a base TN of 3 with a +1 modifier results in a final TN of 4.
 
 ## 1.11. Tokens & Markers
 
 Tokens and markers are physical gaming aids used to indicate various game related things.
-No tokens or markers have any in-game presence and may be moved around to make space whenever necessary.
+Tokens and markers have no in-game presence and may be moved around to make space whenever necessary.
 
 ### 1.11.1. Order tokens <!-- no toc -->
 
@@ -79,7 +84,8 @@ Are also used to track unit actions during the turn by being 'consumed' when the
 
 ### 1.11.2. Pin markers <!-- no toc -->
 
-Pin markers are used to track the level of stress a unit is experiencing by placing an number of them next to the unit.
+Pin markers, or simply Pins, are used to track the level of stress a unit is experiencing by placing an number of them next to the unit.
+Pins follow along with the unit until they are removed.
 Players should bring their own visually distinct pin markers in order to make tracking pinning levels easy for their opponent.
 
 ### 1.11.3. Objective makers <!-- no toc -->
@@ -89,103 +95,84 @@ These are used in Scenarios to score Victory points.
 
 ### 1.11.4. Targeting Arrows <!-- no toc -->
 
-Targeting arrows are used to declare targets when shooting.
-They are placed in front of units preforming shooting actions during a phase and point towards their declared target.
+Targeting arrows are used to declare targets.
+They are placed in front of attacking units, pointed towards their declared target.
 
 # 2. Unit Characteristics
 
-All units have a number of characteristics that determine how they act on the the battlefield. These are found in each unit's respective Unit Profile.
+All units have a number of characteristics that determine how they act on the the battlefield.
+These are found in each unit's respective Unit Profile.
 
-## 2.1. Unit Type
+## 2.1. Unit Type <!-- no toc -->
 
-Each unit has a Unit Type.
-This has no direct game effect but influences how the unit interact with other rules.
+Each unit has a Unit type.
+Unit types has no in-game effect itself but influences how the unit interacts with other rules.
 
-Common Unit Types:
+## 2.2. Cohesion Distance <!-- no toc -->
 
-- Infantry
-- Bikes
-- Vehicle
+This distance is used to determine Unit Cohesion.
 
-## 2.2. Cohesion Distance
+## 2.3. Base Size <!-- no toc -->
 
-How close together models need to be.
-This distance used to determine Unit Cohesion.
+The diameter of the model's base.
 
-## 2.3. Base Size
-
-The shape and dimension of the model's base.
-A single value indicates a round base while two values separated by 'x' indicates an oval base.
-
-For example:
-
-- '30mm' means the base is round and has a diameter of 30mm
-- '25x35mm' means the base is elliptical with a width of 25mm and a depth of 35mm
-
-## 2.4. Speed
+## 2.4. Speed <!-- no toc -->
 
 A unit's Speed determines how far it can move during a Move action.
 
-## 2.5. Drill
+## 2.5. Discipline <!-- no toc -->
 
-A unit's Drill represents it's ability to mitigate incoming fire through a combination of training and equipment.
+A unit's Discipline represents its ability to keep fighting under pressure and shake off suppression.
+Discipline determines the Target Number for Rally tests.
 
-- Green; enemy units gains a +1 TN modifier to hit when targeting this unit.
-- Regular; no modifier.
-- Seasoned; enemy units suffer a -1 TN modifier to hit when targeting this unit.
+## 2.6. Range <!-- no toc -->
 
-## 2.6. Armor
+A unit's Range is the maximum distance that the unit can effectively attack.
 
-Vehicle units have Armor instead of Drill.
-This functions similarly but serves as reminder of how Vehicles interact differently with some types of
+## 2.7. Special Rules <!-- no toc -->
 
-- Light; enemy units gains a +1 TN modifier to hit when targeting this unit.
-- Medium; no modifier.
-- Heavy; enemy units suffer a -1 TN modifier to hit when targeting this unit.
-
-## 2.7. Resolve
-
-A unit's Resolve represents its ability to keep fighting under pressure and shake off suppression.
-Resolve determines the Target Number for Rally tests.
-
-- Reluctant (TN2)
-- Motivated (TN3)
-- Determined (TN4)
-- Fanatical (TN5)
+Most units have one or more Special rules that further effects their battlefield capabilities.
 
 # 3. The Round
+
+The game is played over a number of Rounds.
+Each Round consists of a sequence of phases:
 
 1. Command phase
    1. Issue Orders
    2. Reveal Orders
-   3. Randomize Starting player for the Round
+   3. Determine Starting player for the Round
 2. Movement phase
 3. Overwatch phase
    1. Declare targets
-   2. Preform Shooting actions
-4. Shooting phase
+   2. Resolve attacks
+   3. Remove casualties
+4. Combat phase
    1. Declare targets
-   2. Preform Shooting actions
+   2. Resolve attacks
+   3. Remove casualties
 5. Rally phase
    1. Take Rally tests
-   2. Suppression Checks
+   2. Checks suppression
 6. End phase
    1. Score Victory Points
    2. Check Victory Conditions
 
 ## 3.1. Command Phase
 
-### 3.1.1. Assign Order Tokens
+### 3.1.1. Assign Order Tokens <!-- no toc -->
 
 Both players begin the Command phase by privately assigning all their units a single Order token each.
 A unit may normally be assigned either an Advance, Overwatch or Sprint order token.
-If a unit is Suppressed then it may only be assigned either a Shoot or a Move order token instead.
-Order tokens are placed face down next to their assigned units.
+If a unit is Suppressed then it may only be assigned either a Combat or a Move order token instead.
+Order tokens are placed face down next to the unit assigned them.
+
+### 3.1.2. Reveal Order Tokens <!-- no toc -->
 
 When both players are done all Order tokens are made public by flipping them face up.
-Any unit that players forgot to assign an Order token before they were made public are automatically assigned a Shoot order token
+Any unit that players forgot to assign an Order token before they were made public are automatically assigned a Combat order token.
 
-### 3.1.2. Determine Starting Player
+### 3.1.3. Determine Starting Player <!-- no toc -->
 
 After Orders are assigned both players rolls a D10 each.
 The player with the highest roll becomes the Starting player for this Round.
@@ -202,37 +189,42 @@ See the Movement section for details on how to move units.
 
 ## 3.3. Overwatch Phase
 
-During the Overwatch phase units assigned Overwatch orders get to shoot before other units with basic Shoot orders.
-All shooting during this phase is considered simultaneous and all targets are declared before any dice are rolled.
+During the Overwatch phase units with Overwatch orders get to attack before other units with basic Combat orders.
+All attacks during this phase are considered simultaneous and all targets are declared before any dice are rolled.
 
-### Declare Targets
+### 3.3.1. Declare Targets <!-- no toc -->
 
 The Starting player declares targets for each of his units assigned Overwatch orders.
-Then the Second player does the same.
-Targets are declared by verbally calling them out and placing Targeting arrows in front of each shooting unit pointing towards their target.
+The Second player then does the same.
+Targets are declared by verbally calling them out and placing Targeting arrows in front of each attacking unit pointing towards their target.
 Each unit may only target a single enemy unit.
 It is important that both players are fully aware of what units are being targeted.
 
-If a player forgets to declare a target for a unit with an Overwatch order before dice are rolled to resolve shooting during this phase then that unit automatically targets the closest enemy unit that it has Line of Sight to.
+If a player forgets to declare a target for a unit with an Overwatch order before dice are rolled to resolve an attack during this phase then that unit automatically targets the closest enemy unit that it has Line of Sight to. 
 
-### Resolve Shooting
+A unit may choose to delay its attack, removing its Overwatch order token and replacing it with a Combat order token instead. Should a unit have no enemy units within Line of Sight and Range then simply remove the Overwatch order token.
 
-The Starting player shoots with all his units assigned Overwatch orders against their declared targets.
+### 3.3.2. Resolve Attacks <!-- no toc -->
+
+The Starting player attacks with all his units assigned Overwatch orders against their declared targets.
 Then the Second player does the same.
 After shooting with a unit remove its Overwatch order, see the Shooting section for details on how to shoot with units.
 Note that casualties are not removed at this point but instead the number of casualties inflicted is marked next to the targeting arrow of the shooting unit.
 Inflicted Pins however are placed immediately.
 
-### Remove Casualties
+### 3.3.3. Remove Casualties <!-- no toc -->
 
 After all units with Overwatch orders have shot it is time to remove casualties.
 Starting with the Starting player, both players now remove models from their units up to the amount of casualties they suffered during shooting.
-Only models that were within range and Line of Sight of the unit causing the casualties are eligible to be removed. 
+Only models that were within range and Line of Sight of the unit causing the casualties are eligible to be removed.
 
-If a unit suffered casualties from multiple units then casualties has to be removed in such a way as to maximize the number of models removed. 
-Should the number of available models eligible to be removed be less than the inflicted casualties then the excess is disregarded. 
+If a unit suffered casualties from multiple units then casualties has to be removed in such a way as to maximize the number of models removed.
+Should the number of available models eligible to be removed be less than the inflicted casualties then the excess is disregarded.
 
-## 3.4. Shooting Phase
+## 3.4. Combat Phase
+
+During the Shooting phase units with Shoot orders shoot.
+All shooting during this phase is considered simultaneous and all targets are declared before any dice are rolled.
 
 The Starting player performs Shooting actions with all his eligible units.
 Then the Second player performs Shooting actions with all his eligible units.
@@ -291,19 +283,19 @@ If unable to maintain Unit Cohesion
 
 ## 5.2. Moving Through Friendly Models
 
-Models may be moved through friendly models as long as it has enough distance to fully clear them.
+Models may move through friendly models as long as it has enough distance to fully clear them.
 
 ## 5.3. Moving Through Enemy Models
 
-Models may not be moved through enemy models.
+Models may not move through enemy models.
 
 ## 5.4. Moving Through Terrain
 
 Terrain may affects movement depending on the type of terrain and Unit type of the model.
 
-# 6. Shooting
+# 6. Combat
 
-## 6.1. Shooting Action
+## 6.1. Attacking
 
 When shooting with a unit a number of steps has to be taken in sequence.
 
@@ -347,8 +339,8 @@ Suppression Table:
 
 # 11. Special Rules
 
-- Armored
-- Light-skinned
+- Armored(Light/Medium/Heavy)
+- Transport
 - Tracked
 - Vehicle
 - Wheeled
