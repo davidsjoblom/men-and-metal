@@ -4,6 +4,7 @@ Men & Metal - Wargame Rules <!-- no toc -->
 
 ## 1.1. Models
 
+Models are physical representations soldiers and war machines.
 A model consists of 2 parts; the base and the miniature:
 
 - The base is a round plate of a specific dimension depending on the unit represented.
@@ -16,7 +17,7 @@ The miniature part is purely decorative and only the base is used for Line of Si
 
 ## 1.3. Units
 
-A unit consists of a number of identical models acting together.
+A unit consists of a number of models moving and fighting together.
 Infantry are typically organized into units of 6 and vehicles into units of 3.
 
 ## 1.4. Unit Cohesion
@@ -45,25 +46,27 @@ For all rules purposes the battlefield is considered a 2D plane.
 
 ## 1.7. Line of Sight
 
-A model is considered to have Line of Sight to another model if an uninterrupted straight line can be drawn from any point of its base to the base of the other model.
-
+A model is considered to have Line of Sight to another model if an unobstructed straight line can be drawn from any point of its base to any point on the base of the other model.
 A unit is considered to have Line of Sight to another unit if at least one model in the unit has Line of Sight to at least one model in the other unit.
+
+A models Line of Sight is never obstructed by other models in its own unit.
+Other friendly and enemy models obstruct Line of Sight.
+Certain Terrain features obstruct Line of Sight, see Terrain section.
 
 ## 1.8. Measuring Distance
 
 Distance between two models are measured in a straight line between the closest points of their respective bases.
 Distance between two units is the distance between the two closest models from each the unit.
-
 A unit is considered to be within a specified distance of something if the distance of its closest model is equal to or less than the specified distance.
 
-Note that the vertical position of the physical models is ignored, all models are considered to be at the same level when measuring distance.  
+Note that the vertical position of the physical models is ignored, all models are considered to be at the same level when measuring distance.
 All distances are measured in inches.
 Players are free to measure any distance at any time.
 
 ## 1.9. Dice
 
 All dice used are ten-sided dice referred to as a D10.
-An added prefix refers to a number of dice, e.g. 2D10 calls for two D10s to be rolled.
+A number in front refers to a number of dice, e.g. 2D10 calls for two D10s to be rolled.
 
 ## 1.10. Target Number
 
@@ -79,8 +82,9 @@ Tokens and markers have no in-game presence and may be moved around to make spac
 ### 1.11.1. Order tokens <!-- no toc -->
 
 Order tokens have a blank side while the other side features one of the Orders.
-Are used to privately assign Orders by placing them face down next to a unit and then flipped up to reveal which order was issued.
-Are also used to track unit actions during the turn by being 'consumed' when the unit takes the associated action.
+These are used to privately assign Orders by placing them face down next to a unit and then flipped up to reveal which order was issued.
+All order tokens are removed after the unit has carried them out.
+An exception to this is the Advance order which is replaced instead.
 
 ### 1.11.2. Pin markers <!-- no toc -->
 
@@ -108,30 +112,34 @@ These are found in each unit's respective Unit Profile.
 Each unit has a Unit type.
 Unit types has no in-game effect itself but influences how the unit interacts with other rules.
 
-## 2.2. Cohesion Distance <!-- no toc -->
+## 2.2. Model Number <!-- no toc -->
+
+The number of models the unit consists of.
+
+## 2.3. Cohesion Distance <!-- no toc -->
 
 This distance is used to determine Unit Cohesion.
 
-## 2.3. Base Size <!-- no toc -->
+## 2.4. Base Size <!-- no toc -->
 
 The diameter of the model's base.
 
-## 2.4. Speed <!-- no toc -->
+## 2.5. Speed <!-- no toc -->
 
 A unit's Speed determines how far it can move during a Move action.
 
-## 2.5. Discipline <!-- no toc -->
+## 2.6. Discipline <!-- no toc -->
 
 A unit's Discipline represents its ability to keep fighting under pressure and shake off suppression.
 Discipline determines the Target Number for Rally tests.
 
-## 2.6. Range <!-- no toc -->
+## 2.7. Range <!-- no toc -->
 
 A unit's Range is the maximum distance that the unit can effectively attack.
 
-## 2.7. Special Rules <!-- no toc -->
+## 2.8. Special Rules <!-- no toc -->
 
-Most units have one or more Special rules that further effects their battlefield capabilities.
+Most units have one or more Special rules that effects their battlefield capabilities.
 
 # 3. The Round
 
@@ -164,13 +172,13 @@ Each Round consists of a sequence of phases:
 
 Both players begin the Command phase by privately assigning all their units a single Order token each.
 A unit may normally be assigned either an Advance, Overwatch or Sprint order token.
-If a unit is Suppressed then it may only be assigned either a Combat or a Move order token instead.
+If a unit is Suppressed then it may only be assigned either a Fight or a Move order token instead.
 Order tokens are placed face down next to the unit assigned them.
 
 ### 3.1.2. Reveal Order Tokens <!-- no toc -->
 
 When both players are done all Order tokens are made public by flipping them face up.
-Any unit that players forgot to assign an Order token before they were made public are automatically assigned a Combat order token.
+Any unit that players forgot to assign an Order token before they were made public are automatically assigned a Fight order token.
 
 ### 3.1.3. Determine Starting Player <!-- no toc -->
 
@@ -184,33 +192,34 @@ If its the roll for the first round then ties are rerolled.
 
 The Starting player moves all his eligible units.
 Then the Second player moves all his eligible units.
-Eligible units are units assigned Advance, Sprint or Move orders.
+Eligible units are units with Advance, Sprint or Move orders.
 See the Movement section for details on how to move units.
 
 ## 3.3. Overwatch Phase
 
-During the Overwatch phase units with Overwatch orders get to attack before other units with basic Combat orders.
+During the Overwatch phase units with Overwatch orders get to fight before other units with Fight orders.
 All attacks during this phase are considered simultaneous and all targets are declared before any dice are rolled.
 
 ### 3.3.1. Declare Targets <!-- no toc -->
 
-The Starting player declares targets for each of his units assigned Overwatch orders.
+The Starting player declares targets for each of his units with Overwatch orders.
 The Second player then does the same.
 Targets are declared by verbally calling them out and placing Targeting arrows in front of each attacking unit pointing towards their target.
 Each unit may only target a single enemy unit.
 It is important that both players are fully aware of what units are being targeted.
 
-If a player forgets to declare a target for a unit with an Overwatch order before dice are rolled to resolve an attack during this phase then that unit automatically targets the closest enemy unit that it has Line of Sight to. 
+If a player forgets to declare a target for a unit with an Overwatch order before dice are rolled to resolve an attack during this phase then that unit automatically targets the closest enemy unit within Range that it has Line of Sight to.
 
-A unit may choose to delay its attack, removing its Overwatch order token and replacing it with a Combat order token instead. Should a unit have no enemy units within Line of Sight and Range then simply remove the Overwatch order token.
+A unit may choose to delay its attack, removing its Overwatch order and replacing it with a Fight order instead. Should a unit have no enemy units within Line of Sight or Range then remove the Overwatch order token.
 
 ### 3.3.2. Resolve Attacks <!-- no toc -->
 
-The Starting player attacks with all his units assigned Overwatch orders against their declared targets.
+The Starting player fight with all his units with Overwatch orders against their declared targets.
 Then the Second player does the same.
-After shooting with a unit remove its Overwatch order, see the Shooting section for details on how to shoot with units.
-Note that casualties are not removed at this point but instead the number of casualties inflicted is marked next to the targeting arrow of the shooting unit.
-Inflicted Pins however are placed immediately.
+See the Fighting section for details on how to fight with units.
+After attacking with a unit remove its Overwatch order.
+Note that casualties are not removed at this point but instead the number of casualties inflicted is marked next to the targeting arrow of the fighting unit.
+Inflicted Pins are placed immediately.
 
 ### 3.3.3. Remove Casualties <!-- no toc -->
 
@@ -223,13 +232,10 @@ Should the number of available models eligible to be removed be less than the in
 
 ## 3.4. Combat Phase
 
-During the Shooting phase units with Shoot orders shoot.
-All shooting during this phase is considered simultaneous and all targets are declared before any dice are rolled.
-
-The Starting player performs Shooting actions with all his eligible units.
-Then the Second player performs Shooting actions with all his eligible units.
-Eligible units are units with Advance and Shoot orders.
-All Shooting actions during the Shooting phase are considered simultaneous.
+During the Combat phase units with Fight orders get to attack.
+This phase is played out identically to the Overwatch phase but it applies to all units with Fight instead of orders.
+One exception is that there's no option to choose to fight in the next phase, since there is no next phase.
+Should a unit have no enemy units within Line of Sight or Range then simply remove the Fight order token.
 
 ## 3.5. Rally Phase
 
@@ -243,47 +249,50 @@ The players now score Victory points according to the scenario being played.
 
 # 4. Orders
 
-Units are issued Orders at the start of the Round and this dictates what actions they will take.
+Units are issued Orders at the start of the Round.
 
 ## 4.1. Advance Order
 
-A unit with an Advance order may preform a Move action in the Movement phase.
-After moving remove the Advance order token and replace it with a Shoot order token.
+A unit with an Advance order may move during the Movement phase up to its Speed.
+After moving remove the Advance order and replace it with a Fight order.
 
 ## 4.2. Overwatch Order
 
-A unit with an Overwatch order may preform a Shooting action in the Overwatch phase.
-After shooting remove the Overwatch order token.
+A unit with an Overwatch order may preform a fight during the Overwatch phase.
+After fighting remove the Overwatch order token.
 
 ## 4.3. Sprint Order
 
-A unit with a Sprint order may preform a Move action in the the Movement phase but doubles it's Speed during this move.
+A unit with a Sprint order may move during the the Movement phase up to twice its Speed.
 After moving remove the Sprint order token.
 
 ## 4.4. Move Order
 
-A unit with a Move order may preform a Move action in the the Movement phase.
+A unit with a Move order may move during the the Movement phase up to its Speed.
 After moving remove the Move order token.
 
-## 4.5. Shoot Order
+## 4.5. Fight Order
 
-A unit with a Shoot order may preform a Shooting action in the Shooting phase.
-After shooting remove the Shoot order token.
+A unit with a Fight order may fight in the Combat phase.
+After fighting remove the Shoot order token.
 
 # 5. Movement
 
-## 5.1. Move Action
+## 5.1. Moving
 
-In order to perform a Move action with the unit, the controlling player moves each individual base a distance up to the unit's Speed.
-Bases are moved in straight lines and may change direction at any point during the move.
+When moving a unit, the controlling player moves each individual model in the unit one at a time.
+Models are moved in straight lines and may change direction at any point during the move.
+The sum of the lengths of the moved moved lines may not exceed the maximum distance the unit is allowed to move during the move.
+There have to be sufficient space for the model during the entirety of its move.
 
-At the end of the move the unit has to maintain Unit Cohesion.
-If unable to maintain Unit Cohesion at the end of the move then that move cannot be made.
-If unable to maintain Unit Cohesion
+After a unit has finished moving, check whether it is maintaining Unit Cohesion.
+If Unit cohesion is not maintained then the controlling player marks the least amount of models necessary in the unit as casualties so that Unit cohesion is restored among remaining models.
+Models marked as casualties in this way may not fight during this round, may not draw any Line of Sight and are not removed until the Remove casualties step of the Fight phase.
+Additionally these casualties should be marked in unique way to signify this; either use a special marker, a Pin marker placed right on top of the model or flip the model upside down.
 
 ## 5.2. Moving Through Friendly Models
 
-Models may move through friendly models as long as it has enough distance to fully clear them.
+Models may ignore friendly models during a move as long as it has sufficient movement to clear them fully.
 
 ## 5.3. Moving Through Enemy Models
 
@@ -291,11 +300,11 @@ Models may not move through enemy models.
 
 ## 5.4. Moving Through Terrain
 
-Terrain may affects movement depending on the type of terrain and Unit type of the model.
+Terrain may affect movement depending on the type of terrain, see Terrain section.
 
 # 6. Combat
 
-## 6.1. Attacking
+## 6.1. Fighting
 
 When shooting with a unit a number of steps has to be taken in sequence.
 
@@ -307,7 +316,7 @@ When shooting with a unit a number of steps has to be taken in sequence.
 
 In order to preform a Shooting action with a Unit
 
-## 6.2. Shooting Modifiers
+## 6.2. Fighting Modifiers
 
 ## 6.3. Removing Casualties
 
@@ -339,12 +348,22 @@ Suppression Table:
 
 # 11. Special Rules
 
+## Model Rules
+
 - Armored(Light/Medium/Heavy)
 - Transport
 - Tracked
-- Vehicle
 - Wheeled
 - Open-topped
+- Tough
+- Leader
+- Tall
+
+## Attack Attributes
+
+- Armor piercing
+- Blast
+- Ignores Cover
 
 # 12. Scenarios
 
