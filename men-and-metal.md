@@ -150,7 +150,16 @@ Discipline determines the Target Number for Rally tests.
 
 A unit's Range is the maximum distance that the unit can effectively attack.
 
-## 2.8. Special Rules <!-- no toc -->
+## 2.8. Attacks <!-- no toc -->
+
+The number of dice the model rolls when fighting.
+
+## Power
+
+The Target Number the unit needs to roll when fighting.
+This number is commonly modified depending on battlefield conditions.
+
+## 2.9. Special Rules <!-- no toc -->
 
 Most units have one or more Special rules that effects their battlefield capabilities.
 
@@ -236,9 +245,10 @@ Inflicted Pins are placed immediately.
 
 ### 3.3.3. Remove Casualties <!-- no toc -->
 
-After all units with Overwatch Orders have shot it is time to remove casualties.
-Starting with the Starting player, both players now remove models from their units up to the amount of casualties they suffered during shooting.
-Only models that were within range and Line of Sight of the unit causing the casualties are eligible to be removed.
+After all units with Overwatch Orders have fought it's time to remove casualties.
+Starting with the Starting player, both players now remove models from their units up to the amount of casualties they suffered during the phase.
+Only models that were both within Range and Line of Sight of the unit causing the casualties are eligible to be removed.
+Note that Separated models are not eligible to be removed this way, they are automatically removed at the end of the Combat Phase instead.
 
 If a unit suffered casualties from multiple units then casualties has to be removed in such a way as to maximize the number of models removed.
 Should the number of available models eligible to be removed be less than the inflicted casualties then the excess is disregarded.
@@ -264,27 +274,27 @@ The players now score Victory points according to the scenario being played.
 
 Units are issued Orders at the start of the Round.
 
-## 4.1. Advance Order
+## 4.1. Advance Order <!-- no toc -->
 
 A unit with an Advance Order may move during the Movement Phase up to its Speed.
 After moving remove the Advance Order and replace it with a Fight Order.
 
-## 4.2. Overwatch Order
+## 4.2. Overwatch Order <!-- no toc -->
 
 A unit with an Overwatch Order may preform a fight during the Overwatch Phase.
 After fighting remove the Overwatch Order token.
 
-## 4.3. Sprint Order
+## 4.3. Sprint Order <!-- no toc -->
 
 A unit with a Sprint Order may move during the the Movement Phase up to twice its Speed.
 After moving remove the Sprint Order token.
 
-## 4.4. Move Order
+## 4.4. Move Order <!-- no toc -->
 
 A unit with a Move Order may move during the the Movement Phase up to its Speed.
 After moving remove the Move Order token.
 
-## 4.5. Fight Order
+## 4.5. Fight Order <!-- no toc -->
 
 A unit with a Fight Order may fight in the Combat phase.
 After fighting remove the Shoot Order token.
@@ -298,39 +308,53 @@ Models are moved in straight lines and may change direction at any point during 
 The sum of the lengths of the moved moved lines may not exceed the maximum distance the unit is allowed to move during the move.
 There have to be sufficient space for the model during the entirety of its move.
 
+## 5.2. Maintaining Cohesion & Separated Models <!-- no toc -->
+
 After a unit has finished moving, check whether it is maintaining Unit Cohesion.
-If Unit cohesion is not maintained then the controlling player marks the least amount of models necessary in the unit as casualties so that Unit Cohesion is restored among remaining models.
-Models marked as casualties in this way may not fight during this round, may not draw any Line of Sight and are not removed until the Remove casualties step of the Fight phase.
-Additionally these casualties should be marked in unique way to signify this; either use a special marker, a Pin marker placed right on top of the model or flip the model upside down.
+If Unit cohesion is not maintained then the controlling player marks the least amount of models necessary in the unit as Separated so that Unit Cohesion is restored among remaining models.
+Models marked as Separated in this way may not fight and may not draw any Line of Sight during this round.
 
-## 5.2. Moving Through Friendly Models <!-- no toc -->
+Separated models are still considered part of their unit for all rules purposes but are removed as casualties at the end of the Combat Phase.
+Make sure Separated models are marked clearly; either use a special Separated marker, a Pin marker placed right on top of the model or flip the model upside down.
 
-Models may ignore friendly models during a move as long as it has sufficient movement to clear them fully.
+## 5.3. Moving Through Friendly Units <!-- no toc -->
 
-## 5.3. Moving Through Enemy Models <!-- no toc -->
+Models may ignore models belonging to friendly units during a move as long as it has sufficient movement to clear them fully.
 
-Models may not move through enemy models.
+## 5.4. Moving Through Enemy Units <!-- no toc -->
 
-## 5.4. Moving Through Terrain <!-- no toc -->
+Models may not move through enemy Unit Boundaries.
+
+## 5.5. Moving Through Terrain <!-- no toc -->
 
 Terrain may affect movement depending on the type of terrain, see Terrain section.
 
 # 6. Combat
 
-## 6.1. Fighting
+When a unit fights it goes through these steps:
 
-When a unit fights it goes through a number of steps:
+1. *Nominate target enemy unit*  
+This is done at the beginning of the phase for all unit.
+See Declare Targets subsection in the Overwatch Phase section.
+2. *Check Range & Line of Sight*  
+Check which models in the fighting unit independently has both Range and Line of Sight to the target unit.
+Only these are able to fight.
+3. *Calculate Target Number*  
+Take the units Power value and apply the relevant modifiers to it.
+4. *Roll Fight Test*  
+Roll a number of dice equal to the sum of Attacks characteristic the models able to fight.
+Any die that is equal to or less than the Calculated Target Number is considered a success.
+5. *Place Pins and mark casualties*  
+Place one Pin per success on the target unit.
+Some successes also inflict casualties.
 
-1. Nominate target enemy unit
-2. Check Range, Line of Sight and Cover
-3. Calculate Target Number
-4. Roll to hit
-5. Place Pins and mark casualties
+## Fight Modifiers
 
+A Fight Modifier change the Target Number when rolling a Fight Test.
+There are many sources of Fight Modifiers; Special Rules and Stratagems to name a few.
+The most common modifier is Cover.
 
-## 6.2. Fighting Modifiers
-
-## 6.3. Removing Casualties
+## Inflicting Casualties
 
 # 7. Morale
 
