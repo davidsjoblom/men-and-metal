@@ -22,23 +22,20 @@ Infantry are typically organized into units of 6 and vehicles into units of 3.
 
 ## 1.4. Unit Cohesion
 
-All units have a Cohesion distance.
-Typically 1" for infantry units and 2" for vehicle units.
-
 A unit is considered to maintain Unit Cohesion when both of these conditions are fulfilled:
 
-- All models are within Cohesion Distance of at least one other model in the unit
+- All models are within 1" of at least one other model in the unit
 - All models are connected through an unbroken chain of other models in the unit
 
 ## 1.5. Unit Boundary
 
 All units have a Unit Boundary.
 This boundary is the area covered by the sum of all bases of models in the unit as well as the spaces between those models.
-These spaces are the area swept over by a model should it make an imaginary move straight towards the other model and stopping right on top of it.
-These spaces only occur between models that are within their Cohesion distance of each other.
+These spaces are the area swept over by a model should it be moved straight towards the other model and stopped right on top of it.
+These spaces only occur between models that are within 1" of each other.
 
 Example:
-A unit with Base size of 30mm would have a Unit Boundary consisting of the area covered by the units models as well as all 30mm wide area corridors between all pairs of models within Unit Cohesion distance.
+A unit with Base size of 30mm would have a Unit Boundary consisting of the area covered by the units models as well as all 30mm wide area corridors between all model pairs that are within 1" of each other.
 
 Note that a Unit Boundary may fragment, for example as a result of removing casualties.
 
@@ -85,7 +82,10 @@ A number in front refers to a number of dice, e.g. 2D10 calls for two D10s to be
 
 The Target Number, TN, is the value a rolled D10 needs to equal or be less than to be considered a success.
 A roll that exceeds the TN is considered a fail.
-A TN is calculated by taking the base TN and applying the relevant modifiers to it, e.g. a base TN of 3 with a +1 modifier results in a final TN of 4.
+A TN is calculated by taking the base TN and applying the relevant modifiers to it.
+
+For example: A player is required to take a test by rolling a single D10 with a base Target Number of 3 and a +1 modifier, resulting in a final TN of 4.
+Any roll resulting in either 1, 2, 3 or 4 is considered a success while any result of 5, 6, 7, 8, 9, or 10 is considered a fail.
 
 ## 1.12. Tokens & Markers
 
@@ -115,23 +115,23 @@ These are used in Scenarios to score Victory points.
 Targeting arrows are used to declare targets.
 They are placed in front of attacking units, pointed towards their declared target.
 
+### Victory Point Markers
+
+Victory Point markers are used to track Victory Points scored during the game.
+
 # 2. Unit Characteristics
 
 All units have a number of characteristics that determine how they act on the the battlefield.
-These are found in each unit's respective Unit Profile.
+These are found in each units respective Unit Profile.
 
 ## 2.1. Unit Type <!-- no toc -->
 
-Each unit has a Unit type.
-Unit types has no in-game effect itself but influences how the unit interacts with other rules.
+Each unit has a Unit Type.
+Unit Types has no in-game effect itself but may influences how the unit interacts with other rules.
 
 ## 2.2. Model Number <!-- no toc -->
 
-The number of models the unit consists of.
-
-## 2.3. Cohesion Distance <!-- no toc -->
-
-This distance is used to determine Unit Cohesion.
+The number of models the unit starts the game with.
 
 ## 2.4. Base Size <!-- no toc -->
 
@@ -156,7 +156,7 @@ The number of dice the model rolls when fighting.
 
 ## Power
 
-The Target Number the unit needs to roll when fighting.
+The base Target Number the unit needs to roll when fighting.
 This number is commonly modified depending on battlefield conditions.
 
 ## 2.9. Special Rules <!-- no toc -->
@@ -212,9 +212,9 @@ If its the roll for the first round then ties are rerolled.
 
 ## 3.2. Movement Phase
 
-The Starting player moves all his eligible units.
-Then the Second player moves all his eligible units.
-Eligible units are units with Advance, Sprint or Move Orders.
+The Starting player moves with all his eligible units.
+Then the Second player moves with all his eligible units.
+Eligible units are those with Advance, Sprint or Move Orders.
 See the Movement section for details on how to move units.
 
 ## 3.3. Overwatch Phase
@@ -351,7 +351,7 @@ Some successes also inflict casualties.
 ## Fight Modifiers
 
 A Fight Modifier change the Target Number when rolling a Fight Test.
-There are many sources of Fight Modifiers; Special Rules and Stratagems to name a few.
+There are many sources of Fight Modifiers.
 The most common modifier is Cover.
 
 ## Inflicting Casualties
