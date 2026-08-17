@@ -354,7 +354,14 @@ A Fight Modifier change the Target Number when rolling a Fight Test.
 There are many sources of Fight Modifiers.
 The most common modifier is Cover.
 
+### Cover
+
+
+
 ## Inflicting Casualties
+
+All successful attacks inflict a Pin but some may also inflict a casualty as well.
+Any 
 
 # 7. Morale
 
