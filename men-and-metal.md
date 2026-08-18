@@ -150,14 +150,10 @@ Discipline determines the Target Number for Rally tests.
 
 A unit's Range is the maximum distance that the unit can effectively attack.
 
-## 2.8. Attacks <!-- no toc -->
-
-The number of dice the model rolls when fighting.
-
-## Power
+## 2.8. Attack Power <!-- no toc -->
 
 The base Target Number the unit needs to roll when fighting.
-This number is commonly modified depending on battlefield conditions.
+This number is commonly modified depending on battlefield conditions and special rules.
 
 ## 2.9. Special Rules <!-- no toc -->
 
@@ -220,7 +216,9 @@ See the Movement section for details on how to move units.
 ## 3.3. Overwatch Phase
 
 During the Overwatch phase units with Overwatch Orders get to fight before other units with Fight Orders.
-All attacks during this phase are considered simultaneous and all targets are declared before any dice are rolled.
+All attack during this phase are considered to take place simultaneously even though the players take turns resolving them.
+This means that any casualties inflicted during the phase still get to fight and are not removed until the end.
+All targets are declared before any dice are rolled.
 
 ### 3.3.1. Declare Targets <!-- no toc -->
 
@@ -272,7 +270,7 @@ The players now score Victory points according to the scenario being played.
 
 # 4. Orders
 
-Units are issued Orders at the start of the Round.
+Units are issued Orders at the start of the Round and dictates what actions they take during the round.
 
 ## 4.1. Advance Order <!-- no toc -->
 
@@ -297,7 +295,7 @@ After moving remove the Move Order token.
 ## 4.5. Fight Order <!-- no toc -->
 
 A unit with a Fight Order may fight in the Combat phase.
-After fighting remove the Shoot Order token.
+After fighting remove the Fight Order token.
 
 # 5. Movement
 
@@ -342,21 +340,16 @@ Only these are able to fight.
 3. *Calculate Target Number*  
 Take the units Power value and apply the relevant modifiers to it.
 4. *Roll Fight Test*  
-Roll a number of dice equal to the sum of Attacks characteristic the models able to fight.
+Roll a number of dice equal to the number models able to fight.
 Any die that is equal to or less than the Calculated Target Number is considered a success.
-5. *Place Pins and mark casualties*  
+1. *Place Pins and mark casualties*  
 Place one Pin per success on the target unit.
 Some successes also inflict casualties.
 
 ## Fight Modifiers
 
 A Fight Modifier change the Target Number when rolling a Fight Test.
-There are many sources of Fight Modifiers.
-The most common modifier is Cover.
-
-### Cover
-
-
+There are many sources of potential Fight Modifiers, for example unit special rules.
 
 ## Inflicting Casualties
 
@@ -367,20 +360,20 @@ Any
 
 ## 7.1. Rally Tests
 
-When a unit takes a Rally test the controlling player rolls a number of D10s equal to the amount of pins on that unit.
-The base Target Number for this roll is the Resolve of the unit.
-Each successful roll removes a pin marker from the unit.
+When a unit takes a Rally test the controlling player rolls a number of D10s equal to the number of remaining models in the unit.
+The Target Number for this roll is the units Discipline value as well as any relevant modifiers applied to it.
+For each successful roll one Pin marker is removed from the unit.
 
 ## 7.2. Suppression Check
 
-When doing a Suppression Check on a unit compare the amount of pins on that unit with the Suppression Table.
+When a unit does a Suppression Check it compares its current number of Pin markers with the Suppression Table and applies the corresponding effect.
 
 Suppression Table:
 
 | Pin Markers | Effect                                                      |
 | :---------: | ----------------------------------------------------------- |
 |     0-2     | No penalty                                                  |
-|     3-5     | **Suppressed** - may only be issued a Move or a Shoot Order |
+|     3-5     | **Suppressed** - may only be issued a Move or a Shoot Order in the following Command Phase|
 |     6+      | **Broken** - the unit is destroyed and removed from play    |
 
 # 8. Terrain
