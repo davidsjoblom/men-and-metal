@@ -331,30 +331,52 @@ Terrain may affect movement depending on the type of terrain, see Terrain sectio
 
 When a unit fights it goes through these steps:
 
-1. *Nominate target enemy unit*  
-This is done at the beginning of the phase for all unit.
+1. *Nominate target unit*  
+2. *Check Which Models Can Fight* 
+3. *Calculate Target Number* 
+2. *Roll Fight Test* 
+3. *Place Pins & Inflict casualties*
+
+## Nominate Target Unit
+
+This is done at the same time for all units fighting that phase.
 See Declare Targets subsection in the Overwatch Phase section.
-2. *Check Range & Line of Sight*  
-Check which models in the fighting unit independently has both Range and Line of Sight to the target unit.
-Only these are able to fight.
-3. *Calculate Target Number*  
-Take the units Power value and apply the relevant modifiers to it.
-4. *Roll Fight Test*  
-Roll a number of dice equal to the number models able to fight.
+
+## Check Which Models Can Fight
+
+Check which individual models both have Line of Sight and is within their Range characteristic of at least one model in the target unit.
+Only these models are able to fight and therefore contribute dice to the Fight Test.
+
+### Point Blank Range
+
+Models that are within 4" of the target unit are considered to be within Point Blank Range.
+Fight Test dice contributed by models at Point Blank Range have to be differentiated from other dice; either roll them separately or use differently colored dice.
+
+## Calculate Target Number
+
+To calculate the Target Number for the Fight Test take the attacking units Attack Power value and apply any relevant modifiers to it.
+There are many sources of potential Fight Test Modifiers, for example unit special rules or abilities.
+
+## Roll Fight Test
+
+Roll a number of dice equal to the number of models able to fight.
 Any die that is equal to or less than the Calculated Target Number is considered a success.
-1. *Place Pins and mark casualties*  
-Place one Pin per success on the target unit.
-Some successes also inflict casualties.
 
-## Fight Modifiers
+## Place Pin Markers
 
-A Fight Modifier change the Target Number when rolling a Fight Test.
-There are many sources of potential Fight Modifiers, for example unit special rules.
+For each success place one Pin marker on the target unit.
 
 ## Inflicting Casualties
 
-All successful attacks inflict a Pin but some may also inflict a casualty as well.
-Any 
+Any success that rolled a 1 also inflict a casualty.
+Mark the number of inflicted casualties next to the attacking units Targeting Arrow.
+Actual models are not removed until the end of the phase.
+Note that units may have more casualties inflicted on them then models that are actually eligible to be removed.
+
+### Point Blank Casualties
+
+Any success by dice contributed by models at Point Blank Range inflict a casualty, not just those that rolled a 1.
+The inflicted casualties also have to be separately marked when marking casualties.
 
 # 7. Morale
 
