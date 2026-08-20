@@ -245,7 +245,7 @@ Inflicted Pins are placed immediately.
 
 After all units with Overwatch Orders have fought it's time to remove casualties.
 Starting with the Starting player, both players now remove models from their units up to the amount of casualties they suffered during the phase.
-Only models that were both within Range and Line of Sight of the unit causing the casualties are eligible to be removed.
+Only models benefiting from No Cover and that were both within Range and Line of Sight of the unit causing the casualties are eligible to be removed.
 Note that Separated models are not eligible to be removed this way, they are automatically removed at the end of the Combat Phase instead.
 
 If a unit suffered casualties from multiple units then casualties has to be removed in such a way as to maximize the number of models removed.
@@ -396,7 +396,7 @@ Suppression Table:
 | Pin Markers | Effect                                                                                     |
 | :---------: | ------------------------------------------------------------------------------------------ |
 |     0-2     | No penalty                                                                                 |
-|     3-5     | **Suppressed** - may only be issued a Move or a Shoot Order in the following Command Phase |
+|     3-5     | **Suppressed** - may only be issued a Move or a Fight Order in the following Command Phase |
 |     6+      | **Broken** - the unit is removed from play and considered destroyed                        |
 
 # Terrain
