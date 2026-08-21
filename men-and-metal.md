@@ -29,14 +29,8 @@ A unit is considered to maintain Unit Cohesion when both of these conditions are
 
 ## Unit Boundary
 
-All units have a Unit Boundary.
-This boundary is the area covered by the sum of all bases of models in the unit as well as the spaces between those models.
-These spaces are the area swept over by a model should it be moved straight towards the other model and stopped right on top of it.
-These spaces only occur between models that are within 1" of each other.
-
-Example:
-A unit with Base size of 30mm would have a Unit Boundary consisting of the area covered by the units models as well as all 30mm wide area corridors between all model pairs that are within 1" of each other.
-
+All units have a Unit Boundary. The Boundary consists of the area occupied by the bases of all models in the unit, together with corridors connecting pairs of models whose bases are no more than 1" apart.
+A corridor is the area between two parallel lines drawn from the opposing outermost points of the two bases.
 Note that a Unit Boundary may fragment, for example as a result of removing casualties.
 
 ## Armies
@@ -137,13 +131,13 @@ The number of models the unit starts the game with.
 
 The diameter of the model's base.
 
-## Speed 
+## Movement Speed 
 
-A unit's Speed determines how far it can move during a Move action.
+A unit's Movement Speed determines how far it can move during a Move action.
 
-## Range 
+## Effective Range 
 
-A unit's Range is the maximum distance that the unit can effectively attack.
+A unit's Effective Range is the maximum distance that the unit can effectively attack.
 
 ## Attack Power 
 
@@ -157,7 +151,7 @@ Discipline determines the Target Number for Rally tests.
 
 ## Special Rules 
 
-Most units have one or more Special rules that effects their battlefield capabilities.
+Most units have one or more Special rules that affects their battlefield capabilities.
 
 # The Round
 
@@ -228,9 +222,9 @@ Targets are declared by verbally calling them out and placing Targeting arrows i
 Each unit may only target a single enemy unit.
 It is important that both players are fully aware of what units are being targeted.
 
-If a player forgets to declare a target for a unit with an Overwatch Order before dice are rolled to resolve an attack during this phase then that unit automatically targets the closest enemy unit within Range that it has Line of Sight to.
+If a player forgets to declare a target for a unit with an Overwatch Order before dice are rolled to resolve an attack during this phase then that unit automatically targets the closest enemy unit within Effective Range that it has Line of Sight to.
 
-A unit may choose to delay its attack, removing its Overwatch Order and replacing it with a Fight Order instead. Should a unit have no enemy units within Line of Sight or Range then remove the Overwatch Order token.
+A unit may choose to delay its attack, removing its Overwatch Order and replacing it with a Fight Order instead. Should a unit have no enemy units within Line of Sight or Effective Range then remove the Overwatch Order token.
 
 ### Resolve Attacks 
 
@@ -245,7 +239,7 @@ Inflicted Pins are placed immediately.
 
 After all units with Overwatch Orders have fought it's time to remove casualties.
 Starting with the Starting player, both players now remove models from their units up to the amount of casualties they suffered during the phase.
-Only models benefiting from No Cover and that were both within Range and Line of Sight of the unit causing the casualties are eligible to be removed.
+Only models benefiting from No Cover and that were both within Effective Range and Line of Sight of the unit causing the casualties are eligible to be removed.
 Note that Separated models are not eligible to be removed this way, they are automatically removed at the end of the Combat Phase instead.
 
 If a unit suffered casualties from multiple units then casualties has to be removed in such a way as to maximize the number of models removed.
@@ -256,7 +250,7 @@ Should the number of available models eligible to be removed be less than the in
 During the Combat Phase units with Fight Orders get to attack.
 This phase is played out identically to the Overwatch phase but it applies to all units with Fight instead of Orders.
 One exception is that there's no option to choose to fight in the next phase, since there is no next phase.
-Should a unit have no enemy units within Line of Sight or Range then simply remove the Fight Order token.
+Should a unit have no enemy units within Line of Sight or Effective Range then simply remove the Fight Order token.
 
 ## Rally Phase
 
@@ -274,7 +268,7 @@ Units are issued Orders at the start of the Round and dictates what actions they
 
 ## Advance Order 
 
-A unit with an Advance Order may move during the Movement Phase up to its Speed.
+A unit with an Advance Order may move during the Movement Phase up to its Movement Speed.
 After moving remove the Advance Order and replace it with a Fight Order.
 
 ## Overwatch Order 
@@ -284,12 +278,12 @@ After fighting remove the Overwatch Order token.
 
 ## Sprint Order 
 
-A unit with a Sprint Order may move during the the Movement Phase up to twice its Speed.
+A unit with a Sprint Order may move during the the Movement Phase up to twice its Movement Speed.
 After moving remove the Sprint Order token.
 
 ## Move Order 
 
-A unit with a Move Order may move during the the Movement Phase up to its Speed.
+A unit with a Move Order may move during the the Movement Phase up to its Movement Speed.
 After moving remove the Move Order token.
 
 ## Fight Order 
@@ -345,12 +339,12 @@ See Declare Targets subsection in the Overwatch Phase section.
 
 ## Check Which Models Can Fight
 
-Check which individual models both have Line of Sight and is within their Range characteristic of at least one model in the target unit.
+Check which individual models both have Line of Sight and is within their Effective Range characteristic of at least one model in the target unit.
 Only these models are able to fight and therefore contribute dice to the Fight Test.
 
 ### Point Blank Range
 
-Models that are within 4" of the target unit are considered to be within Point Blank Range.
+Models that are within 4" of any unit are considered to be within Point Blank Range.
 Fight Test dice contributed by models at Point Blank Range have to be differentiated from other dice; either roll them separately or use differently colored dice.
 
 ## Calculate Target Number
@@ -401,16 +395,26 @@ Suppression Table:
 
 # Terrain
 
-| Terrain Feature   | Type        | Cover | Line of Sight      | Infantry   | Bikes      | Vehicles   | Special  |
-| ----------------- | ----------- | ----- | ------------------ | ---------- | ---------- | ---------- | -------- |
-| Forest            | Area        | Soft  | Obstructed Through | \-         | Difficult  | Impassable | \-       |
-| Hill              | Area        | No    | Obstructed Through | \-         | \-         | \-         | Elevated |
-| Mud               | Area        | No    | \-                 | Difficult  | Difficult  | Difficult  | \-       |
-| Deep Water        | Area        | No    | \-                 | Impassable | Impassable | Impassable | \-       |
-| Ruins             | Area        | Hard  | Obstructed Through | Difficult  | Impassable | Impassable | \-       |
-| High Wall         | Directional | Hard  | Obstructed         | Impassable | Impassable | Impassable | \-       |
-| Low Wall          | Directional | Hard  | \-                 | \-         | Difficult  | Difficult  | \-       |
-| Apartment Complex | Directional | Hard  | Obstructed         | Impassable | Impassable | Impassable | Building |
+Terrain is an essential part of the Battlefield and there are many types of terrain features.
+A Terrain feature is a distinct specified area of the Battlefield with certain effects on unit movement, Line of Sight and whether they benefit from cover or not.
+
+
+
+
+
+
+| Terrain Feature   | Cover Type  | Cover Level | Line of Sight      | Infantry   | Bikes      | Vehicles   | Special  |
+| ----------------- | ----------- | ----------- | ------------------ | ---------- | ---------- | ---------- | -------- |
+| Forest            | Area        | Soft        | Obstructed Through | \-         | Difficult  | Impassable | \-       |
+| Hill              | Area        | -           | Obstructed Through | \-         | \-         | \-         | Elevated |
+| Mud               | Area        | -           | \-                 | Difficult  | Difficult  | Difficult  | \-       |
+| Deep Water        | Area        | -           | \-                 | Impassable | Impassable | Impassable | \-       |
+| Ruins             | Area        | Hard        | Obstructed Through | Difficult  | Impassable | Impassable | \-       |
+| High Wall         | Directional | Hard        | Fully Obstructed   | Impassable | Impassable | Impassable | \-       |
+| Low Wall          | Directional | Hard        | \-                 | \-         | Impassable | Difficult  | \-       |
+| High Fence        | Directional | Soft        | \-                 | Difficult  | Impassable | Impassable | \-       |
+| Hedge             | Directional | Soft        | \-                 | \-         | Difficult  | Difficult  | \-       |
+| Apartment Complex | Directional | Hard        | Fully Obstructed   | Impassable | Impassable | Impassable | Building |
 
 # Transports
 
@@ -442,8 +446,9 @@ Some potential stratagems:
 - Leader
 - Large Target; this unit can never benefit from Soft or Hard Cover.
 - Armor piercing; capable of inflicting casualties on Armored units as well as full pins.
-- Blast
+- Blast; casualties inflicted by units with Blast treat models in Soft Cover as eligible to be remove.
 - Ignores Cover; casualties inflicted by this unit treat all target models as if they had No Cover.
+- Demolisher; casualties inflicted by units with Demolisher treat models in Hard Cover as eligible to be remove.
 
 More to come...
 
@@ -454,6 +459,9 @@ WIP
 ## Battlefield Setup
 WIP
 
+## Deployment
+WIP
+
 ## Objectives
 WIP
 
@@ -462,9 +470,9 @@ WIP
 Some generic units used for basic game design.
 Will later serve as guidlines for appropriately setting unit costs.
 
-| Name          | Unit Type | Base Size | Model Number | Speed | Attack Power | Range | Discipline | Special Rules                        |
-| ------------- | --------- | --------- | ------------ | ----- | ------------ | ----- | ---------- | ------------------------------------ |
-| Rifle Platoon | Infantry  | 30mm      | 6            | 4"    | 3            | 12"   | 3          | Scoring                              |
-| IFV Platoon   | Vehicle   | 30mm      | 3            | 6"    | 3            | 16"   | 3          | Armored, All-Terrain, Transport      |
-| Tank Platoon  | Vehicle   | 30mm      | 3            | 6"    | 4            | 24"   | 3          | Armored, All-Terrain, Armor Piercing |
+| Unit Name     | Unit Type | Base Size | Model Number | Movement Speed | Attack Power | Effective Range | Discipline | Special Rules                        |
+| ------------- | --------- | --------- | ------------ | -------------- | ------------ | --------------- | ---------- | ------------------------------------ |
+| Rifle Platoon | Infantry  | 30mm      | 6            | 4"             | 3            | 12"             | 3          | Scoring                              |
+| IFV Platoon   | Vehicle   | 30mm      | 3            | 6"             | 3            | 16"             | 3          | Armored, All-Terrain, Transport      |
+| Tank Platoon  | Vehicle   | 30mm      | 3            | 6"             | 4            | 24"             | 3          | Armored, All-Terrain, Armor Piercing |
 
