@@ -1,4 +1,4 @@
-Men & Metal - Wargame Rules 
+Men & Metal - Wargame Rules
 
 # General Principles
 
@@ -43,7 +43,7 @@ Friendly units are units belonging to the same army while enemy units are units 
 The Battlefield, also called the board, is the physical space where the game takes place.
 The standard board size is 48" by 72".
 
-### Battlefield Interpretation 
+### Battlefield Interpretation
 
 For all rules purposes The Battlefield is considered a 2D plane.
 
@@ -86,25 +86,25 @@ Any roll resulting in either 1, 2, 3 or 4 is considered a success while any resu
 Tokens and markers are physical gaming aids used to indicate various game related things.
 Tokens and markers have no in-game presence and may be moved around to make space whenever necessary.
 
-### Order tokens 
+### Order tokens
 
 Order tokens have a blank side while the other side features one of the Orders.
 These are used to privately assign Orders by placing them face down next to a unit and then flipped up to reveal which Order was issued.
 All Order tokens are removed after the unit has carried them out.
 An exception to this is the Advance Order which is replaced by a Fight Order instead.
 
-### Pin markers 
+### Pin markers
 
 Pin markers, or simply Pins, are used to track the level of stress a unit is experiencing by placing an number of them next to the unit.
 Pins follow along with the unit until they are removed.
 Players should bring their own visually distinct pin markers in Order to make tracking pin numbers at a glance easy for their opponent.
 
-### Objective makers 
+### Objective makers
 
 Objective markers are used to specify a point or a terrain feature on the battlefield as Objectives.
 These are used in Scenarios to score Victory points.
 
-### Targeting Arrows 
+### Targeting Arrows
 
 Targeting arrows are used to declare targets.
 They are placed in front of attacking units, pointed towards their declared target.
@@ -118,38 +118,38 @@ Victory Point markers are used to track Victory Points scored during the game.
 All units have a number of characteristics that determine how they act on the the battlefield.
 These are found in each units respective Unit Profile.
 
-## Unit Type 
+## Unit Type
 
 Each unit has a Unit Type.
 Unit Types has no in-game effect itself but may influences how the unit interacts with other rules.
 
-## Model Number 
+## Model Number
 
 The number of models the unit starts the game with.
 
-## Base Size 
+## Base Size
 
 The diameter of the model's base.
 
-## Movement Speed 
+## Movement Speed
 
 A unit's Movement Speed determines how far it can move during a Move action.
 
-## Effective Range 
+## Effective Range
 
 A unit's Effective Range is the maximum distance that the unit can effectively attack.
 
-## Attack Power 
+## Attack Power
 
 The base Target Number the unit needs to roll when fighting.
 This number is commonly modified depending on battlefield conditions and special rules.
 
-## Discipline 
+## Discipline
 
 A unit's Discipline represents its ability to keep fighting under pressure and shake off suppression.
 Discipline determines the Target Number for Rally tests.
 
-## Special Rules 
+## Special Rules
 
 Most units have one or more Special rules that affects their battlefield capabilities.
 
@@ -180,19 +180,19 @@ Each Round consists of a sequence of phases:
 
 ## Command Phase
 
-### Assign Order Tokens 
+### Assign Order Tokens
 
 Both players begin the Command phase by privately assigning all their units a single Order token each.
 A unit may normally be assigned either an Advance, Overwatch or Sprint Order token.
 If a unit is Suppressed then it may only be assigned either a Fight or a Move Order token instead.
 Order tokens are placed face down next to the unit assigned them.
 
-### Reveal Order Tokens 
+### Reveal Order Tokens
 
 When both players are done all Order tokens are made public by flipping them face up.
 Any unit that players forgot to assign an Order token before they were made public are automatically assigned a Fight Order token.
 
-### Determine Starting Player 
+### Determine Starting Player
 
 After Orders are assigned both players rolls a D10 each.
 The player with the highest roll becomes the Starting player for this Round.
@@ -214,7 +214,7 @@ All attack during this phase are considered to take place simultaneously even th
 This means that any casualties inflicted during the phase still get to fight and are not removed until the end.
 All targets are declared before any dice are rolled.
 
-### Declare Targets 
+### Declare Targets
 
 The Starting player declares targets for each of his units with Overwatch Orders.
 The Second player then does the same.
@@ -226,7 +226,7 @@ If a player forgets to declare a target for a unit with an Overwatch Order befor
 
 A unit may choose to delay its attack, removing its Overwatch Order and replacing it with a Fight Order instead. Should a unit have no enemy units within Line of Sight or Effective Range then remove the Overwatch Order token.
 
-### Resolve Attacks 
+### Resolve Attacks
 
 The Starting player fights with all his units with Overwatch Orders against their declared targets.
 Then the Second player does the same.
@@ -235,7 +235,7 @@ After attacking with a unit remove its Overwatch Order.
 Note that casualties are not removed at this point but instead the number of casualties inflicted is marked next to the targeting arrow of the fighting unit.
 Inflicted Pins are placed immediately.
 
-### Remove Casualties 
+### Remove Casualties
 
 After all units with Overwatch Orders have fought it's time to remove casualties.
 Starting with the Starting player, both players now remove models from their units up to the amount of casualties they suffered during the phase.
@@ -266,71 +266,74 @@ The players now score Victory points according to the scenario being played.
 
 Units are issued Orders at the start of the Round and dictates what actions they take during the round.
 
-## Advance Order 
+## Advance Order
 
 A unit with an Advance Order may move during the Movement Phase up to its Movement Speed.
 After moving remove the Advance Order and replace it with a Fight Order.
 
-## Overwatch Order 
+## Overwatch Order
 
 A unit with an Overwatch Order may preform a fight during the Overwatch Phase.
 After fighting remove the Overwatch Order token.
 
-## Sprint Order 
+## Sprint Order
 
 A unit with a Sprint Order may move during the the Movement Phase up to twice its Movement Speed.
 After moving remove the Sprint Order token.
 
-## Move Order 
+## Move Order
 
 A unit with a Move Order may move during the the Movement Phase up to its Movement Speed.
 After moving remove the Move Order token.
 
-## Fight Order 
+## Fight Order
 
 A unit with a Fight Order may fight in the Combat phase.
 After fighting remove the Fight Order token.
 
 # Movement
 
-## Moving 
+## Moving
 
 When moving a unit, the controlling player moves each individual model in the unit one at a time.
 Models are moved in straight lines and may change direction at any point during the move.
 The sum of the lengths of the moved moved lines may not exceed the maximum distance the unit is allowed to move during the move.
 There have to be sufficient space for the model during the entirety of its move.
 
-## Maintaining Cohesion & Separated Models 
+## Maintaining Cohesion & Separated Models
 
-After a unit has finished moving, check whether it is maintaining Unit Cohesion.
+After a unit has finished moving it has to maintain Unit Cohesion.
+
 If Unit cohesion is not maintained then the controlling player marks the least amount of models necessary in the unit as Separated so that Unit Cohesion is restored among remaining models.
 Models marked as Separated in this way may not fight and may not draw any Line of Sight during this round.
 
 Separated models are still considered part of their unit for all rules purposes but are removed as casualties at the end of the Combat Phase.
 Make sure Separated models are marked clearly; either use a special Separated marker, a Pin marker placed right on top of the model or flip the model upside down.
 
-## Moving Through Friendly Units 
+## Moving Through Friendly Units
 
-Models may ignore models belonging to friendly units during a move as long as it has sufficient movement to clear them fully.
+Models may move through friendly Unit Boundaries as long as it has sufficient movement to clear them fully.
 
-## Moving Through Enemy Units 
+## Moving Through Enemy Units
 
 Models may not move through enemy Unit Boundaries.
 
-## Moving Through Terrain 
+## Moving Through Terrain
 
 Terrain may affect movement depending on the type of terrain, see Terrain section.
 
 # Combat
 
-When a unit fights it goes through these steps:
+When fighting during the Overwatch Phase and the Combat Phase
 
-1. *Nominate target unit*  
-2. *Check Which Models Can Fight* 
-3. *Calculate Target Number* 
-2. *Roll Fight Test* 
-3. *Place Pins*
-4. *Mark Inflicted Casualties*
+1. _Declare All Target Units_
+2. _Resolve Each Attack:_
+   1. _Check Which Models Can Fight_
+   2. _Calculate Target Number_
+   3. _Roll Fight Test_
+   4. _Place Pins_
+   5. _Mark Inflicted Casualties_
+3. _Remove Eligible Models As Casualties_
 
 ## Nominate Target Unit
 
@@ -341,11 +344,6 @@ See Declare Targets subsection in the Overwatch Phase section.
 
 Check which individual models both have Line of Sight and is within their Effective Range characteristic of at least one model in the target unit.
 Only these models are able to fight and therefore contribute dice to the Fight Test.
-
-### Point Blank Range
-
-Models that are within 4" of any unit are considered to be within Point Blank Range.
-Fight Test dice contributed by models at Point Blank Range have to be differentiated from other dice; either roll them separately or use differently colored dice.
 
 ## Calculate Target Number
 
@@ -397,11 +395,6 @@ Suppression Table:
 
 Terrain is an essential part of the Battlefield and there are many types of terrain features.
 A Terrain feature is a distinct specified area of the Battlefield with certain effects on unit movement, Line of Sight and whether they benefit from cover or not.
-
-
-
-
-
 
 | Terrain Feature   | Cover Type  | Cover Level | Line of Sight      | Infantry   | Bikes      | Vehicles   | Special  |
 | ----------------- | ----------- | ----------- | ------------------ | ---------- | ---------- | ---------- | -------- |
@@ -457,22 +450,24 @@ More to come...
 WIP
 
 ## Battlefield Setup
+
 WIP
 
 ## Deployment
+
 WIP
 
 ## Objectives
+
 WIP
 
 # Generic units
 
 Some generic units used for basic game design.
-Will later serve as guidlines for appropriately setting unit costs.
+Will later serve as guidelines for appropriately setting unit costs.
 
 | Unit Name     | Unit Type | Base Size | Model Number | Movement Speed | Attack Power | Effective Range | Discipline | Special Rules                        |
 | ------------- | --------- | --------- | ------------ | -------------- | ------------ | --------------- | ---------- | ------------------------------------ |
 | Rifle Platoon | Infantry  | 30mm      | 6            | 4"             | 3            | 12"             | 3          | Scoring                              |
 | IFV Platoon   | Vehicle   | 30mm      | 3            | 6"             | 3            | 16"             | 3          | Armored, All-Terrain, Transport      |
 | Tank Platoon  | Vehicle   | 30mm      | 3            | 6"             | 4            | 24"             | 3          | Armored, All-Terrain, Armor Piercing |
-
