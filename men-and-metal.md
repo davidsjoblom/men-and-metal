@@ -324,15 +324,14 @@ Terrain may affect movement depending on the type of terrain, see Terrain sectio
 
 # Combat
 
-When fighting during the Overwatch Phase and the Combat Phase
+Fighting during the Overwatch and Combat Phase follow the same sequence:
 
 1. _Declare All Target Units_
-2. _Resolve Each Attack:_
+2. _Resolve All Attacks_
    1. _Check Which Models Can Fight_
-   2. _Calculate Target Number_
-   3. _Roll Fight Test_
-   4. _Place Pins_
-   5. _Mark Inflicted Casualties_
+   2. _Roll Fight Test_
+   3. _Place Pins_
+   4. _Mark Inflicted Casualties_
 3. _Remove Eligible Models As Casualties_
 
 ## Nominate Target Unit
@@ -342,13 +341,8 @@ See Declare Targets subsection in the Overwatch Phase section.
 
 ## Check Which Models Can Fight
 
-Check which individual models both have Line of Sight and is within their Effective Range characteristic of at least one model in the target unit.
+Check which individual models both have Line of Sight and is within their Effective Range of at least one model in the target unit.
 Only these models are able to fight and therefore contribute dice to the Fight Test.
-
-## Calculate Target Number
-
-To calculate the Target Number for the Fight Test take the attacking units Attack Power value and apply any relevant modifiers to it.
-There are many sources of potential Fight Test Modifiers, for example unit special rules or abilities.
 
 ## Roll Fight Test
 
@@ -442,6 +436,9 @@ Some potential stratagems:
 - Blast; casualties inflicted by units with Blast treat models in Soft Cover as eligible to be remove.
 - Ignores Cover; casualties inflicted by this unit treat all target models as if they had No Cover.
 - Demolisher; casualties inflicted by units with Demolisher treat models in Hard Cover as eligible to be remove.
+- Move or Fight; this unit may not be issued an Advance Order.
+- Slow; this unit may not be issued a Sprint Order.
+- Assault Specialists; when this unit finishes a Sprint Move it replaces it's Sprint Order with a Fight Order instead of removing it.
 
 More to come...
 
@@ -460,14 +457,3 @@ WIP
 ## Objectives
 
 WIP
-
-# Generic units
-
-Some generic units used for basic game design.
-Will later serve as guidelines for appropriately setting unit costs.
-
-| Unit Name     | Unit Type | Base Size | Model Number | Movement Speed | Attack Power | Effective Range | Discipline | Special Rules                        |
-| ------------- | --------- | --------- | ------------ | -------------- | ------------ | --------------- | ---------- | ------------------------------------ |
-| Rifle Platoon | Infantry  | 30mm      | 6            | 4"             | 3            | 12"             | 3          | Scoring                              |
-| IFV Platoon   | Vehicle   | 30mm      | 3            | 6"             | 3            | 16"             | 3          | Armored, All-Terrain, Transport      |
-| Tank Platoon  | Vehicle   | 30mm      | 3            | 6"             | 4            | 24"             | 3          | Armored, All-Terrain, Armor Piercing |
