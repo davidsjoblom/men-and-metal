@@ -18,7 +18,7 @@ The miniature part is purely decorative and only the base is used for Line of Si
 ## Units
 
 A unit consists of a number of models moving and fighting together.
-Infantry are typically organized into units of 6 and vehicles into units of 3.
+Infantry are typically organized into units of 6, support units into units of 3 and vehicles into units of 3 or 2.
 
 ## Unit Cohesion
 
@@ -52,16 +52,17 @@ For all rules purposes The Battlefield is considered a 2D plane.
 A model is considered to have Line of Sight to another model if an unobstructed straight line can be drawn from any point of its base to any point on the base of the other model.
 A unit is considered to have Line of Sight to another unit if at least one model in the unit has Line of Sight to at least one model in the other unit.
 
-Line of Sight drawn by or to a model is never obstructed by other models in its own unit.
-The Unit Boundaries of intervening units obstruct Line of Sight.
+Line of Sight drawn by a model is never obstructed by other models in its own unit.
+Line of Sight drawn to a model is never obstructed by other models in its own unit.
 
+Unit Boundaries of intervening units obstruct Line of Sight.
 Certain Terrain features obstruct Line of Sight, see Terrain section.
 
 ## Measuring Distance
 
 Distance between two models are measured in a straight line between the closest points of their respective bases.
-Distance between two units is the distance between the two closest models from each the unit.
-A unit is considered to be within a specified distance of something if the distance of its closest model is equal to or less than the specified distance.
+Distance between two units is the distance between the two closest models from each unit.
+A unit is considered to be within a specified distance of something if the distance of the closest point of its closest model is equal to or less than the specified distance.
 
 Note that the vertical position of the physical models is ignored, all models are considered to be at the same level when measuring distance.
 All distances are measured in inches.
@@ -69,39 +70,38 @@ Players are free to measure any distance at any time.
 
 ## Dice
 
-All dice used are six-sided dice.
-Six-sided dice may be abbreviated as D6.
+All dice used are six-sided dice, abbreviated as D6.
 
 ## Target Number
 
 The Target Number, TN, is the value a rolled D6 needs to equal or beat to be considered a success.
 A roll that's less than the TN is considered a fail.
 
-A TN value is written with a '+' next to it to imply that greater results also are successes.
-For example a value of '5+' means that a result of 5 or 6 is a success while a result of 1, 2, 3 or 4 is a fail.
+TN values are written with a '+' next to them to imply that greater results also are successes.
+For example '5+' means that a result of 5 or 6 is a success while a result of 1, 2, 3 or 4 is a fail.
 
 ## Tokens & Markers
 
-Tokens and markers are physical gaming aids used to indicate various game related things.
+Tokens and markers are physical gaming aids used to indicate various game states.
 Tokens and markers have no in-game presence and may be moved around to make space whenever necessary.
+An exception to this are Objective markers which may not be moved.
 
 ### Order tokens
 
-Order tokens have a blank side while the other side features one of the Orders.
-These are used to privately assign Orders by placing them face down next to a unit and then flipped up to reveal which Order was issued.
-All Order tokens are removed after the unit has carried them out.
-An exception to this is the Advance Order which is replaced by a Fight Order instead.
+Order tokens have a blank, identical side while the other side features one of the Orders.
+These are used to privately assign Orders by placing them face down next to a unit and then flipped up to reveal which Order was assigned.
+All Order tokens are removed or replaced after the unit has carried them out, depending on the order.
 
 ### Pin markers
 
-Pin markers, or simply Pins, are used to track the level of stress a unit is experiencing by placing an number of them next to the unit.
-Pins follow along with the unit until they are removed.
-Players should bring their own visually distinct pin markers in Order to make tracking pin numbers at a glance easy for their opponent.
+Pin markers, or simply Pins, are used to track the level of stress a unit is experiencing by placing a number of them next to the unit.
+Pins follow along with the unit until they, or the unit, are removed.
 
 ### Objective makers
 
 Objective markers are used to specify a point or a terrain feature on the battlefield as Objectives.
 These are used in Scenarios to score Victory points.
+Objective markers are round with a 40mm diameter.
 
 ### Targeting Arrows
 
@@ -117,10 +117,19 @@ Victory Point markers are used to track Victory Points scored during the game.
 All units have a number of characteristics that determine how they act on the the battlefield.
 These are found in each units respective Unit Profile.
 
+## Unit Name
+
+All units have a unique Unit Name.
+
 ## Unit Type
 
 Each unit has a Unit Type.
 Unit Types has no in-game effect itself but may influences how the unit interacts with other rules.
+
+There are 3 unit types:
+- Infantry
+- Bikes
+- Vehicles
 
 ## Model Number
 
@@ -132,7 +141,7 @@ The diameter of the model's base.
 
 ## Movement Speed
 
-A unit's Movement Speed determines how far it can move during a Move action.
+A unit's Movement Speed determines how much distance it can move during a round.
 
 ## Effective Range
 
@@ -140,8 +149,7 @@ A unit's Effective Range is the maximum distance that the unit can effectively a
 
 ## Attack Power
 
-The base Target Number the unit needs to roll when fighting.
-This number is commonly modified depending on battlefield conditions and special rules.
+The Target Number the unit needs to roll when attacking.
 
 ## Discipline
 
@@ -155,12 +163,13 @@ Most units have one or more Special rules that affects their battlefield capabil
 # The Round
 
 The game is played over a number of Rounds.
+The standard game length is 6 Rounds.
 Each Round consists of a sequence of phases:
 
 1. Command phase
-   1. Issue Orders
-   2. Reveal Orders
-   3. Determine Starting player for the Round
+   1. Assign Orders
+   2. Determine Starting player for the Round
+   3. Reveal Orders
 2. Movement phase
 3. Overwatch phase
    1. Declare targets
@@ -179,62 +188,64 @@ Each Round consists of a sequence of phases:
 
 ## Command Phase
 
-### Assign Order Tokens
+### Assign Orders
 
 Both players begin the Command phase by privately assigning all their units a single Order token each.
-There are 5 different Orders a unit may be issued; Advance, Overwatch, Sprint, Fight and Attack.
+There are 5 different Orders a unit may be assigned; Advance, Overwatch, Sprint, Fight and Reposition.
 Order tokens are placed face down next to the unit assigned them.
 
 #### Suppressed Units
 
 Units that begin the Round with 3 or more Pin markers are considered Suppressed.
-Suppressed units may only be assigned a Fight or a Move Order.
-
-### Reveal Order Tokens
-
-When both players are done all Order tokens are made public by flipping them face up.
-Any unit that players forgot to assign an Order token before they were made public are automatically assigned a Fight Order token.
+Suppressed units may only be assigned a Fight or a Reposition Order.
 
 ### Determine Starting Player
 
-After Orders are revealed both players rolls a D6 each.
+After Orders are assigned both players rolls a D6 each.
 The player with the highest roll decides who becomes the Starting and Second player for this Round.
-In case of a tie the player that did not get to decide last round does so now.
-If its the roll for the first round then ties are rerolled.
+Reroll ties.
+
+### Reveal Orders
+
+Finally all Order tokens are made public by flipping them face up.
+
+Any unit without an assigned Order token after they have been made public is automatically assigned a Fight Order token.
 
 ## Movement Phase
 
-The Starting player moves all his eligible units.
+First the Starting player moves all his eligible units.
 Then the Second player moves all his eligible units.
-Eligible units are those with Advance, Sprint or Move Orders.
+Eligible units are those with Advance, Sprint or Reposition Orders.
 See the Movement section for details on how to move units.
 
 ## Overwatch Phase
 
-During the Overwatch phase units with Overwatch Orders get to fight before other units with Fight Orders.
-First both declare targets for their units with Overwatch Orders.
+During the Overwatch phase units with Overwatch Orders get to attack before other units with Fight Orders.
+First both players declare targets for all their units with Overwatch Orders.
 Then the Starting player resolves all their attacks followed by the Second player doing the same.
 Finally eligible casualties are removed.
-See the Combat section for details on how to fight with units.
+See the Combat section for details on how to attack with units.
 
 ## Combat Phase
 
 During the Combat Phase units with Fight Orders get to attack.
 This phase is played out identically to the Overwatch phase but it applies to all units with Fight instead of Overwatch Orders.
+See the Combat section for details on how to attack with units.
 
 ## Rally Phase
 
-The Starting player takes Rally tests for all of their units with pins tokens.
-Then the Second player takes Rally tests for all of their units with pins tokens.
-A Suppression Check is then done on all units with pin tokens remaining.
+The Starting player takes Rally tests followed by a Nerve Check for all of their units with Pin markers.
+Then the Second player then does the same.
+See the Morale section for details on how to take Rally tests and do Nerve Checks.
 
 ## End Phase
 
 The players now score Victory points according to the scenario being played.
+See the Scenario section for details.
 
 # Orders
 
-Units are issued Orders at the start of the Round and dictates what actions they take during the round.
+Units are assigned Orders at the start of the Round and dictates what actions they take.
 
 ## Advance Order
 
@@ -243,23 +254,23 @@ After moving remove the Advance Order and replace it with a Fight Order.
 
 ## Overwatch Order
 
-A unit with an Overwatch Order may preform a fight during the Overwatch Phase.
-After fighting remove the Overwatch Order token.
+A unit with an Overwatch Order may attack during the Overwatch Phase.
+After attacking remove the Overwatch Order token.
 
 ## Sprint Order
 
 A unit with a Sprint Order may move during the the Movement Phase up to twice its Movement Speed.
 After moving remove the Sprint Order token.
 
-## Move Order
+## Reposition Order
 
-A unit with a Move Order may move during the the Movement Phase up to its Movement Speed.
-After moving remove the Move Order token.
+A unit with a Reposition Order may move during the the Movement Phase up to its Movement Speed.
+After moving remove the Reposition Order token.
 
 ## Fight Order
 
-A unit with a Fight Order may fight in the Combat phase.
-After fighting remove the Fight Order token.
+A unit with a Fight Order may attack in the Combat phase.
+After attacking remove the Fight Order token.
 
 # Movement
 
@@ -272,13 +283,8 @@ There have to be sufficient space for the model during the entirety of its move.
 
 ## Maintaining Cohesion & Separated Models
 
-After a unit has finished moving it has to maintain Unit Cohesion.
-
-If Unit cohesion is not maintained then the controlling player marks the least amount of models necessary in the unit as Separated so that Unit Cohesion is restored among remaining models.
-Models marked as Separated in this way may not fight and may not draw any Line of Sight during this round.
-
-Separated models are still considered part of their unit for all rules purposes but are removed as casualties at the end of the Combat Phase.
-Make sure Separated models are marked clearly; either use a special Separated marker, a Pin marker placed right on top of the model or flip the model upside down.
+A unit has to move in a way such that Unit Cohesion is maintained at the end of the move.
+If there is no possible way to move a unit so that Unit Cohesion is maintained then remove the least amount of models, chosen by the owner, until it is possible to move the unit so that Unit Cohesion is maintained.
 
 ## Moving Through Friendly Units
 
@@ -294,91 +300,85 @@ Terrain may affect movement depending on the type of terrain, see Terrain sectio
 
 # Combat
 
-Fighting during the Overwatch and Combat Phase follow the same sequence:
+Attacking during the Overwatch and Combat Phase follow the same sequence:
 
-1. _Declare All Target Units_
-2. _Resolve All Attacks_
-   1. _Check Which Models Can Fight_
-   2. _Roll Fight Test_
+1. _Declare Targets_
+2. _Resolve Attacks_
+   1. _Check Which Models Can Attack_
+   2. _Roll Combat Test_
    3. _Place Pins_
    4. _Mark Inflicted Casualties_
-3. _Remove Eligible Models As Casualties_
+3. _Remove Casualties_
 
-## Nominate Target Unit
+## Declare Targets
 
-This is done at the same time for all units fighting that phase.
-See Declare Targets subsection in the Overwatch Phase section.
-
-### Declare Targets
-
-The Starting player declares targets for each of his units with Overwatch Orders.
+The Starting player declares targets for each of his units with Overwatch or Fight Orders, depending on the Phase.
 The Second player then does the same.
 Targets are declared by verbally calling them out and placing Targeting arrows in front of each attacking unit pointing towards their target.
 Each unit may only target a single enemy unit.
-It is important that both players are fully aware of what units are being targeted.
+It is important that both players are fully aware of which units are being targeted.
 
-If a player forgets to declare a target for a unit with an Overwatch Order before dice are rolled to resolve an attack during this phase then that unit automatically targets the closest enemy unit within Effective Range that it has Line of Sight to.
+Any unit that could have had a target declared for it but wasn't before any Combat Tests had been rolled automatically target the closest visible enemy unit within Effective Range.
 
-A unit may choose to delay its attack, removing its Overwatch Order and replacing it with a Fight Order instead. Should a unit have no enemy units within Line of Sight or Effective Range then remove the Overwatch Order token.
+## Resolve Attacks
 
-### Resolve Attacks
-
-The Starting player fights with all his units with Overwatch Orders against their declared targets.
+The Starting player resolves the attacks of his units with declared targets.
 Then the Second player does the same.
-See the Fighting section for details on how to fight with units.
-After attacking with a unit remove its Overwatch Order.
-Note that casualties are not removed at this point but instead the number of casualties inflicted is marked next to the targeting arrow of the fighting unit.
-Inflicted Pins are placed immediately.
+After resolving an attack the Overwatch or Fight Order token is removed.
 
-## Check Which Models Can Fight
+### Check Which Models Can Attack
 
 Check which individual models both have Line of Sight and is within their Effective Range of at least one model in the target unit.
-Only these models are able to fight and therefore contribute dice to the Fight Test.
+Only these models are able to attack and therefore contribute dice to the Combat Test.
 
-## Roll Fight Test
+### Roll Combat Test
 
-Roll a number of dice equal to the number of models able to fight.
-Any die that is equal to or less than the Calculated Target Number is considered a success.
+Roll a number of dice equal to the number of models that were able to fight.
+The Target Number for this roll is the units Attack Power value.
 
-## Place Pin Markers
+### Place Pin Markers
 
 For each success place one Pin marker on the target unit.
 
-## Mark Inflicted Casualties
+### Mark Inflicted Casualties
 
-Any success that rolled a 1 also inflict a casualty.
+Any success that rolled a 6 also inflict a casualty.
 Mark the number of inflicted casualties next to the attacking units Targeting Arrow.
-Actual models are not removed until the end of the phase.
-Note that units may have more casualties inflicted on them than models that are actually removed later during the phase.
+Note that actual models are not removed until the end of the phase.
+Also note that units may have more casualties inflicted on them than models that are actually removed later during the phase.
 
-### Point Blank Casualties
+#### Close Quarters Combat
 
-Any success by dice contributed by models at Point Blank Range inflict a casualty, not just those that rolled a 1.
-The inflicted casualties also have to be separately marked when marking casualties.
+If the attacking unit is within 1" of the target unit then all successes inflict a casualty instead of only those that rolled 6s.
 
 ### Remove Casualties
 
-After all units with Overwatch Orders have fought it's time to remove casualties.
-Starting with the Starting player, both players now remove models from their units up to the amount of casualties they suffered during the phase.
-Only models benefiting from No Cover and that were both within Effective Range and Line of Sight of the unit causing the casualties are eligible to be removed.
-Note that Separated models are not eligible to be removed this way, they are automatically removed at the end of the Combat Phase instead.
+After all attacks have been resolved it's time to remove models as casualties.
+Both players remove models from their units up to the number of casualties they suffered during the phase.
 
-If a unit suffered casualties from multiple units then casualties has to be removed in such a way as to maximize the number of models removed.
-Should the number of available models eligible to be removed be less than the inflicted casualties then the excess is disregarded.
+For a model to be eligible to be removed as a result of an inflicted casualty it has to:
+- Be within both Effective Range and Line of Sight of one enemy model in the attacking unit
+- Benefit from No Cover from the attack
+
+If a unit has suffered casualties from multiple units then casualty removal eligibility is determined from each attacker for their respective inflicted casualties.
+The owning player choses which models, from among the eligible ones, are removed but must choose in such a way as to maximize the number of removed models. 
+
+Note that removed models still contribute to casualty removal eligibility.
+Also note that if the inflicted casualties exceed available models eligible for removal the excess is discarded.
 
 # Morale
 
 ## Rally Tests
 
 When a unit takes a Rally test the controlling player rolls a number of dice equal to the number of remaining models in the unit.
-The Target Number for this roll is the unit's Discipline value as well as any relevant modifiers applied to it.
+The Target Number for this roll is the unit's Discipline value.
 For each successful roll one Pin marker is removed from the unit.
 
 ## Nerve Check
 
-After a unit takes a Rally test it does a Nerve Check.
+After a unit takes a Rally test it preforms a Nerve Check.
 If its current total number of Pin markers equal or exceed 6 then the unit loses it's nerve and disintegrates as a functioning unit.
-The unit is removed and is considered destroyed. |
+The unit is removed and is considered destroyed.
 
 # Terrain
 
@@ -431,8 +431,8 @@ Some potential stratagems:
 - Blast; casualties inflicted by units with Blast treat models in Soft Cover as eligible to be remove.
 - Ignores Cover; casualties inflicted by this unit treat all target models as if they had No Cover.
 - Demolisher; casualties inflicted by units with Demolisher treat models in Hard Cover as eligible to be remove.
-- Move or Fight; this unit may not be issued an Advance Order.
-- Slow; this unit may not be issued a Sprint Order.
+- Move or Fight; this unit may not be assigned an Advance Order.
+- Slow; this unit may not be assigned a Sprint Order.
 - CQB Specialists; when this unit finishes a Sprint Move it replaces it's Sprint Order with a Fight Order instead of removing it.
 
 More to come...
