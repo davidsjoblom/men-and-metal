@@ -62,7 +62,6 @@ Certain Terrain features obstruct Line of Sight, see Terrain section.
 
 Distance between two models are measured in a straight line between the closest points of their respective bases.
 Distance between two units is the distance between the two closest models from each unit.
-A unit is considered to be within a specified distance of something if the distance of the closest point of its closest model is equal to or less than the specified distance.
 
 Note that the vertical position of the physical models is ignored, all models are considered to be at the same level when measuring distance.
 All distances are measured in inches.
@@ -126,9 +125,10 @@ All units have a unique Unit Name.
 Each unit has a Unit Type.
 Unit Types has no in-game effect itself but may influences how the unit interacts with other rules.
 
-There are 3 unit types:
+There are 4 unit types:
 - Infantry
 - Bikes
+- Support Weapons
 - Vehicles
 
 ## Model Number
@@ -278,13 +278,15 @@ After attacking remove the Fight Order token.
 
 When moving a unit, the controlling player moves each individual model in the unit one at a time.
 Models are moved in straight lines and may change direction at any point during the move.
-The sum of the lengths of the moved moved lines may not exceed the maximum distance the unit is allowed to move during the move.
+The sum of the distances moved may not exceed the maximum distance the unit is allowed to move during the phase.
 There have to be sufficient space for the model during the entirety of its move.
 
 ## Maintaining Cohesion & Separated Models
 
 A unit has to move in a way such that Unit Cohesion is maintained at the end of the move.
 If there is no possible way to move a unit so that Unit Cohesion is maintained then remove the least amount of models, chosen by the owner, until it is possible to move the unit so that Unit Cohesion is maintained.
+
+Note that a unit which does not move is not required to maintain Unit Cohesion.
 
 ## Moving Through Friendly Units
 
@@ -318,7 +320,7 @@ Targets are declared by verbally calling them out and placing Targeting arrows i
 Each unit may only target a single enemy unit.
 It is important that both players are fully aware of which units are being targeted.
 
-Any unit that could have had a target declared for it but wasn't before any Combat Tests had been rolled automatically target the closest visible enemy unit within Effective Range.
+Any unit that should've had a target declared for it but wasn't before the first Combat Test had been taken automatically target the closest visible enemy unit within Effective Range.
 
 ## Resolve Attacks
 
@@ -353,22 +355,22 @@ If the attacking unit is within 1" of the target unit then all successes inflict
 
 ### Remove Casualties
 
-After all attacks have been resolved it's time to remove models as casualties.
-Both players remove models from their units up to the number of casualties they suffered during the phase.
+After all attacks have been resolved, remove casualties from affected units.
+For each attacking unit, determine which models in each target unit are eligible to be removed for the casualties inflicted by that attacking unit.
+A target model is eligible to be removed if at least one attacking model from the attacking unit that inflicted the casualty:
 
-For a model to be eligible to be removed as a result of an inflicted casualty it has to:
-- Be within both Effective Range and Line of Sight of one enemy model in the attacking unit
-- Benefit from No Cover from the attack
+- is within Effective Range and Line of Sight of the target model; and
+- does not have the target model benefiting from Cover.
 
-If a unit has suffered casualties from multiple units then casualty removal eligibility is determined from each attacker for their respective inflicted casualties.
-The owning player choses which models, from among the eligible ones, are removed but must choose in such a way as to maximize the number of removed models. 
+If a unit suffered casualties from multiple attacking units, determine eligibility separately for the casualties inflicted by each attacking unit.
+The owning player chooses which eligible models are removed, but must remove as many eligible models as possible.
 
-Note that removed models still contribute to casualty removal eligibility.
-Also note that if the inflicted casualties exceed available models eligible for removal the excess is discarded.
+Models removed as casualties remain on the battlefield for the purposes of Line of Sight, Effective Range, and determining casualty eligibility until the end of the phase.
+If the number of casualties inflicted by an attacking unit exceeds the number of models eligible to be removed for those casualties, the excess casualties are discarded.
 
 # Morale
 
-## Rally Tests
+## Rally Test
 
 When a unit takes a Rally test the controlling player rolls a number of dice equal to the number of remaining models in the unit.
 The Target Number for this roll is the unit's Discipline value.
@@ -382,21 +384,29 @@ The unit is removed and is considered destroyed.
 
 # Terrain
 
-Terrain is an essential part of the Battlefield and there are many types of terrain features.
-A Terrain feature is a distinct specified area of the Battlefield with certain effects on unit movement, Line of Sight and whether they benefit from cover or not.
+A Terrain Feature is a distinct, specified area of the Battlefield with certain effects on unit movement, Line of Sight and whether models benefit from cover.
 
-| Terrain Feature   | Cover Type  | Cover Level | Line of Sight      | Infantry   | Bikes      | Vehicles   | Special  |
-| ----------------- | ----------- | ----------- | ------------------ | ---------- | ---------- | ---------- | -------- |
-| Forest            | Area        | Soft        | Obstructed Through | \-         | Difficult  | Impassable | \-       |
-| Hill              | Area        | -           | Obstructed Through | \-         | \-         | \-         | Elevated |
-| Mud               | Area        | -           | \-                 | Difficult  | Difficult  | Difficult  | \-       |
-| Deep Water        | Area        | -           | \-                 | Impassable | Impassable | Impassable | \-       |
-| Ruins             | Area        | Hard        | Obstructed Through | Difficult  | Impassable | Impassable | \-       |
-| High Wall         | Directional | Hard        | Fully Obstructed   | Impassable | Impassable | Impassable | \-       |
-| Low Wall          | Directional | Hard        | \-                 | \-         | Impassable | Difficult  | \-       |
-| High Fence        | Directional | Soft        | \-                 | Difficult  | Impassable | Impassable | \-       |
-| Hedge             | Directional | Soft        | \-                 | \-         | Difficult  | Difficult  | \-       |
-| Apartment Complex | Directional | Hard        | Fully Obstructed   | Impassable | Impassable | Impassable | Building |
+## Cover
+
+There are 3 levels of Cover; No Cover, Soft Cover and Hard Cover.
+A model gets Cover against an attack if the attacking models Line of Sight has to be drawn through a Terrain Feature that the defending model is in contact with.
+The level of Cover granted depends on the Terrain Feature.
+Any model without Soft or Hard Cover is considered having No Cover.
+
+## Line of Sight & Terrain
+
+There
+
+| Terrain Feature   | Cover | Line of Sight      | Infantry   | Bikes      | Vehicles   | Special  |
+| ----------------- | ----- | ------------------ | ---------- | ---------- | ---------- | -------- |
+| Forest            | Soft  | Obstructed Through | \-         | Difficult  | Impassable | \-       |
+| Hill              | No    | Obstructed Through | \-         | \-         | \-         | Elevated |
+| Mud               | No    | \-                 | Difficult  | Difficult  | Difficult  | \-       |
+| Deep Water        | No    | \-                 | Impassable | Impassable | Impassable | \-       |
+| Ruins             | Hard  | Obstructed Through | Difficult  | Impassable | Impassable | \-       |
+| Trench System     | Hard  | -                  | -          | Difficult  | Difficult  | \-       |
+| Perimeter Wall    | No    | Fully Obstructed   | Impassable | Impassable | Impassable | \-       |
+| Apartment Complex | Hard  | Fully Obstructed   | Impassable | Impassable | Impassable | Building |
 
 # Transports
 
