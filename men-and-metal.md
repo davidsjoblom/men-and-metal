@@ -69,17 +69,16 @@ Players are free to measure any distance at any time.
 
 ## Dice
 
-All dice used are ten-sided dice referred to as a D10.
-A number in front refers to a number of dice, e.g. 2D10 calls for two D10s to be rolled.
+All dice used are six-sided dice.
+Six-sided dice may be abbreviated as D6.
 
 ## Target Number
 
-The Target Number, TN, is the value a rolled D10 needs to equal or be less than to be considered a success.
-A roll that exceeds the TN is considered a fail.
-A TN is calculated by taking the base TN and applying the relevant modifiers to it.
+The Target Number, TN, is the value a rolled D6 needs to equal or beat to be considered a success.
+A roll that's less than the TN is considered a fail.
 
-For example: A player is required to take a test by rolling a single D10 with a base Target Number of 3 and a +1 modifier, resulting in a final TN of 4.
-Any roll resulting in either 1, 2, 3 or 4 is considered a success while any result of 5, 6, 7, 8, 9, or 10 is considered a fail.
+A TN value is written with a '+' next to it to imply that greater results also are successes.
+For example a value of '5+' means that a result of 5 or 6 is a success while a result of 1, 2, 3 or 4 is a fail.
 
 ## Tokens & Markers
 
@@ -183,9 +182,13 @@ Each Round consists of a sequence of phases:
 ### Assign Order Tokens
 
 Both players begin the Command phase by privately assigning all their units a single Order token each.
-A unit may normally be assigned either an Advance, Overwatch or Sprint Order token.
-If a unit is Suppressed then it may only be assigned either a Fight or a Move Order token instead.
+There are 5 different Orders a unit may be issued; Advance, Overwatch, Sprint, Fight and Attack.
 Order tokens are placed face down next to the unit assigned them.
+
+#### Suppressed Units
+
+Units that begin the Round with 3 or more Pin markers are considered Suppressed.
+Suppressed units may only be assigned a Fight or a Move Order.
 
 ### Reveal Order Tokens
 
@@ -194,63 +197,30 @@ Any unit that players forgot to assign an Order token before they were made publ
 
 ### Determine Starting Player
 
-After Orders are assigned both players rolls a D10 each.
-The player with the highest roll becomes the Starting player for this Round.
-In case of a tie the player that was the Second player during the previous round becomes the Starting player for this Round.
-The other player becomes the Second player for this Round.
+After Orders are revealed both players rolls a D6 each.
+The player with the highest roll decides who becomes the Starting and Second player for this Round.
+In case of a tie the player that did not get to decide last round does so now.
 If its the roll for the first round then ties are rerolled.
 
 ## Movement Phase
 
-The Starting player moves with all his eligible units.
-Then the Second player moves with all his eligible units.
+The Starting player moves all his eligible units.
+Then the Second player moves all his eligible units.
 Eligible units are those with Advance, Sprint or Move Orders.
 See the Movement section for details on how to move units.
 
 ## Overwatch Phase
 
 During the Overwatch phase units with Overwatch Orders get to fight before other units with Fight Orders.
-All attack during this phase are considered to take place simultaneously even though the players take turns resolving them.
-This means that any casualties inflicted during the phase still get to fight and are not removed until the end.
-All targets are declared before any dice are rolled.
-
-### Declare Targets
-
-The Starting player declares targets for each of his units with Overwatch Orders.
-The Second player then does the same.
-Targets are declared by verbally calling them out and placing Targeting arrows in front of each attacking unit pointing towards their target.
-Each unit may only target a single enemy unit.
-It is important that both players are fully aware of what units are being targeted.
-
-If a player forgets to declare a target for a unit with an Overwatch Order before dice are rolled to resolve an attack during this phase then that unit automatically targets the closest enemy unit within Effective Range that it has Line of Sight to.
-
-A unit may choose to delay its attack, removing its Overwatch Order and replacing it with a Fight Order instead. Should a unit have no enemy units within Line of Sight or Effective Range then remove the Overwatch Order token.
-
-### Resolve Attacks
-
-The Starting player fights with all his units with Overwatch Orders against their declared targets.
-Then the Second player does the same.
-See the Fighting section for details on how to fight with units.
-After attacking with a unit remove its Overwatch Order.
-Note that casualties are not removed at this point but instead the number of casualties inflicted is marked next to the targeting arrow of the fighting unit.
-Inflicted Pins are placed immediately.
-
-### Remove Casualties
-
-After all units with Overwatch Orders have fought it's time to remove casualties.
-Starting with the Starting player, both players now remove models from their units up to the amount of casualties they suffered during the phase.
-Only models benefiting from No Cover and that were both within Effective Range and Line of Sight of the unit causing the casualties are eligible to be removed.
-Note that Separated models are not eligible to be removed this way, they are automatically removed at the end of the Combat Phase instead.
-
-If a unit suffered casualties from multiple units then casualties has to be removed in such a way as to maximize the number of models removed.
-Should the number of available models eligible to be removed be less than the inflicted casualties then the excess is disregarded.
+First both declare targets for their units with Overwatch Orders.
+Then the Starting player resolves all their attacks followed by the Second player doing the same.
+Finally eligible casualties are removed.
+See the Combat section for details on how to fight with units.
 
 ## Combat Phase
 
 During the Combat Phase units with Fight Orders get to attack.
-This phase is played out identically to the Overwatch phase but it applies to all units with Fight instead of Orders.
-One exception is that there's no option to choose to fight in the next phase, since there is no next phase.
-Should a unit have no enemy units within Line of Sight or Effective Range then simply remove the Fight Order token.
+This phase is played out identically to the Overwatch phase but it applies to all units with Fight instead of Overwatch Orders.
 
 ## Rally Phase
 
@@ -339,6 +309,27 @@ Fighting during the Overwatch and Combat Phase follow the same sequence:
 This is done at the same time for all units fighting that phase.
 See Declare Targets subsection in the Overwatch Phase section.
 
+### Declare Targets
+
+The Starting player declares targets for each of his units with Overwatch Orders.
+The Second player then does the same.
+Targets are declared by verbally calling them out and placing Targeting arrows in front of each attacking unit pointing towards their target.
+Each unit may only target a single enemy unit.
+It is important that both players are fully aware of what units are being targeted.
+
+If a player forgets to declare a target for a unit with an Overwatch Order before dice are rolled to resolve an attack during this phase then that unit automatically targets the closest enemy unit within Effective Range that it has Line of Sight to.
+
+A unit may choose to delay its attack, removing its Overwatch Order and replacing it with a Fight Order instead. Should a unit have no enemy units within Line of Sight or Effective Range then remove the Overwatch Order token.
+
+### Resolve Attacks
+
+The Starting player fights with all his units with Overwatch Orders against their declared targets.
+Then the Second player does the same.
+See the Fighting section for details on how to fight with units.
+After attacking with a unit remove its Overwatch Order.
+Note that casualties are not removed at this point but instead the number of casualties inflicted is marked next to the targeting arrow of the fighting unit.
+Inflicted Pins are placed immediately.
+
 ## Check Which Models Can Fight
 
 Check which individual models both have Line of Sight and is within their Effective Range of at least one model in the target unit.
@@ -365,25 +356,29 @@ Note that units may have more casualties inflicted on them than models that are 
 Any success by dice contributed by models at Point Blank Range inflict a casualty, not just those that rolled a 1.
 The inflicted casualties also have to be separately marked when marking casualties.
 
+### Remove Casualties
+
+After all units with Overwatch Orders have fought it's time to remove casualties.
+Starting with the Starting player, both players now remove models from their units up to the amount of casualties they suffered during the phase.
+Only models benefiting from No Cover and that were both within Effective Range and Line of Sight of the unit causing the casualties are eligible to be removed.
+Note that Separated models are not eligible to be removed this way, they are automatically removed at the end of the Combat Phase instead.
+
+If a unit suffered casualties from multiple units then casualties has to be removed in such a way as to maximize the number of models removed.
+Should the number of available models eligible to be removed be less than the inflicted casualties then the excess is disregarded.
+
 # Morale
 
 ## Rally Tests
 
-When a unit takes a Rally test the controlling player rolls a number of D10s equal to the number of remaining models in the unit.
+When a unit takes a Rally test the controlling player rolls a number of dice equal to the number of remaining models in the unit.
 The Target Number for this roll is the unit's Discipline value as well as any relevant modifiers applied to it.
 For each successful roll one Pin marker is removed from the unit.
 
-## Suppression Check
+## Nerve Check
 
-When a unit does a Suppression Check it compares its current number of Pin markers with the Suppression Table and applies the corresponding effect.
-
-Suppression Table:
-
-| Pin Markers | Effect                                                                                     |
-| :---------: | ------------------------------------------------------------------------------------------ |
-|     0-2     | No penalty                                                                                 |
-|     3-5     | **Suppressed** - may only be issued a Move or a Fight Order in the following Command Phase |
-|     6+      | **Broken** - the unit is removed from play and considered destroyed                        |
+After a unit takes a Rally test it does a Nerve Check.
+If its current total number of Pin markers equal or exceed 6 then the unit loses it's nerve and disintegrates as a functioning unit.
+The unit is removed and is considered destroyed. |
 
 # Terrain
 
@@ -438,7 +433,7 @@ Some potential stratagems:
 - Demolisher; casualties inflicted by units with Demolisher treat models in Hard Cover as eligible to be remove.
 - Move or Fight; this unit may not be issued an Advance Order.
 - Slow; this unit may not be issued a Sprint Order.
-- Assault Specialists; when this unit finishes a Sprint Move it replaces it's Sprint Order with a Fight Order instead of removing it.
+- CQB Specialists; when this unit finishes a Sprint Move it replaces it's Sprint Order with a Fight Order instead of removing it.
 
 More to come...
 
