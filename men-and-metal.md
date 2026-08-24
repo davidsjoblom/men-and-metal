@@ -386,27 +386,51 @@ The unit is removed and is considered destroyed.
 
 A Terrain Feature is a distinct, specified area of the Battlefield with certain effects on unit movement, Line of Sight and whether models benefit from cover.
 
-## Cover
+## Terrain & Cover
 
-There are 3 levels of Cover; No Cover, Soft Cover and Hard Cover.
-A model gets Cover against an attack if the attacking models Line of Sight has to be drawn through a Terrain Feature that the defending model is in contact with.
+There are 2 types of Cover; Soft Cover and Hard Cover.
+A model gets Cover against an attack if the attacking model's Line of Sight has to be drawn through a Terrain Feature that the defending model is in contact with.
 The level of Cover granted depends on the Terrain Feature.
-Any model without Soft or Hard Cover is considered having No Cover.
+Note that some Terrain Features don't grant any Cover at all.
 
-## Line of Sight & Terrain
+## Terrain & Line of Sight
 
-There
+Terrain Features are either Clear, Obscuring or Opaque:
+- Clear Terrain does not obstruct Line of Sight. 
+- Obscuring Terrain obstructs Line of Sight drawn fully through it but not drawn to models within it.
+- Opaque Terrain obstructs all Line of Sight.
 
-| Terrain Feature   | Cover | Line of Sight      | Infantry   | Bikes      | Vehicles   | Special  |
-| ----------------- | ----- | ------------------ | ---------- | ---------- | ---------- | -------- |
-| Forest            | Soft  | Obstructed Through | \-         | Difficult  | Impassable | \-       |
-| Hill              | No    | Obstructed Through | \-         | \-         | \-         | Elevated |
-| Mud               | No    | \-                 | Difficult  | Difficult  | Difficult  | \-       |
-| Deep Water        | No    | \-                 | Impassable | Impassable | Impassable | \-       |
-| Ruins             | Hard  | Obstructed Through | Difficult  | Impassable | Impassable | \-       |
-| Trench System     | Hard  | -                  | -          | Difficult  | Difficult  | \-       |
-| Perimeter Wall    | No    | Fully Obstructed   | Impassable | Impassable | Impassable | \-       |
-| Apartment Complex | Hard  | Fully Obstructed   | Impassable | Impassable | Impassable | Building |
+## Terrain & Movement
+
+Each Unit Type considers a Terrain Feature either Open, Difficult or Impassable:
+- Open Terrain does not impede movement.
+- Difficult Terrain prevents all units with Sprint Orders from entering it and units in contact with Difficult Terrain may not be assigned a Sprint Order.
+- Impassable prevents units from entering it.
+
+## Elevated Terrain
+
+Models fully within Elevated Terrain may draw Line of Sight through intervening Unit Boundaries.
+
+## Buildings
+
+Buildings are unique Terrain Features which may be occupied by Infantry units.
+A moving Infantry Unit may occupy a building if all of its models are able to move into contact with the building.
+When a unit occupies a building it is removed from the Battlefield and the building is marked as being occupied by that unit, ideally done by placing one or more of the units models on top of the building.
+
+When drawing Line of Sight and measuring Effective Range an occupying unit chooses a single point on the building which is then used by all its models.
+When drawing Line of Sight and measuring Effective Range to an occupying unit an attacking unit chooses a single point on the building which is then used by all its models.
+
+
+| Terrain Feature   | Cover | Line of Sight | Infantry   | Bikes/Weapon Teams | Vehicles   | Special  |
+| ----------------- | ----- | ------------- | ---------- | ------------------ | ---------- | -------- |
+| Forest            | Soft  | Obscuring     | -          | Difficult          | Impassable | \-       |
+| Hill              | -     | Obscuring     | -          | \-                 | \-         | Elevated |
+| Mud               | -     | -             | Difficult  | Difficult          | Difficult  | \-       |
+| Deep Water        | -     | -             | Impassable | Impassable         | Impassable | \-       |
+| Ruins             | Hard  | Obscuring     | -          | Difficult          | Impassable | \-       |
+| Trench System     | Hard  | -             | -          | Difficult          | Difficult  | \-       |
+| Perimeter Wall    | -     | Opaque        | Impassable | Impassable         | Impassable | \-       |
+| Apartment Complex | Hard  | Opaque        | Difficult  | Impassable         | Impassable | Building |
 
 # Transports
 
