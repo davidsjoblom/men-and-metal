@@ -349,14 +349,20 @@ Mark the number of inflicted casualties next to the attacking units Targeting Ar
 Note that actual models are not removed until the end of the phase.
 Also note that units may have more casualties inflicted on them than models that are actually removed later during the phase.
 
-#### Close Quarters Combat
+#### Close Quarters
 
-If the attacking unit is within 1" of the target unit then all successes inflict a casualty instead of only those that rolled 6s.
+If an attacking Infantry or Bikes unit is within 1" of its target unit then:
+- all successes inflict a casualty instead of only those that rolled 6s; and 
+- target models may not benefit from any Cover.
+
+If the target unit has the Armored Special rule then the attacking unit gains the Armor Piercing Special rule for the duration of the attack instead of "all successes inflicts casualties".
+Note that 6s still cause casualties as normal.
 
 ### Remove Casualties
 
 After all attacks have been resolved, remove casualties from affected units.
 For each attacking unit, determine which models in each target unit are eligible to be removed for the casualties inflicted by that attacking unit.
+
 A target model is eligible to be removed if at least one attacking model from the attacking unit that inflicted the casualty:
 
 - is within Effective Range and Line of Sight of the target model; and
@@ -397,7 +403,7 @@ Note that some Terrain Features don't grant any Cover at all.
 
 Terrain Features are either Clear, Obscuring or Opaque:
 - Clear Terrain does not obstruct Line of Sight. 
-- Obscuring Terrain obstructs Line of Sight drawn fully through it but not drawn to models within it.
+- Obscuring Terrain obstructs Line of Sight drawn fully through it but not drawn to or from models in it.
 - Opaque Terrain obstructs all Line of Sight.
 
 ## Terrain & Movement
@@ -414,11 +420,36 @@ Models fully within Elevated Terrain may draw Line of Sight through intervening 
 ## Buildings
 
 Buildings are unique Terrain Features which may be occupied by Infantry units.
-A moving Infantry Unit may occupy a building if all of its models are able to move into contact with the building.
-When a unit occupies a building it is removed from the Battlefield and the building is marked as being occupied by that unit, ideally done by placing one or more of the units models on top of the building.
 
-When drawing Line of Sight and measuring Effective Range an occupying unit chooses a single point on the building which is then used by all its models.
-When drawing Line of Sight and measuring Effective Range to an occupying unit an attacking unit chooses a single point on the building which is then used by all its models.
+### Entering Buildings
+
+A moving Infantry Unit may occupy a building if each of its models could to move into contact with the building during that move.
+When a unit occupies a building, place the unit in or on top of the building.
+The exact position of occupying models is irrelevant.
+
+An occupying unit's Unit Boundary is replaced with the building's footprint until it leaves the building.
+
+### Leaving Buildings
+
+An occupying unit may leave its building when making a move.
+Move each model out of the building one at a time by placing it in contact with the building and moving it normally.
+
+### Buildings & Effective Range & Line of Sight
+
+When an attacking or occupying unit draws Line of Sight to or from a building, the unit chooses a single point on the building. An occupying model uses that point to draw Line of Sight and measure Effective Range. An attacking model that has Line of Sight to the chosen point and is within Effective Range of it has Line of Sight to and is within Effective Range of all models occupying the building.
+
+### Buildings & Cover
+
+A unit occupying a building benefits from its Cover level against attacks.
+
+### Entering Occupied Buildings & Close Quarters
+
+A unit may not enter a building occupied by a friendly unit.
+A unit may enter a building occupied by an enemy unit.
+
+Opposing units occupying the same building are considered to be within 1" of each other for the purposes of Close Quarters.
+An occupying unit and a unit outside but within 1" of the building are not considered be within 1" of each other for the purposes of Close Quarters.
+
 
 
 | Terrain Feature   | Cover | Line of Sight | Infantry   | Bikes/Weapon Teams | Vehicles   | Special  |
