@@ -317,7 +317,9 @@ Attacking during the Overwatch and Combat Phase follow the same sequence:
 The Starting player declares targets for each of his units with Overwatch or Fight Orders, depending on the Phase.
 The Second player then does the same.
 Targets are declared by verbally calling them out and placing Targeting arrows in front of each attacking unit pointing towards their target.
-Each unit may only target a single enemy unit.
+The target unit has to be in Line of Sight and withing Effective Range of the attacking unit.
+If there are no viable targets the unit does nothing and its Order token is removed.
+Each unit may only target a single enemy unit and may not choose to target nothing if there are viable targets.
 It is important that both players are fully aware of which units are being targeted.
 
 Any unit that should've had a target declared for it but wasn't before the first Combat Test had been taken automatically target the closest visible enemy unit within Effective Range.
@@ -386,7 +388,7 @@ For each successful roll one Pin marker is removed from the unit.
 
 After a unit takes a Rally test it preforms a Nerve Check.
 If its current total number of Pin markers equal or exceed 6 then the unit loses it's nerve and disintegrates as a functioning unit.
-The unit is removed and is considered destroyed.
+The unit is removed from the Battlefield.
 
 # Terrain
 
@@ -395,7 +397,7 @@ A Terrain Feature is a distinct, specified area of the Battlefield with certain 
 ## Terrain & Cover
 
 There are 2 types of Cover; Soft Cover and Hard Cover.
-A model gets Cover against an attack if the attacking model's Line of Sight has to be drawn through a Terrain Feature that the defending model is in contact with.
+A model gets Cover against an attack if all of the possible Lines of Sight that could be drawn by an attacking model passes through a Terrain Feature the target model is in contact with.
 The level of Cover granted depends on the Terrain Feature.
 Note that some Terrain Features don't grant any Cover at all.
 
@@ -403,7 +405,7 @@ Note that some Terrain Features don't grant any Cover at all.
 
 Terrain Features are either Clear, Obscuring or Opaque:
 - Clear Terrain does not obstruct Line of Sight. 
-- Obscuring Terrain obstructs Line of Sight drawn fully through it but not drawn to or from models in it.
+- Obscuring Terrain obstructs Line of Sight unless it is drawn to or from models inside it.
 - Opaque Terrain obstructs all Line of Sight.
 
 ## Terrain & Movement
@@ -416,6 +418,7 @@ Each Unit Type considers a Terrain Feature either Open, Difficult or Impassable:
 ## Elevated Terrain
 
 Models fully within Elevated Terrain may draw Line of Sight through intervening Unit Boundaries.
+Models drawing Line of Sight to models fully within Elevated Terrain may draw Line of Sight through intervening Unit Boundaries.
 
 ## Buildings
 
@@ -423,7 +426,7 @@ Buildings are unique Terrain Features which may be occupied by Infantry units.
 
 ### Entering Buildings
 
-A moving Infantry Unit may occupy a building if each of its models could to move into contact with the building during that move.
+A moving Infantry Unit may occupy a building if each of its models could move into contact with the building during that move.
 When a unit occupies a building, place the unit in or on top of the building.
 The exact position of occupying models is irrelevant.
 
@@ -448,7 +451,7 @@ A unit may not enter a building occupied by a friendly unit.
 A unit may enter a building occupied by an enemy unit.
 
 Opposing units occupying the same building are considered to be within 1" of each other for the purposes of Close Quarters.
-An occupying unit and a unit outside but within 1" of the building are not considered be within 1" of each other for the purposes of Close Quarters.
+An occupying unit and a unit outside but within 1" of the building are not considered to be within 1" of each other for the purposes of Close Quarters.
 
 
 
@@ -502,18 +505,36 @@ Some potential stratagems:
 
 More to come...
 
-# Scenarios
+# Playing the Game
 
-WIP
+A Standard game takes place between 2 opposing players each commanding an army.
+An army is built by assembling a roster of units from a Faction List whose total points value does not exceed the agreed upon points limit.
+The game takes place on The Battlefield scattered with various Terran Features.
+Each player presents their army to their opponent, explaining and answering any questions that might come up regarding rules or model representations.
+The players then go through the Battlefield Terrain Features, agreeing on what terrain each feature represents.
+Then a Scenario is either randomized, agreed upon or stipulated by the tournament schedule.
+Objective marker are placed according to the Scenario.
+
+Next the players roll-off for deployment, the winner decides which player is to be the Scenario Attacking Player and Defending Player.
+The Attacking Player now picks one of the Long Table Edges and deploys his army in the corresponding Deployment Zone.
+
+
 
 ## Battlefield Setup
-
-WIP
-
-## Deployment
 
 WIP
 
 ## Objectives
 
 WIP
+
+## Deployment
+
+There are 2 Deployment Zones on the Battlefield, one along each long table edge.
+Each Deployment Zones extend 6" from their long table edge.
+
+### Choose Deployment Zones
+
+
+
+
