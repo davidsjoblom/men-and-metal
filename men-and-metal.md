@@ -533,6 +533,8 @@ WIP
 There are 2 Deployment Zones on the Battlefield, one along each long table edge.
 Each Deployment Zones extend 6" from their long table edge.
 
+<img src="deployment-zones.svg" style="max-width: 600; width: 100%; height: auto;">
+
 ### Choose Deployment Zones
 
 
