@@ -129,9 +129,9 @@ Unit Types has no in-game effect itself but may influences how the unit interact
 
 There are 4 unit types:
 - Infantry
-- Bikes
-- Support Weapons
-- Vehicles
+- Light Motorized
+- Weapon Team
+- Vehicle
 
 ## Model Number
 
@@ -355,7 +355,7 @@ Also note that units may have more casualties inflicted on them than models that
 
 #### Close Quarters
 
-If an attacking Infantry or Bikes unit is within 1" of its target unit then:
+If an attacking Infantry or Light Motorized unit is within 1" of its target unit then:
 - all successes inflict a casualty instead of only those that rolled 6s; and 
 - target models may not benefit from any Cover.
 
@@ -429,7 +429,7 @@ Buildings are unique Terrain Features which may be occupied by Infantry units.
 ### Entering Buildings
 
 A moving Infantry Unit with an Advance or Reposition Order may occupy a building if each of its models could move into contact with the building during that move.
-When a unit occupies a building, place the unit in or on top of the building.
+When occupying a building a unit is placed in or on top of the building, ending its move.
 The exact position of occupying models is irrelevant.
 
 An occupying unit's Unit Boundary is replaced with the building's footprint until it leaves the building.
@@ -458,29 +458,57 @@ An occupying unit and a unit outside but within 1" of the building are not consi
 
 
 
-| Terrain Feature   | Cover | Line of Sight | Infantry   | Bikes/Weapon Teams | Vehicles   | Special  |
-| ----------------- | ----- | ------------- | ---------- | ------------------ | ---------- | -------- |
-| Forest            | Soft  | Obscuring     | -          | Difficult          | Impassable | \-       |
-| Hill              | -     | Obscuring     | -          | \-                 | \-         | Elevated |
-| Mud               | -     | -             | Difficult  | Difficult          | Difficult  | \-       |
-| Deep Water        | -     | -             | Impassable | Impassable         | Impassable | \-       |
-| Ruins             | Hard  | Obscuring     | -          | Difficult          | Impassable | \-       |
-| Trench System     | Hard  | -             | -          | Difficult          | Difficult  | \-       |
-| Perimeter Wall    | -     | Opaque        | Impassable | Impassable         | Impassable | \-       |
-| Apartment Complex | Hard  | Opaque        | Impassable | Impassable         | Impassable | Building |
+| Terrain Feature   | Cover | Line of Sight | Infantry   | Light Motorized/Weapon Teams | Vehicles   | Special  |
+| ----------------- | ----- | ------------- | ---------- | ---------------------------- | ---------- | -------- |
+| Forest            | Soft  | Obscuring     | -          | Difficult                    | Impassable | \-       |
+| Hill              | -     | Obscuring     | -          | \-                           | \-         | Elevated |
+| Mud               | -     | -             | Difficult  | Difficult                    | Difficult  | \-       |
+| Deep Water        | -     | -             | Impassable | Impassable                   | Impassable | \-       |
+| Ruins             | Hard  | Obscuring     | -          | Difficult                    | Impassable | \-       |
+| Trench System     | Hard  | -             | -          | Difficult                    | Difficult  | \-       |
+| Perimeter Wall    | -     | Opaque        | Impassable | Impassable                   | Impassable | \-       |
+| Apartment Complex | Hard  | Opaque        | Impassable | Impassable                   | Impassable | Building |
 
-# Transports
+# Transports(X)
 
 Some units are capable of carrying other units into battle.
-Transporting and transported units are 
+These units have the Special Rule Transports(X).
+Transports are purchased along with a unit being transported.
+
+## Transported Units
+
+Transported units are not physically present on the board until they disembark.
+They may therefore not draw any Lines of Sight nor themselves be targeted.
+They are placed to the side of the Battlefield and their transporting unit is optionally marked as carrying them.
+Transported units are still assigned Orders as normal.
+Note that transported units may not draw any Line of Sight
+
+## Transport Capacity X
+
+The X value is the Capacity of the Transport model.
+This dictates how many models can be transported, leave each transport when disembarking and are removed when a transport model is removed as a casualty.
 
 ## Entering Transports
 
-A unit may 
+Units may start the game inside transports.
+Transports may not be entered during the game.
 
 ## Leaving Transports
 
-## 
+A transported unit with an Advance or Reposition Order may disembark when making a move provided that it moves before the transporting unit moves.
+Move each model one at a time by placing it fully within the base of a chosen transport model then moving it normally, ignoring the transporting unit for the duration of the move.
+A transport model may only be chosen a number of times up to its Capacity value.
+
+Example: A unit of 3 Transport models with Capacity 2 is carrying a unit of 6 models.
+When disembarking the transported unit first moves 2 models from the first transport model, then 2 more from the second transport and the last 2 from the final transport.
+
+## Taking Pins while Transported
+
+For each Pin suffered by a Transport unit immediately place a Pin on the transported unit as well.
+
+## Transport Casualties
+
+If a transport model is removed as a casualty while transporting a unit, then immediately also remove a number of models from the transported unit equal to the transport models Capacity.
 
 # Stratagems
 
@@ -503,12 +531,14 @@ Some potential stratagems:
 
 # Special Rules
 
+- Active Protection; the unit may ignore one suffered casualty per round chosen by the owner.
 - Armored; attacks targeting this unit without the Armor Piercing rule cannot inflict any casualties and they only inflict Pins on rolls of 1 regardless of Attack Power.
 - Transport; may carry another unit into battle.
 - All-Terrain; not slowed down in difficult terrain.
 - Tough; able to absorb several casualties before being actually removed.
 - Leader
-- Large Target; this unit can never benefit from Soft or Hard Cover.
+- Big Target; this unit can never benefit from Soft or Hard Cover.
+- Large Caliber; when this unit takes a Combat test it adds 1 die to the roll and then discards the lowest result.
 - Armor piercing; capable of inflicting casualties on Armored units as well as full pins.
 - Blast; casualties inflicted by units with Blast treat models in Soft Cover as eligible to be remove.
 - Ignores Cover; casualties inflicted by this unit treat all target models as if they had No Cover.
