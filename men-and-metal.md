@@ -1,5 +1,7 @@
 Men & Metal - Wargame Rules
 
+<img src="sample models.jpg" style="max-width: 2693; width: 100%; height: auto; border-radius: 25px;">
+
 # General Principles
 
 ## Models
@@ -166,23 +168,23 @@ The game is played over a number of Rounds.
 The standard game length is 6 Rounds.
 Each Round consists of a sequence of phases:
 
-1. Command phase
+1. Command Phase
    1. Assign Orders
    2. Determine Starting player for the Round
    3. Reveal Orders
-2. Movement phase
-3. Overwatch phase
+2. Movement Phase
+3. Overwatch Phase
    1. Declare targets
    2. Resolve attacks
    3. Remove casualties
-4. Combat phase
+4. Fight Phase
    1. Declare targets
    2. Resolve attacks
    3. Remove casualties
-5. Rally phase
+5. Rally Phase
    1. Take Rally tests
    2. Checks suppression
-6. End phase
+6. End Phase
    1. Score Victory Points
    2. Check Victory Conditions
 
@@ -226,9 +228,9 @@ Then the Starting player resolves all their attacks followed by the Second playe
 Finally eligible casualties are removed.
 See the Combat section for details on how to attack with units.
 
-## Combat Phase
+## Fight Phase
 
-During the Combat Phase units with Fight Orders get to attack.
+During the Fight Phase units with Fight Orders get to attack.
 This phase is played out identically to the Overwatch phase but it applies to all units with Fight instead of Overwatch Orders.
 See the Combat section for details on how to attack with units.
 
@@ -269,7 +271,7 @@ After moving remove the Reposition Order token.
 
 ## Fight Order
 
-A unit with a Fight Order may attack in the Combat phase.
+A unit with a Fight Order may attack in the Fight Phase.
 After attacking remove the Fight Order token.
 
 # Movement
@@ -302,7 +304,7 @@ Terrain may affect movement depending on the type of terrain, see Terrain sectio
 
 # Combat
 
-Attacking during the Overwatch and Combat Phase follow the same sequence:
+Attacking during the Overwatch and Fight Phase follow the same sequence:
 
 1. _Declare Targets_
 2. _Resolve Attacks_
@@ -426,7 +428,7 @@ Buildings are unique Terrain Features which may be occupied by Infantry units.
 
 ### Entering Buildings
 
-A moving Infantry Unit may occupy a building if each of its models could move into contact with the building during that move.
+A moving Infantry Unit with an Advance or Reposition Order may occupy a building if each of its models could move into contact with the building during that move.
 When a unit occupies a building, place the unit in or on top of the building.
 The exact position of occupying models is irrelevant.
 
@@ -434,12 +436,13 @@ An occupying unit's Unit Boundary is replaced with the building's footprint unti
 
 ### Leaving Buildings
 
-An occupying unit may leave its building when making a move.
-Move each model out of the building one at a time by placing it in contact with the building and moving it normally.
+An occupying unit with an Advance or Reposition Order may leave its building when making a move.
+Move each model one at a time by placing it fully within the footprint of the building then moving it normally, ignoring the building for the duration of the move.
+Note that all models have to end their move in a legal position and the unit must maintain Unit Cohesion as normal.
 
-### Buildings & Effective Range & Line of Sight
+### Buildings, Effective Range & Line of Sight
 
-When an attacking or occupying unit draws Line of Sight to or from a building, the unit chooses a single point on the building. An occupying model uses that point to draw Line of Sight and measure Effective Range. An attacking model that has Line of Sight to the chosen point and is within Effective Range of it has Line of Sight to and is within Effective Range of all models occupying the building.
+When an attacking or occupying unit draws Line of Sight to or from a building, the unit chooses a single point on the building. An occupying model uses that point to draw Line of Sight and measure Effective Range. An attacking model that both has line of Sight to and is within Effective Range of the chosen point is considered to have Line of Sight to and be within Effective Range of all models occupying the building.
 
 ### Buildings & Cover
 
@@ -464,13 +467,24 @@ An occupying unit and a unit outside but within 1" of the building are not consi
 | Ruins             | Hard  | Obscuring     | -          | Difficult          | Impassable | \-       |
 | Trench System     | Hard  | -             | -          | Difficult          | Difficult  | \-       |
 | Perimeter Wall    | -     | Opaque        | Impassable | Impassable         | Impassable | \-       |
-| Apartment Complex | Hard  | Opaque        | Difficult  | Impassable         | Impassable | Building |
+| Apartment Complex | Hard  | Opaque        | Impassable | Impassable         | Impassable | Building |
 
 # Transports
 
-WIP
+Some units are capable of carrying other units into battle.
+Transporting and transported units are 
+
+## Entering Transports
+
+A unit may 
+
+## Leaving Transports
+
+## 
 
 # Stratagems
+
+WIP
 
 Stratagems are one-use abilities players can use during the game.
 These range from temporary unit boosts to supporting assets such as fire missions.
@@ -508,8 +522,9 @@ More to come...
 # Playing the Game
 
 A Standard game takes place between 2 opposing players each commanding an army.
-An army is built by assembling a roster of units from a Faction List whose total points value does not exceed the agreed upon points limit.
-The game takes place on The Battlefield scattered with various Terran Features.
+Each player builds their army by assembling a roster of units from a Faction List whose total points value does not exceed the agreed upon points limit.
+The game takes place on The Battlefield which is scattered with various Terran Features.
+
 Each player presents their army to their opponent, explaining and answering any questions that might come up regarding rules or model representations.
 The players then go through the Battlefield Terrain Features, agreeing on what terrain each feature represents.
 Then a Scenario is either randomized, agreed upon or stipulated by the tournament schedule.
@@ -517,8 +532,13 @@ Objective marker are placed according to the Scenario.
 
 Next the players roll-off for deployment, the winner decides which player is to be the Scenario Attacking Player and Defending Player.
 The Attacking Player now picks one of the Long Table Edges and deploys his army in the corresponding Deployment Zone.
+Then the Defending Player deploys his army in the other Deployment Zone.
+Now the first round begins.
 
-
+The players play 6 rounds.
+After the final round is finished then tally up Victory Points scored by the players.
+The Victory Point difference is converted into Battle Points.
+The player with the most Battle Points wins the match!
 
 ## Battlefield Setup
 
