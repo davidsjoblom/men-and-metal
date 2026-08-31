@@ -574,9 +574,15 @@ The player with the most Battle Points wins the match!
 
 WIP
 
+The board should be largely covered in various Terrain Features. 
+
 ## Objectives
 
 WIP
+
+Nominate 3 Terrain Features accessible to Infantry roughly along the Center Line as Key Terrain.
+A Key Terrain Feature is controlled by a player if that player has a Scoring unit in contact with it and the opposing player has no Scoring unit in contact with it.
+During the End Phase the player with most Key Terrain Features controlled gains 1 Victory Point.
 
 ## Deployment
 
