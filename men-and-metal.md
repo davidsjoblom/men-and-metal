@@ -1,6 +1,6 @@
-Men & Metal - Wargame Rules
-
 <img src="sample models.jpg" style="max-width: 2693; width: 100%; height: auto; border-radius: 25px;">
+
+**Men & Metal - Wargame Rules**
 
 # General Principles
 
@@ -90,7 +90,7 @@ An exception to this are Objective markers which may not be moved.
 ### Order tokens
 
 Order tokens have a blank, identical side while the other side features one of the Orders.
-These are used to privately assign Orders by placing them face down next to a unit and then flipped up to reveal which Order was assigned.
+These are used to privately issue Orders by placing them face down next to a unit and then flipped up to reveal which Order was issued.
 All Order tokens are removed or replaced after the unit has carried them out, depending on the order.
 
 ### Pin markers
@@ -149,7 +149,11 @@ A unit's Movement Speed determines how much distance it can move during a round.
 
 A unit's Effective Range is the maximum distance that the unit can effectively attack.
 
-## Attack Power
+Some units also have a minimum Effective Range.
+This is denoted with a span, e.g. 12"-36".
+The first value is the minimum Effective Range and any target model that is fully within that value is considered to be out of Effective Range.
+
+## Fire Power
 
 The Target Number the unit needs to roll when attacking.
 
@@ -169,7 +173,7 @@ The standard game length is 6 Rounds.
 Each Round consists of a sequence of phases:
 
 1. Command Phase
-   1. Assign Orders
+   1. Issue Orders
    2. Determine Starting player for the Round
    3. Reveal Orders
 2. Movement Phase
@@ -190,20 +194,20 @@ Each Round consists of a sequence of phases:
 
 ## Command Phase
 
-### Assign Orders
+### Issue Orders
 
-Both players begin the Command phase by privately assigning all their units a single Order token each.
-There are 5 different Orders a unit may be assigned; Advance, Overwatch, Sprint, Fight and Reposition.
-Order tokens are placed face down next to the unit assigned them.
+Both players begin the Command phase by privately issuing all their units a single Order token each.
+There are 5 different Orders a unit may be issued; Advance, Overwatch, Sprint, Fight and Reposition.
+Order tokens are placed face down next to the unit issued them.
 
 #### Suppressed Units
 
-Units that begin the Round with 3 or more Pin markers are considered Suppressed.
-Suppressed units may only be assigned a Fight or a Reposition Order.
+Units that begin the Round with 3 or more Pin markers are considered Suppressed until the end of the Round.
+Suppressed units may only be issued a Fight or a Reposition Order.
 
 ### Determine Starting Player
 
-After Orders are assigned both players rolls a D6 each.
+After Orders are issued both players rolls a D6 each.
 The player with the highest roll decides who becomes the Starting and Second player for this Round.
 Reroll ties.
 
@@ -211,7 +215,7 @@ Reroll ties.
 
 Finally all Order tokens are made public by flipping them face up.
 
-Any unit without an assigned Order token after they have been made public is automatically assigned a Fight Order token.
+Any unit without an issued Order token after they have been made public is automatically issued a Fight Order token.
 
 ## Movement Phase
 
@@ -247,7 +251,7 @@ See the Scenario section for details.
 
 # Orders
 
-Units are assigned Orders at the start of the Round and dictates what actions they take.
+Units are issued Orders at the start of the Round and dictates what actions they take.
 
 ## Advance Order
 
@@ -340,7 +344,7 @@ Only these models are able to attack and therefore contribute dice to the Combat
 ### Roll Combat Test
 
 Roll a number of dice equal to the number of models that were able to fight.
-The Target Number for this roll is the units Attack Power value.
+The Target Number for this roll is the units Fire Power value.
 
 ### Place Pin Markers
 
@@ -356,6 +360,7 @@ Also note that units may have more casualties inflicted on them than models that
 #### Close Quarters
 
 If an attacking Infantry or Light Motorized unit is within 1" of its target unit then:
+- it's considered to be in Close Quarters with the target unit; and
 - all successes inflict a casualty instead of only those that rolled 6s; and 
 - target models may not benefit from any Cover.
 
@@ -414,7 +419,7 @@ Terrain Features are either Clear, Obscuring or Opaque:
 
 Each Unit Type considers a Terrain Feature either Open, Difficult or Impassable:
 - Open Terrain does not impede movement.
-- Difficult Terrain prevents all units with Sprint Orders from entering it and units in contact with Difficult Terrain may not be assigned a Sprint Order.
+- Difficult Terrain prevents all units with Sprint Orders from entering it and units in contact with Difficult Terrain may not be issued a Sprint Order.
 - Impassable prevents units from entering it.
 
 ## Elevated Terrain
@@ -428,17 +433,21 @@ Buildings are unique Terrain Features which may be occupied by Infantry units.
 
 ### Entering Buildings
 
-A moving Infantry Unit with an Advance or Reposition Order may occupy a building if each of its models could move into contact with the building during that move.
-When occupying a building a unit is placed in or on top of the building, ending its move.
+A moving Infantry Unit with an Advance or Reposition Order may enter a building if each of its models could move into contact with the building during that move.
+Note that models don't have to be able to end its move in contact with the building.
+When occupying a building a unit is placed in or on top of the building.
 The exact position of occupying models is irrelevant.
 
 An occupying unit's Unit Boundary is replaced with the building's footprint until it leaves the building.
+A unit may not enter and leave a building during the same move.
 
 ### Leaving Buildings
 
 An occupying unit with an Advance or Reposition Order may leave its building when making a move.
-Move each model one at a time by placing it fully within the footprint of the building then moving it normally, ignoring the building for the duration of the move.
-Note that all models have to end their move in a legal position and the unit must maintain Unit Cohesion as normal.
+When leaving the building, move each model as if it started its move with its base fully within the footprint of the building.
+A unit may not leave and enter a building during the same move.
+Note that models don't need to be physically placed on top of the building.
+Move each leaving model one at a time.
 
 ### Buildings, Effective Range & Line of Sight
 
@@ -474,14 +483,14 @@ An occupying unit and a unit outside but within 1" of the building are not consi
 Some units are capable of carrying other units into battle.
 These units have the Special Rule Transports(X).
 Transports are purchased along with a unit being transported.
+A unit that purchases a transporting unit starts the game inside it as a transported unit.
 
 ## Transported Units
 
 Transported units are not physically present on the board until they disembark.
 They may therefore not draw any Lines of Sight nor themselves be targeted.
 They are placed to the side of the Battlefield and their transporting unit is optionally marked as carrying them.
-Transported units are still assigned Orders as normal.
-Note that transported units may not draw any Line of Sight
+Transported units are still issued Orders as normal.
 
 ## Transport Capacity X
 
@@ -495,8 +504,11 @@ Transports may not be entered during the game.
 
 ## Leaving Transports
 
-A transported unit with an Advance or Reposition Order may disembark when making a move provided that it moves before the transporting unit moves.
-Move each model one at a time by placing it fully within the base of a chosen transport model then moving it normally, ignoring the transporting unit for the duration of the move.
+A transported unit may not disembark if its transporting unit has already moved this round.
+A transported unit with an Advance or Reposition Order may disembark when making a move.
+When disembarking, move each model as if it started its move with its base fully within the base of a chosen transport model.
+Note that models don't need to be physically placed on top of the transport model.
+Move each disembarking model one at a time.
 A transport model may only be chosen a number of times up to its Capacity value.
 
 Example: A unit of 3 Transport models with Capacity 2 is carrying a unit of 6 models.
@@ -506,13 +518,13 @@ When disembarking the transported unit first moves 2 models from the first trans
 
 For each Pin suffered by a Transport unit immediately place a Pin on the transported unit as well.
 
-## Transport Casualties
+## Casualties while Transporting
 
 If a transport model is removed as a casualty while transporting a unit, then immediately also remove a number of models from the transported unit equal to the transport models Capacity.
 
 # Stratagems
 
-WIP
+WIP (will not be implemented until after first rounds of playtesting)
 
 Stratagems are one-use abilities players can use during the game.
 These range from temporary unit boosts to supporting assets such as fire missions.
@@ -528,26 +540,29 @@ Some potential stratagems:
 - Artillery fire mission
 - Strafing run
 - Remote mines
+- ISR Drone
+- Loitering Munition
 
 # Special Rules
 
 - Active Protection; the unit may ignore one suffered casualty per round chosen by the owner.
-- Armored; attacks targeting this unit without the Armor Piercing rule cannot inflict any casualties and they only inflict Pins on rolls of 1 regardless of Attack Power.
-- Transport; may carry another unit into battle.
-- All-Terrain; not slowed down in difficult terrain.
+- Armored; attacks targeting this unit without the Armor Piercing rule cannot inflict any casualties and they only inflict Pins on rolls of 1 regardless of Fire Power.
+- Transport(X); the unit may carry another unit into battle and each model has Capacity X.
+- Assault Ramp; a transported unit may disembark with a Sprint Order.
+- All-Terrain; Vehicle units treat terrain is if they were Light Mechanized.
 - Tough; able to absorb several casualties before being actually removed.
-- Leader
 - Big Target; this unit can never benefit from Soft or Hard Cover.
 - Large Caliber; when this unit takes a Combat test it adds 1 die to the roll and then discards the lowest result.
 - Armor piercing; capable of inflicting casualties on Armored units as well as full pins.
 - Blast; casualties inflicted by units with Blast treat models in Soft Cover as eligible to be remove.
+- Indirect; this unit can and may only draw Line of Sight from other friendly non-Suppressed models with the Spotter Special rule.
 - Ignores Cover; casualties inflicted by this unit treat all target models as if they had No Cover.
 - Demolisher; casualties inflicted by units with Demolisher treat models in Hard Cover as eligible to be remove.
-- Move or Fight; this unit may not be assigned an Advance Order.
-- Slow; this unit may not be assigned a Sprint Order.
-- CQB Specialists; when this unit finishes a Sprint Move it replaces it's Sprint Order with a Fight Order instead of removing it.
-
-More to come...
+- Move or Fight; this unit may not be issued an Advance Order.
+- Slow; this unit may not be issued a Sprint Order.
+- Spotter; units with Indirect may draw Line of Sight from this unit's models.
+- Assault; when this unit finishes a Sprint Move in Close Quarters, it replaces it's Sprint Order with a Fight Order instead of removing it. It may also enter buildings when issued a Sprint Order if the building is occupied by an enemy unit.
+- QRF; this unit may chose not to deploy regularly but be kept in reserve. It may enter the battlefield from any point along the long table edge in the owners deployment zone when making a move during Round 2 and onwards.
 
 # Playing the Game
 
@@ -572,13 +587,12 @@ The player with the most Battle Points wins the match!
 
 ## Battlefield Setup
 
-WIP
-
+The players either set the board up together, follow a pre-determined map layout or have a third-party set it up for them.
 The board should be largely covered in various Terrain Features. 
+It should be difficult to draw Line of Sight across the whole board.
+Deployment zones can be kept relatively open.
 
 ## Objectives
-
-WIP
 
 Nominate 3 Terrain Features accessible to Infantry roughly along the Center Line as Key Terrain.
 A Key Terrain Feature is controlled by a player if that player has a Scoring unit in contact with it and the opposing player has no Scoring unit in contact with it.
@@ -592,6 +606,24 @@ Each Deployment Zones extend 6" from their long table edge.
 <img src="deployment-zones.svg" style="max-width: 600; width: 100%; height: auto;">
 
 ### Choose Deployment Zones
+
+## Battle Points
+
+For tournament purposes the game result can be normalized by converting the Victory Point difference into Battle Points.
+
+| **VP Difference** | **Winner** | **Loser** |
+| :---------------: | :--------: | :-------: |
+|        0-1        |     10     |    10     |
+|        2-3        |     11     |     9     |
+|        4-5        |     12     |     8     |
+|        6-7        |     13     |     7     |
+|        8-9        |     14     |     6     |
+|       10-11       |     15     |     5     |
+|       12-13       |     16     |     4     |
+|       14-15       |     17     |     3     |
+|       16-17       |     18     |     2     |
+|       18-19       |     19     |     1     |
+|        20+        |     20     |     0     |
 
 
 
