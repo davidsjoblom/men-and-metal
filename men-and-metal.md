@@ -181,8 +181,8 @@ Each Round consists of a sequence of phases:
    2. Resolve attacks
    3. Remove casualties
 5. Rally Phase
-   1. Take Rally tests
-   2. Check Nerve
+   1. Rally Tests
+   2. Nerve Checks
 6. End Phase
    1. Score Victory Points
 
@@ -356,52 +356,59 @@ Also note that units can have more casualties inflicted on them than the unit ha
 
 #### Close Quarters
 
-If an attacking Infantry or Light Motorized unit is within 1" of its target unit then:
-- it's considered to be in Close Quarters with the target unit; and
-- all successes inflict a casualty instead of only those that rolled 6s; and 
-- target models may not benefit from any Cover.
+Opposing units within 1" are in Close Quarters with each other.
+An attacking unit in Close Quarters with its target gains the following benefits:
+- every successful Combat Test roll inflict a casualty, instead of only those that rolled a 6; and
+- target models may not benefit from Cover.
 
-If the target unit has the Armored Special rule then the attacking unit gains the Armor Piercing Special rule for the duration of the attack instead of "all successes inflicts casualties".
-Note that 6s still cause casualties as normal.
+If the target unit has the Special Rule Armored then the attacker gains the following benefits instead:
+- the attacker gains the Special Rule Armor Piercing for the duration of the attack; and
+- target models may not benefit from Cover.
+
+Vehicle and Weapon Team units do not gain these benefits.
 
 ### Remove Casualties
 
 After all attacks have been resolved, remove casualties from affected units.
 For each attacking unit, determine which models in each target unit are eligible to be removed for the casualties inflicted by that attacking unit.
 
-A target model is eligible to be removed if at least one attacking model from the attacking unit that inflicted the casualty:
-
+A target model is eligible to be removed if at least one attacking model from the unit that inflicted the casualty:
 - is within Effective Range and Line of Sight of the target model; and
-- does not have the target model benefiting from Cover.
+- the target model does not benefit from Cover against that attacking model.
 
 If a unit suffered casualties from multiple attacking units, determine eligibility separately for the casualties inflicted by each attacking unit.
-The owning player chooses which eligible models are removed, but must remove as many eligible models as possible.
+The owning player chooses which eligible models are removed, but must remove the maximum number possible, up to the number of casualties inflicted.
 
-Models removed as casualties remain on the battlefield for the purposes of Line of Sight, Effective Range, and determining casualty eligibility until the end of the phase.
+After being removed as casualties, models continue to count as occupying their previous position for the purposes of Line of Sight, Effective Range, and determining casualty eligibility until the end of the phase.
 If the number of casualties inflicted by an attacking unit exceeds the number of models eligible to be removed for those casualties, the excess casualties are discarded.
 
 # Morale
 
 ## Rally Test
 
-When a unit takes a Rally test the controlling player rolls a number of dice equal to the number of remaining models in the unit.
+When a unit takes a Rally Test, the controlling player rolls a number of dice equal to the number of remaining models in the unit.
 The Target Number for this roll is the unit's Discipline value.
-For each successful roll one Pin marker is removed from the unit.
+For each successful roll, remove one Pin marker from the unit.
 
 ## Nerve Check
 
-After a unit takes a Rally test it preforms a Nerve Check.
-If its current total number of Pin markers equal or exceed 6 then the unit loses it's nerve and disintegrates as a functioning unit.
-The unit is removed from the Battlefield.
+After takes a Rally Test, if the unit has Pins remaining, it performs a Nerve Check:  
+If the unit has 6 or more Pins it loses it's nerve and is removed from the Battlefield.
 
 # Terrain
 
-A Terrain Feature is a distinct, specified area of the Battlefield with certain effects on unit movement, Line of Sight and whether models benefit from cover.
+A Terrain Feature is a distinct, specified area of the Battlefield with defined effects on unit movement, Line of Sight and Cover.
+This area is called the footprint of the Terrain Feature.
+
+A model is inside a Terrain Feature if any part of its base overlaps the Terrain Feature's footprint.
+Note that a model does not have to have it's entire base in contact with a Terrain Feature in order to be inside it.
+Also note that a model can be in contact with a Terrain Feature without being inside it.
 
 ## Terrain & Cover
 
 There are 2 types of Cover; Soft Cover and Hard Cover.
-A model gets Cover against an attack if all of the possible Lines of Sight that could be drawn by an attacking model passes through a Terrain Feature the target model is in contact with.
+A target model benefits from Cover against an attacking model if all possible Lines of Sight passes through a Terrain Feature that the target model is inside of.
+
 The level of Cover granted depends on the Terrain Feature.
 Note that some Terrain Features don't grant any Cover at all.
 
@@ -409,20 +416,22 @@ Note that some Terrain Features don't grant any Cover at all.
 
 Terrain Features are either Clear, Obscuring or Opaque:
 - Clear Terrain does not obstruct Line of Sight. 
-- Obscuring Terrain obstructs Line of Sight unless it is drawn to or from models inside it.
+- Obscuring Terrain obstructs Line of Sight drawn completely through it, but not Line of Sight drawn to or from a model inside it.
 - Opaque Terrain obstructs all Line of Sight.
 
 ## Terrain & Movement
 
 Each Unit Type considers a Terrain Feature either Open, Difficult or Impassable:
 - Open Terrain does not impede movement.
-- Difficult Terrain prevents all units with Sprint Orders from entering it and units in contact with Difficult Terrain may not be issued a Sprint Order.
-- Impassable prevents units from entering it.
+- Difficult Terrain prevents units with Sprint Orders from entering and moving through it, and units with models inside Difficult Terrain may not be issued a Sprint Order.
+- Impassable prevents units from entering and moving through it.
 
 ## Elevated Terrain
 
-Models fully within Elevated Terrain may draw Line of Sight through intervening Unit Boundaries.
-Models drawing Line of Sight to models fully within Elevated Terrain may draw Line of Sight through intervening Unit Boundaries.
+Models inside Elevated Terrain may draw Line of Sight through intervening Unit Boundaries.
+Models drawing Line of Sight to models inside Elevated Terrain may draw Line of Sight through intervening Unit Boundaries.
+
+
 
 ## Buildings
 
@@ -431,7 +440,7 @@ Buildings are unique Terrain Features which may be occupied by Infantry units.
 ### Entering Buildings
 
 A moving Infantry Unit with an Advance or Reposition Order may enter a building if each of its models could move into contact with the building during that move.
-Note that models don't have to be able to end its move in contact with the building.
+Note that models don't have to be able to end their move in contact with the building.
 When occupying a building a unit is placed in or on top of the building.
 The exact position of occupying models is irrelevant.
 
@@ -441,7 +450,7 @@ A unit may not enter and leave a building during the same move.
 ### Leaving Buildings
 
 An occupying unit with an Advance or Reposition Order may leave its building when making a move.
-When leaving the building, move each model as if it started its move with its base fully within the footprint of the building.
+When leaving a building, move each model as if it started its move with its base fully inside the footprint of the building, exact starting position chosen by the controlling player.
 A unit may not leave and enter a building during the same move.
 Note that models don't need to be physically placed on top of the building.
 Move each leaving model one at a time.
@@ -466,13 +475,13 @@ An occupying unit and a unit outside but within 1" of the building are not consi
 
 | Terrain Feature   | Cover | Line of Sight | Infantry   | Light Motorized/Weapon Teams | Vehicles   | Special  |
 | ----------------- | ----- | ------------- | ---------- | ---------------------------- | ---------- | -------- |
-| Forest            | Soft  | Obscuring     | -          | Difficult                    | Impassable | \-       |
-| Hill              | -     | Obscuring     | -          | \-                           | \-         | Elevated |
-| Mud               | -     | -             | Difficult  | Difficult                    | Difficult  | \-       |
-| Deep Water        | -     | -             | Impassable | Impassable                   | Impassable | \-       |
-| Ruins             | Hard  | Obscuring     | -          | Difficult                    | Impassable | \-       |
-| Trench System     | Hard  | -             | -          | Difficult                    | Difficult  | \-       |
-| Perimeter Wall    | -     | Opaque        | Impassable | Impassable                   | Impassable | \-       |
+| Forest            | Soft  | Obscuring     | Open       | Difficult                    | Impassable |          |
+| Hill              | No    | Obscuring     | Open       | Open                         | Open       | Elevated |
+| Mud               | No    | Clear         | Difficult  | Difficult                    | Difficult  |          |
+| Deep Water        | No    | Clear         | Impassable | Impassable                   | Impassable |          |
+| Ruins             | Hard  | Obscuring     | Open       | Difficult                    | Impassable |          |
+| Trench System     | Hard  | Clear         | Open       | Difficult                    | Difficult  |          |
+| Perimeter Wall    | No    | Opaque        | Impassable | Impassable                   | Impassable |          |
 | Apartment Complex | Hard  | Opaque        | Impassable | Impassable                   | Impassable | Building |
 
 # Transports(X)
@@ -521,7 +530,7 @@ If a transport model is removed as a casualty while transporting a unit, then im
 
 # Stratagems
 
-WIP (will not be implemented until after first rounds of playtesting)
+WIP (will not be implemented until after first rounds of play-testing)
 
 Stratagems are one-use abilities players can use during the game.
 These range from temporary unit boosts to supporting assets such as fire missions.
@@ -539,6 +548,9 @@ Some potential stratagems:
 - Remote mines
 - ISR Drone
 - Loitering Munition
+- Combat Stimulants
+- Bonus Pay
+- Defection
 
 # Special Rules
 
