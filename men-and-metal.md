@@ -457,7 +457,12 @@ Move each leaving model one at a time.
 
 ### Buildings, Effective Range & Line of Sight
 
-When an attacking or occupying unit draws Line of Sight to or from a building, the unit chooses a single point on the building. An occupying model uses that point to draw Line of Sight and measure Effective Range. An attacking model that both has line of Sight to and is within Effective Range of the chosen point is considered to have Line of Sight to and be within Effective Range of all models occupying the building.
+Whenever an occupying unit measures Effective Range and draws Line of Sight it chooses a single point on the building footprint.
+All occupying models then use this point for both Effective Range and Line of Sight.
+A new point may be chosen each time a measurement is taken.
+
+Whenever an attacking model targets an occupied building it chooses a single point on the building footprint.
+If the model is within Effective Range and has Line of Sight to that point then the model is considered to be within Effective Range and have Line of Sight to all occupying models in the building.
 
 ### Buildings & Cover
 
@@ -488,20 +493,22 @@ An occupying unit and a unit outside but within 1" of the building are not consi
 
 Some units are capable of carrying other units into battle.
 These units have the Special Rule Transports(X).
-Transports are purchased along with a unit being transported.
-A unit that purchases a transporting unit starts the game inside it as a transported unit.
+Transport units are assigned to the unit they will carry in the Army List.
+A unit assigned a Transport unit start the game inside it as a transported unit.
+A transport unit may only carry a single transported unit.
 
 ## Transported Units
 
 Transported units are not physically present on the board until they disembark.
 They may therefore not draw any Lines of Sight nor themselves be targeted.
-They are placed to the side of the Battlefield and their transporting unit is optionally marked as carrying them.
+They are placed to the side of the Battlefield and their transporting unit is marked as carrying them.
 Transported units are still issued Orders as normal.
 
 ## Transport Capacity X
 
-The X value is the Capacity of the Transport model.
-This dictates how many models can be transported, leave each transport when disembarking and are removed when a transport model is removed as a casualty.
+The X value is the Transport Capacity of a single Transport model.
+The Total Transport Capacity of a Transport Unit is the product of its Model Number and Transport Capacity.
+A transported unit's Model Number may not exceed its transports Total Transport Capacity.
 
 ## Entering Transports
 
@@ -512,10 +519,11 @@ Transports may not be entered during the game.
 
 A transported unit may not disembark if its transporting unit has already moved this round.
 A transported unit with an Advance or Reposition Order may disembark when making a move.
-When disembarking, move each model as if it started its move with its base fully within the base of a chosen transport model.
+
+When a transported unit disembarks, each of its models leaves a transport model, spread evenly among the available transport models.
+Move each model as if it started its move concentric with the transport model it is disembarking from.
 Note that models don't need to be physically placed on top of the transport model.
 Move each disembarking model one at a time.
-A transport model may only be chosen a number of times up to its Capacity value.
 
 Example: A unit of 3 Transport models with Capacity 2 is carrying a unit of 6 models.
 When disembarking the transported unit first moves 2 models from the first transport model, then 2 more from the second transport and the last 2 from the final transport.
