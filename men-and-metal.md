@@ -520,8 +520,10 @@ Transports may not be entered during the game.
 A transported unit may not disembark if its transporting unit has already moved this round.
 A transported unit with an Advance or Reposition Order may disembark when making a move.
 
-When a transported unit disembarks, each of its models leaves a transport model, spread evenly among the available transport models.
-Move each model as if it started its move concentric with the transport model it is disembarking from.
+When a transported unit disembarks, each of its models leaves a transport model, spread as evenly as possible among the available transport models.
+The controlling player decides which transports to use in case the disembarking models cannot be spread evenly.
+
+Move each model as if it started its move with its center on the transport model's center it is disembarking from.
 Note that models don't need to be physically placed on top of the transport model.
 Move each disembarking model one at a time.
 
@@ -534,7 +536,7 @@ For each Pin suffered by a Transport unit immediately place a Pin on the transpo
 
 ## Casualties while Transporting
 
-If a transport model is removed as a casualty while transporting a unit, then immediately also remove a number of models from the transported unit equal to the transport models Capacity.
+If a transport model is removed as a casualty while transporting a unit, then immediately also remove a number of models from the transported unit up to the transport models Capacity.
 
 # Stratagems
 
