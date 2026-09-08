@@ -7,14 +7,14 @@
 ## Models
 
 Models are physical representations of soldiers and war machines.
-A model consists of a base and one or more miniature mounted on top of that base.
+A model consists of a base and one or more miniatures mounted on top of that base.
 The base is a flat round plate of a specific dimension depending on the unit being represented.
-The miniature, or miniatures, visually indicate which unit is being represented.
+The miniatures visually indicate which unit is being represented.
 
 ## Model Interpretation
 
 A model is always assumed to occupy the whole area of its base regardless of the physical miniatures mounted on it.
-The miniatures is purely decorative and only the base is used for Line of Sight and measuring distances.
+The miniatures are purely decorative and only the base is used for Line of Sight and measuring distances.
 
 ## Units
 
@@ -26,7 +26,7 @@ Infantry and Light Motorized are typically organized into units of 6 while Vehic
 A unit is considered to maintain Unit Cohesion when both of these conditions are fulfilled:
 
 - All models are within 1" of at least one other model in the unit
-- All models are connected through an unbroken chain of other models in the unit
+- All models are connected through an unbroken chain of models in the unit
 
 ## Unit Boundary
 
@@ -46,8 +46,8 @@ The standard board size is 48" by 72".
 
 ### Battlefield Interpretation
 
-For all rules purposes The Battlefield is considered a 2D plane.
-The physical height or models and terrain is ignored.
+For all rules purposes, the Battlefield is considered a 2D plane.
+The physical height of models and terrain is ignored.
 
 ## Line of Sight
 
@@ -57,17 +57,17 @@ A unit is considered to have Line of Sight to another unit if at least one model
 Line of Sight to or from a model is never obstructed by other models in its unit.
 
 The Unit Boundary of an intervening friendly or enemy unit obstructs Line of Sight.
-Certain Terrain features obstruct Line of Sight, see Terrain section.
+Certain Terrain Features obstruct Line of Sight, see Terrain section.
 
 ## Measuring Distance
 
-Distance between two models are measured in a straight line between the closest points of their respective bases.
+Distance between two models is measured in a straight line between the closest points of their respective bases.
 Distance between two units is the distance between their two closest models.
 
 A model is within a certain distance of another model if the distance between them is equal to or less than that certain distance.
 A unit is within a certain distance of another unit if one of its models is within that distance of one model in the other unit.
 
-Note that the vertical position of the physical models is ignored, all models are considered to be at the same level.
+Note that the vertical position of the physical models is ignored; all models are considered to be at the same level.
 All distances are measured in inches.
 Players are free to measure any distance at any time.
 
@@ -303,7 +303,7 @@ Terrain may affect movement depending on the type of terrain, see Terrain sectio
 
 # Combat
 
-Attacking during the Overwatch and Fight Phases follow the same sequence:
+Attacking during the Overwatch and Fight Phases follows the same sequence:
 
 1. _Declare Targets_
 2. _Resolve Attacks_
@@ -325,17 +325,18 @@ Each unit may only target one enemy unit.
 If there's at least one viable target, a unit has to declare a target.
 It is important that both players are fully aware of which units are being targeted.
 
-If a unit that is required to declare a target but has not done so before the first Combat test is made, automatically targets its closest viable target.
+If a unit that is required to declare a target but has not done so before the first Combat test is made, it automatically targets its closest viable target.
+If there are 2 equally close viable targets then randomize which the unit targets.
 
 ## Resolve Attacks
 
 The Starting player resolves the attacks of their units with declared targets.
 Then the Second player does the same.
-After resolving an attack, remove the unit's the Overwatch or Fight Order token.
+After resolving an attack, remove the unit's Overwatch or Fight Order token.
 
 ### Check Which Models Can Attack
 
-Determine which models in the attacking unit have Line of Sight to and is within Effective Range of at least one model in the target unit.
+Determine which models in the attacking unit have Line of Sight to and are within Effective Range of at least one model in the target unit.
 Only those models can attack.
 
 ### Roll Combat Test
@@ -349,21 +350,20 @@ For each success, place one Pin marker on the target unit.
 
 ### Mark Inflicted Casualties
 
-Any success that rolled a 6 also inflict a casualty.
+Each success that rolled a 6 also inflicts a casualty.
 Mark the number of casualties inflicted next to the attacking unit's Targeting Arrow.
+A unit may have more casualties inflicted on it than it has models.
 Note that actual models are not removed until the end of the phase.
-Also note that units can have more casualties inflicted on them than the unit has models.
 
 #### Close Quarters
 
-Opposing units within 1" are in Close Quarters with each other.
+Opposing units within 1" of each other are in Close Quarters.
 An attacking unit in Close Quarters with its target gains the following benefits:
-- every successful Combat Test roll inflict a casualty, instead of only those that rolled a 6; and
+- each success inflicts a casualty, instead of only those that rolled a 6; and
 - target models may not benefit from Cover.
 
-If the target unit has the Special Rule Armored then the attacker gains the following benefits instead:
-- the attacker gains the Special Rule Armor Piercing for the duration of the attack; and
-- target models may not benefit from Cover.
+If the target unit has the Special Rule Armored then the attacker gains the Special Rule Armour Piercing instead of of causing casualties on every success.
+Note that successes that rolled a 6 still cause a casualty as normal.
 
 Vehicle and Weapon Team units do not gain these benefits.
 
@@ -374,10 +374,10 @@ For each attacking unit, determine which models in each target unit are eligible
 
 A target model is eligible to be removed if at least one attacking model from the unit that inflicted the casualty:
 - is within Effective Range and Line of Sight of the target model; and
-- the target model does not benefit from Cover against that attacking model.
+- the target model does not benefit from Cover against the attacking model.
 
 If a unit suffered casualties from multiple attacking units, determine eligibility separately for the casualties inflicted by each attacking unit.
-The owning player chooses which eligible models are removed, but must remove the maximum number possible, up to the number of casualties inflicted.
+The owning player chooses which eligible models are removed, but must remove as many eligible models as possible, up to the number of casualties inflicted.
 
 After being removed as casualties, models continue to count as occupying their previous position for the purposes of Line of Sight, Effective Range, and determining casualty eligibility until the end of the phase.
 If the number of casualties inflicted by an attacking unit exceeds the number of models eligible to be removed for those casualties, the excess casualties are discarded.
@@ -392,12 +392,12 @@ For each successful roll, remove one Pin marker from the unit.
 
 ## Nerve Check
 
-After takes a Rally Test, if the unit has Pins remaining, it performs a Nerve Check:  
-If the unit has 6 or more Pins it loses it's nerve and is removed from the Battlefield.
+After a unit takes a Rally Test, it performs a Nerve Check:  
+If the unit has 6 or more Pins it is removed from the Battlefield.
 
 # Terrain
 
-A Terrain Feature is a distinct, specified area of the Battlefield with defined effects on unit movement, Line of Sight and Cover.
+A Terrain Feature is a distinct, specified area of the Battlefield with defined effects on unit movement, Line of Sight and whether models benefit from Cover.
 This area is called the footprint of the Terrain Feature.
 
 A model is inside a Terrain Feature if any part of its base overlaps the Terrain Feature's footprint.
@@ -406,8 +406,8 @@ Also note that a model can be in contact with a Terrain Feature without being in
 
 ## Terrain & Cover
 
-There are 2 types of Cover; Soft Cover and Hard Cover.
-A target model benefits from Cover against an attacking model if all possible Lines of Sight passes through a Terrain Feature that the target model is inside of.
+There are 2 types of Cover: Soft Cover and Hard Cover.
+A target model benefits from Cover against an attacking model if all possible Line of Sight from the attacking model to the target model passes through a Terrain Feature that the target model is inside.
 
 The level of Cover granted depends on the Terrain Feature.
 Note that some Terrain Features don't grant any Cover at all.
@@ -430,8 +430,6 @@ Each Unit Type considers a Terrain Feature either Open, Difficult or Impassable:
 
 Models inside Elevated Terrain may draw Line of Sight through intervening Unit Boundaries.
 Models drawing Line of Sight to models inside Elevated Terrain may draw Line of Sight through intervening Unit Boundaries.
-
-
 
 ## Buildings
 
@@ -481,8 +479,10 @@ An occupying unit and a unit outside but within 1" of the building are not consi
 | Terrain Feature   | Cover | Line of Sight | Infantry   | Light Motorized/Weapon Teams | Vehicles   | Special  |
 | ----------------- | ----- | ------------- | ---------- | ---------------------------- | ---------- | -------- |
 | Forest            | Soft  | Obscuring     | Open       | Difficult                    | Impassable |          |
+| Field             | Soft  | Clear         | Open       | Open                         | Difficult  |          |
+| Broken Ground     | Soft  | Clear         | Open       | Difficult                    | Impassable |          |
 | Hill              | No    | Obscuring     | Open       | Open                         | Open       | Elevated |
-| Mud               | No    | Clear         | Difficult  | Difficult                    | Difficult  |          |
+| Mud               | No    | Clear         | Difficult  | Difficult                    | Impassable |          |
 | Deep Water        | No    | Clear         | Impassable | Impassable                   | Impassable |          |
 | Ruins             | Hard  | Obscuring     | Open       | Difficult                    | Impassable |          |
 | Trench System     | Hard  | Clear         | Open       | Difficult                    | Difficult  |          |
@@ -565,10 +565,10 @@ Some potential stratagems:
 # Special Rules
 
 - Active Protection; the unit may ignore one suffered casualty per round chosen by the owner.
-- Armored; attacks targeting this unit without the Armor Piercing rule cannot inflict any casualties and they only inflict Pins on rolls of 1 regardless of Fire Power.
+- Armored; attacks targeting this unit without the Armor Piercing rule cannot inflict any casualties and they only inflict Pins on rolls of 6 regardless of Fire Power.
 - Transport(X); the unit may carry another unit into battle and each model has Capacity X.
 - Assault Ramp; a transported unit may disembark with a Sprint Order.
-- All-Terrain; Vehicle units treat terrain is if they were Light Mechanized.
+- All-Terrain; this unit treats Terrain Features is if it had the Unit Type Light Mechanized.
 - Tough; able to absorb several casualties before being actually removed.
 - Big Target; this unit can never benefit from Soft or Hard Cover.
 - Large Caliber; when this unit takes a Combat test it adds 1 die to the roll and then discards the lowest result.
@@ -587,7 +587,7 @@ Some potential stratagems:
 
 A Standard game takes place between 2 opposing players each commanding an army.
 Each player builds their army by assembling a roster of units from a Faction List whose total points value does not exceed the agreed upon points limit.
-The game takes place on The Battlefield which is scattered with various Terran Features.
+The game takes place on the Battlefield which is scattered with various Terran Features.
 
 Each player presents their army to their opponent, explaining and answering any questions that might come up regarding rules or model representations.
 The players then go through the Battlefield Terrain Features, agreeing on what terrain each feature represents.
