@@ -144,10 +144,6 @@ A unit's Movement Speed determines how fast a unit moves.
 
 A unit's Effective Range is the maximum distance that the unit can effectively attack.
 
-Some units also have a Minimum Effective Range.
-This is denoted with a span, such as 12"-36", where the first value is the Minimum Effective Range.
-Any target model with its entire base within Minimum Effective Range is considered out of Effective Range.
-
 ## Fire Power
 
 Fire Power is the Target Number the unit needs to roll when attacking.
@@ -489,10 +485,10 @@ An occupying unit and a unit outside but within 1" of the building are not consi
 | Perimeter Wall    | No    | Opaque        | Impassable | Impassable                   | Impassable |          |
 | Apartment Complex | Hard  | Opaque        | Impassable | Impassable                   | Impassable | Building |
 
-# Transports(X)
+# Transport(X)
 
 Some units are capable of carrying other units into battle.
-These units have the Special Rule Transports(X).
+These units have the Special Rule Transport(X).
 Transport units are assigned to the unit they will carry in the Army List.
 A unit assigned a Transport unit start the game inside it as a transported unit.
 A transport unit may only carry a single transported unit.
@@ -530,13 +526,61 @@ Move each disembarking model one at a time.
 Example: A unit of 3 Transport models with Capacity 2 is carrying a unit of 6 models.
 When disembarking the transported unit first moves 2 models from the first transport model, then 2 more from the second transport and the last 2 from the final transport.
 
-## Taking Pins while Transported
+## Pinning During Transport
 
-For each Pin suffered by a Transport unit immediately place a Pin on the transported unit as well.
+Transport units take and remove Pins as normal.
+Transported units do not take or remove Pins while being transported.
+Instead, immediately after a transported unit has disembarked, place an equal amount of Pin markers on the disembarking unit as the transport unit it disembarked from has.
 
-## Casualties while Transporting
+## Suppression During Transport
+
+If a transporting unit is Suppressed, then any transported unit inside it is also Suppressed until the end of the Round.
+
+## Casualties During Transport
 
 If a transport model is removed as a casualty while transporting a unit, then immediately also remove a number of models from the transported unit up to the transport models Capacity.
+
+# Indirect(X)
+
+Some units are capable of attacking targets they cannot see themselves through coordination with friendly Spotter units.
+These units have the Special Rule Indirect(X).
+
+## Minimum Effective Range X
+
+The X value is the Indirect unit's Minimum Effective Range.
+Any target model with its entire base within Minimum Effective Range of an Indirect model is considered out of Effective Range.
+
+## Indirect Line of Sight
+
+Units with Indirect can and may only draw Line of Sight from friendly non-Suppressed units.
+When declaring targets, chose a single eligible Spotter unit, the Indirect unit will use this unit for Line of Sight purposes until the end of the round.
+Each eligible Spotter unit may only be chosen by a single Indirect unit per Round.
+
+## Indirect vs Moving Targets
+
+An Indirect unit targeting an enemy unit which has moved this Round:
+- only inflicts Pins on rolls of 6, regardless of Fire Power; and
+- does not inflict any casualties.
+
+# Special Rules
+
+- Active Protection; once per round before removing models, a single casualty suffered may be ignored, chosen by the controlling player.
+- All-Terrain; this unit treats Terrain Features, for movement purposes, as if it had the Unit Type Light Mechanized.
+- Armored; attacks targeting this unit without the Armor Piercing rule cannot inflict any casualties and they only inflict Pins on rolls of 6 regardless of Fire Power.
+- Armor piercing; capable of inflicting casualties on Armored units as well as full pins.
+- Assault; when this unit finishes a Sprint Move in Close Quarters, it replaces it's Sprint Order with a Fight Order instead of removing it. It may also enter buildings when issued a Sprint Order if the building is occupied by an enemy unit.
+- Assault Ramp; a transported unit may disembark with a Sprint Order.
+- ATGM; Once per game when declaring targets, this unit may choose to gain Armor Piercing until the end of the round.
+- Big Target; this unit can never benefit from Soft or Hard Cover.
+- Blast; models may not benefit from Soft Cover against an attacking model with Blast.
+- Demolisher; models may not benefit from Hard Cover against an attacking model with Demolisher.
+- Infiltrators; this unit may be deployed in the owner's Infiltrators Deployment Zone.
+- Tough; able to absorb several casualties before being actually removed.
+- Large Caliber; when this unit takes a Combat test it adds 1 die to the roll and then discards the lowest result.
+- Move or Fight; this unit may not be issued an Advance Order.
+- Slow; this unit may not be issued a Sprint Order.
+- Spotter; units with Indirect may draw Line of Sight from this unit's models.
+- QRF; this unit may chose not to deploy regularly but be kept in reserve. It may enter the battlefield from any point along the long table edge in the owner's deployment zone when making a move during Round 2 and onwards.
 
 # Stratagems
 
@@ -561,27 +605,8 @@ Some potential stratagems:
 - Combat Stimulants
 - Bonus Pay
 - Defection
-
-# Special Rules
-
-- Active Protection; the unit may ignore one suffered casualty per round chosen by the owner.
-- Armored; attacks targeting this unit without the Armor Piercing rule cannot inflict any casualties and they only inflict Pins on rolls of 6 regardless of Fire Power.
-- Transport(X); the unit may carry another unit into battle and each model has Capacity X.
-- Assault Ramp; a transported unit may disembark with a Sprint Order.
-- All-Terrain; this unit treats Terrain Features is if it had the Unit Type Light Mechanized.
-- Tough; able to absorb several casualties before being actually removed.
-- Big Target; this unit can never benefit from Soft or Hard Cover.
-- Large Caliber; when this unit takes a Combat test it adds 1 die to the roll and then discards the lowest result.
-- Armor piercing; capable of inflicting casualties on Armored units as well as full pins.
-- Blast; casualties inflicted by units with Blast treat models in Soft Cover as eligible to be remove.
-- Indirect; this unit can and may only draw Line of Sight from other friendly non-Suppressed models with the Spotter Special rule.
-- Ignores Cover; casualties inflicted by this unit treat all target models as if they had No Cover.
-- Demolisher; casualties inflicted by units with Demolisher treat models in Hard Cover as eligible to be remove.
-- Move or Fight; this unit may not be issued an Advance Order.
-- Slow; this unit may not be issued a Sprint Order.
-- Spotter; units with Indirect may draw Line of Sight from this unit's models.
-- Assault; when this unit finishes a Sprint Move in Close Quarters, it replaces it's Sprint Order with a Fight Order instead of removing it. It may also enter buildings when issued a Sprint Order if the building is occupied by an enemy unit.
-- QRF; this unit may chose not to deploy regularly but be kept in reserve. It may enter the battlefield from any point along the long table edge in the owners deployment zone when making a move during Round 2 and onwards.
+- Ramming Speed
+- Ultimate Sacrifice
 
 # Playing the Game
 
@@ -614,13 +639,12 @@ Deployment zones can be kept relatively open.
 ## Objectives
 
 Nominate 3 Terrain Features accessible to Infantry roughly along the Center Line as Key Terrain.
-A Key Terrain Feature is controlled by a player if that player has a Scoring unit in contact with it and the opposing player has no Scoring unit in contact with it.
-During the End Phase the player with most Key Terrain Features controlled gains 1 Victory Point.
+A Key Terrain Feature is controlled by a player if that player has a Scoring unit inside with it and the opposing player has no unit, Scoring or not, inside with it.
+During the End Phase of each Round after the first, each player scores 2 Victory Points per Key Terrain Feature they control.
 
 ## Deployment
 
 There are 2 Deployment Zones on the Battlefield, one along each long table edge.
-Each Deployment Zones extend 6" from their long table edge.
 
 <img src="deployment-zones.svg" style="max-width: 600; width: 100%; height: auto;">
 
