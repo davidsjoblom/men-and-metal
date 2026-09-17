@@ -22,4 +22,26 @@
 | BTR-80               | Vehicle     | 40mm      | 3            | 7"             | 6+           | 12"             | 6+         | Armored, Transport(2)                                                  | -           |
 | Mobilized Volunteers | Infantry    | 30mm      | 6            | 4"             | 6+           | 12"             | 6+         | Scoring                                                                | 75pts       |
 | T-72 Platoon         | Vehicle     | 45mm      | 3            | 6"             | 4+           | 24"             | 5+         | All-Terrain, Armored, Armor Piercing, Blast, Demolisher, Large Calibre | 150pts      |
-| Mortar Platoon       | Weapon Team | 30mm      | 3            | 4"             | 4+           | 36"         | 6+         | Blast, Indirect(12"), Move or Fire                                                                | 75pts       |
+| Mortar Platoon       | Weapon Team | 30mm      | 3            | 4"             | 4+           | 36"             | 6+         | Blast, Indirect(12"), Move or Fire                                     | 75pts       |
+
+# Plague
+
+| Unit Name       | Unit Type | Base Size | Model Number | Movement Speed | Attack Power | Effective Range | Discipline | Special Rules                                           | Points Cost |
+| --------------- | --------- | --------- | ------------ | -------------- | ------------ | --------------- | ---------- | ------------------------------------------------------- | ----------- |
+| Plague Troopers | Infantry  | 30mm      | 6            | 5"             | 5+           | 12"             | 5+         | Scoring, Spotter                                        | 100pts      |
+| Plague Mule     | Vehicle   | 30mm      | 3            | 8"             | 6+           | 12"             | 6+         | Armored, Transport(2)                                   | 50pts       |
+| Plague Brutes   | Infantry  | 30mm      | 6            | 6"             | 4+           | 4"              | 4+         | Scoring, Assault                                        | 120pts      |
+| Plague Bombard  | Vehicle   | 30mm      | 3            | 4"             | 4+           | 30"             | 6+         | Armored, Indirect(12"), Blast, Demolisher, Move or Fire | 100pts      |
+| Plague Zombies  | Infantry  | 30mm      | 6            | 4"             | 5+           | 4"              | 5+         | Infiltrators                                            | 80pts       |
+
+# Enforcers
+
+| Unit Name         | Unit Type       | Base Size | Model Number | Movement Speed | Attack Power | Effective Range | Discipline | Special Rules                                                              | Points Cost |
+| ----------------- | --------------- | --------- | ------------ | -------------- | ------------ | --------------- | ---------- | -------------------------------------------------------------------------- | ----------- |
+| Operatives        | Infantry        | 30mm      | 6            | 4"             | 5+           | 15"             | 4+         | ATGM, Scoring, Spotter                                                     | 120pts      |
+| Assault Enforcers | Infantry        | 30mm      | 6            | 5"             | 4+           | 4"              | 4+         | Assault, Scoring, Spotter                                                  | 120pts      |
+| Peacekeepers      | Infantry        | 30mm      | 6            | 4"             | 4+           | 12"             | 4+         | Active Protection, Scoring, Spotter                                        | 150pts      |
+| Jet Bikes         | Light Motorized | 30mm      | 6            | 8"             | 5+           | 8"              | 4+         | Assault, Spotter                                                           |
+| Panther APC       | Vehicle         | 30mm      | 3            | 8"             | 6+           | 12"             | 6+         | All-Terrain, Armored, Transport(2)                                         | 60pts       |
+| Grav-Tank         | Vehicle         | 30mm      | 3            | 6"             | 4+           | 18"             | 5+         | Active Protection, All-Terrain, Armored, Blast, Armor Piercing, Demolisher | 150pts      |
+| Punisher Mortar   | Vehicle         | 30mm      | 3            | 6"             | 4+           | 24"             | 6+         | All-Terrain, Armored, Blast, Indirect(12")                                 | 100pts      |

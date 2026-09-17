@@ -568,14 +568,12 @@ An Indirect unit targeting an enemy unit which has moved this Round:
 - All-Terrain; this unit treats Terrain Features, for movement purposes, as if it had the Unit Type Light Mechanized.
 - Armored; attacks targeting this unit without the Armor Piercing rule cannot inflict any casualties and they only inflict Pins on rolls of 6 regardless of Fire Power.
 - Armor piercing; capable of inflicting casualties on Armored units as well as full pins.
-- Assault; when this unit finishes a Sprint Move in Close Quarters, it replaces it's Sprint Order with a Fight Order instead of removing it. It may also enter buildings when issued a Sprint Order if the building is occupied by an enemy unit.
-- Assault Ramp; a transported unit may disembark with a Sprint Order.
+- Assault; when this unit finishes a Sprint Move, it replaces it's Sprint Order with a Fight Order instead of removing it.
 - ATGM; Once per game when declaring targets, this unit may choose to gain Armor Piercing until the end of the round.
 - Big Target; this unit can never benefit from Soft or Hard Cover.
 - Blast; models may not benefit from Soft Cover against an attacking model with Blast.
 - Demolisher; models may not benefit from Hard Cover against an attacking model with Demolisher.
 - Infiltrators; this unit may be deployed in the owner's Infiltrators Deployment Zone.
-- Tough; able to absorb several casualties before being actually removed.
 - Large Caliber; when this unit takes a Combat test it adds 1 die to the roll and then discards the lowest result.
 - Move or Fight; this unit may not be issued an Advance Order.
 - Slow; this unit may not be issued a Sprint Order.
@@ -638,9 +636,23 @@ Deployment zones can be kept relatively open.
 
 ## Objectives
 
+### Take and Hold
+
 Nominate 3 Terrain Features accessible to Infantry roughly along the Center Line as Key Terrain.
 A Key Terrain Feature is controlled by a player if that player has a Scoring unit inside with it and the opposing player has no unit, Scoring or not, inside with it.
 During the End Phase of each Round after the first, each player scores 2 Victory Points per Key Terrain Feature they control.
+
+### Extraction
+
+Randomly assign 6 terrain features an Extraction token each.
+5 of the Extraction tokens are blank while the 6th is the actual objective.
+
+A Scoring unit inside a Terrain Feature with an Extraction token may collect the token as long as there is no other enemy unit inside the Terrain Feature.
+The token is now belongs to the unit which collected it and follows it.
+
+### Breakthrough
+
+Player with the most units within the enemy deployment zone at the end of the game.
 
 ## Deployment
 
