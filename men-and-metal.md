@@ -123,6 +123,7 @@ Each unit has a Unit Type.
 Unit Types dictates how a unit interacts with different Terrain Features.
 
 There are 4 unit types:
+
 - Infantry
 - Light Motorized
 - Weapon Team
@@ -355,6 +356,7 @@ Note that actual models are not removed until the end of the phase.
 
 Opposing units within 1" of each other are in Close Quarters.
 An attacking unit in Close Quarters with its target gains the following benefits:
+
 - each success inflicts a casualty, instead of only those that rolled a 6; and
 - target models may not benefit from Cover.
 
@@ -369,6 +371,7 @@ After all attacks have been resolved, remove casualties from affected units.
 For each attacking unit, determine which models in each target unit are eligible to be removed for the casualties inflicted by that attacking unit.
 
 A target model is eligible to be removed if at least one attacking model from the unit that inflicted the casualty:
+
 - is within Effective Range and Line of Sight of the target model; and
 - the target model does not benefit from Cover against the attacking model.
 
@@ -411,13 +414,15 @@ Note that some Terrain Features don't grant any Cover at all.
 ## Terrain & Line of Sight
 
 Terrain Features are either Clear, Obscuring or Opaque:
-- Clear Terrain does not obstruct Line of Sight. 
+
+- Clear Terrain does not obstruct Line of Sight.
 - Obscuring Terrain obstructs Line of Sight drawn completely through it, but not Line of Sight drawn to or from a model inside it.
 - Opaque Terrain obstructs all Line of Sight.
 
 ## Terrain & Movement
 
 Each Unit Type considers a Terrain Feature either Open, Difficult or Impassable:
+
 - Open Terrain does not impede movement.
 - Difficult Terrain prevents units with Sprint Orders from entering and moving through it, and units with models inside Difficult Terrain may not be issued a Sprint Order.
 - Impassable prevents units from entering and moving through it.
@@ -470,7 +475,9 @@ A unit may enter a building occupied by an enemy unit.
 Opposing units occupying the same building are considered to be within 1" of each other for the purposes of Close Quarters.
 An occupying unit and a unit outside but within 1" of the building are not considered to be within 1" of each other for the purposes of Close Quarters.
 
+### Targeting Contested Buildings
 
+An enemy unit inside a contested building may only be targeted by the friendly unit inside the same building.
 
 | Terrain Feature   | Cover | Line of Sight | Infantry   | Light Motorized/Weapon Teams | Vehicles   | Special  |
 | ----------------- | ----- | ------------- | ---------- | ---------------------------- | ---------- | -------- |
@@ -559,8 +566,13 @@ Each eligible Spotter unit may only be chosen by a single Indirect unit per Roun
 ## Indirect vs Moving Targets
 
 An Indirect unit targeting an enemy unit which has moved this Round:
+
 - only inflicts Pins on rolls of 6, regardless of Fire Power; and
 - does not inflict any casualties.
+
+## Indirect vs Units in Close Quarters
+
+Indirect units may not target an enemy unit in Close Quarters with a friendly unit.
 
 # Special Rules
 
@@ -630,7 +642,7 @@ The player with the most Battle Points wins the match!
 ## Battlefield Setup
 
 The players either set the board up together, follow a pre-determined map layout or have a third-party set it up for them.
-The board should be largely covered in various Terrain Features. 
+The board should be largely covered in various Terrain Features.
 It should be difficult to draw Line of Sight across the whole board.
 Deployment zones can be kept relatively open.
 
@@ -679,7 +691,3 @@ For tournament purposes the game result can be normalized by converting the Vict
 |       16-17       |     18     |     2     |
 |       18-19       |     19     |     1     |
 |        20+        |     20     |     0     |
-
-
-
-
