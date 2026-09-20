@@ -122,12 +122,18 @@ All units have a unique Unit Name.
 Each unit has a Unit Type.
 Unit Types dictates how a unit interacts with different Terrain Features.
 
-There are 4 unit types:
+There are 4 Unit Types:
 
 - Infantry
 - Light Motorized
 - Weapon Team
 - Vehicle
+
+### Armored Units
+
+Unit Types can be Armored, e.g. Armored Vehicle.
+If a unit has an Armored Unit Type it is an Armored unit.
+
 
 ## Model Number
 
@@ -188,13 +194,13 @@ Each Round consists of a sequence of phases:
 ### Issue Orders
 
 Both players begin the Command phase by secretly issuing all their units a single Order token each.
-There are 5 different Orders a unit may be issued; Advance, Overwatch, Sprint, Fight and Reposition.
+There are 6 different Orders a unit may be issued; Advance, Overwatch, Sprint, Fight, Reposition and Regroup.
 Order tokens are placed face down next to the unit issued them.
 
 #### Suppressed Units
 
 Units that begin the Round with 3 or more Pin markers are considered Suppressed until the end of the Round.
-Suppressed units may only be issued a Fight or a Reposition Order.
+Suppressed units may only be issued a Fight, Reposition or Regroup Order.
 
 ### Determine Starting Player
 
@@ -231,8 +237,8 @@ See the Combat section for details on how to attack with units.
 
 ## Rally Phase
 
-The Starting player takes Rally tests for all their units with Pin makers.
-Then they preforms Nerve Checks for all units with Pins remaining.
+Units with Regroup Orders take Rally tests, starting with the Starting Player.
+Then Nerve Checks are preformed for all units with Pins remaining.
 The Second player then does the same.
 See the Morale section for details on how to take Rally tests and do Nerve Checks.
 
@@ -269,6 +275,11 @@ After moving remove the Reposition Order token.
 
 A unit with a Fight Order token may attack in the Fight Phase.
 After attacking remove the Fight Order token.
+
+## Regroup Order
+
+A unit with a Regroup Order may take a Rally Test in the Rally Phase.
+After taking the Rally Test remove the Regroup Order.
 
 # Movement
 

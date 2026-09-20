@@ -11,6 +11,20 @@
 | Scout Cars     | Vehicle   | 35mm      | 3            | 8"             | 5+           | 18"             | 5+         | Armored, Spotter, Recon                     |
 | M113           | Vehicle   | 30mm      | 3            | 6"             | 6+           | 12"             | 6+         | All-Terrain, Transport                      |
 
+## Change to split Fire Power
+
+| Unit Name              | Unit Type       | Base Size | Model Number | Movement Speed | Suppression /Lethality | vs Armored | Effective Range | Discipline | Special Rules                      |
+| ---------------------- | --------------- | --------- | ------------ | -------------- | ---------------------- | ---------- | --------------- | ---------- | ---------------------------------- |
+| Rifle Platoon          | Infantry        | 30mm      | 6            | 4"             | 5+/6+                  | 6+/-       | 12"             | 5+         | Scoring, Single-use AT, Spotter    |
+| IFV Platoon            | Armored Vehicle | 40mm      | 3            | 6"             | 5+/6+                  | 5+/6+      | 18"             | 6+         | All-Terrain, Blast, Transport(2)   |
+| Tank Platoon           | Armored Vehicle | 45mm      | 3            | 6"             | 3+/5+                  | 3+/5+      | 24"             | 6+         | All-Terrain, Blast, Demolisher     |
+| Wheeled APC            | Armored Vehicle | 40mm      | 3            | 7"             | 6+/6+                  | 6+/-       | 12"             | 6+         | Transport(2)                       |
+| Light Truck            | Vehicle         | 30mm      | 3            | 8"             | -/-                    | -/-        | -               | -          | Transport(2)                       |
+| Mortar Teams           | Weapon Team     | 30mm      | 3            | 3"             | 4+/6+                  | 5+/-       | 36"             | 6+         | Blast, Indirect(12"), Move or Fire |
+| Recoilless Rifle Teams | Weapon Team     | 30mm      | 3            | 3"             | 4+/6+                  | 5+/6+      | 18"             | 6+         | Blast, Move or Fire                |
+| ATGM Teams             | Weapon Team     | 30mm      | 3            | 3"             | 6+/-                   | 5+/5+      | 24"             | 6+         | Move or Fire                       |
+
+
 # Russia
 
 | Unit Name            | Unit Type   | Base Size | Model Number | Movement Speed | Attack Power | Effective Range | Discipline | Special Rules                                                          | Points Cost |
