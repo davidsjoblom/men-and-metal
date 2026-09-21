@@ -80,8 +80,10 @@ All dice used are six-sided dice, abbreviated as D6.
 The Target Number, TN, is the value a rolled D6 needs to equal or beat to be a success.
 A roll that's less than the TN is a failure.
 
-TN values are written with a '+' next to them to imply that greater results also are successes.
+Target Number values are written with a '+' next to them to imply that greater results also are successes.
 For example '5+' means that a result of 5 or 6 is a success while a result of 1, 2, 3 or 4 is a fail.
+
+A Target Number of '-' means a roll is an automatic failure.
 
 ## Tokens & Markers
 
@@ -90,7 +92,7 @@ Tokens and markers have no in-game presence and may be moved around to make spac
 
 ### Order tokens
 
-Order tokens have a blank, identical side while the other side features one of the Orders.
+Order tokens have one blank side and one side featuring one of 6 different Orders.
 These are used to secretly issue Orders by placing them face down next to a unit and then flipped up to reveal which Order was issued.
 All Order tokens are removed or replaced after the unit has carried them out, depending on the order.
 
@@ -133,7 +135,7 @@ There are 4 Unit Types:
 
 Unit Types can be Armored, e.g. Armored Vehicle.
 If a unit has an Armored Unit Type it is an Armored unit.
-
+These units follow all the same rules as their non-armored equivalents.
 
 ## Model Number
 
@@ -151,9 +153,15 @@ A unit's Movement Speed determines how fast a unit moves.
 
 A unit's Effective Range is the maximum distance that the unit can effectively attack.
 
-## Fire Power
+## Suppression and Lethality
 
-Fire Power is the Target Number the unit needs to roll when attacking.
+Suppression is the Target Number to inflict a Pin on a Combat Test roll.
+Lethality is the Target Number to inflict a casualty on a Combat Test roll.
+These are separated by a '/' with the first value being Suppression and the second Lethality.
+
+## Suppression and Lethality vs Armored Targets
+
+When targeting an Armored unit this second set of Suppression and Lethality is used instead.
 
 ## Discipline
 
@@ -163,6 +171,10 @@ Discipline determines the Target Number for Rally tests.
 ## Special Rules
 
 Most units have one or more Special Rules that affect their capabilities.
+
+## Points Cost
+
+This is the number of Army Points a unit costs to add to an Army List.
 
 # The Round
 
@@ -350,16 +362,17 @@ Only those models can attack.
 ### Roll Combat Test
 
 Roll a number of dice equal to the number of models that can attack.
-The Target Number for this roll is the unit's Fire Power value.
+The Target Number for this roll is the unit's Suppression and Lethality values.
 
 ### Place Pin Markers
 
-For each success, place one Pin marker on the target unit.
+For each roll equal to or higher than the attacking unit's Suppression value, place one Pin marker on the target unit.
 
 ### Mark Inflicted Casualties
 
-Each success that rolled a 6 also inflicts a casualty.
-Mark the number of casualties inflicted next to the attacking unit's Targeting Arrow.
+For each roll equal to or higher than the attacking unit's Lethality value, one casualty is inflicted.
+Note that a single die may both inflict a Pin as well as a casualty.
+Mark the number of casualties inflicted on top of the attacking unit's Targeting Arrow.
 A unit may have more casualties inflicted on it than it has models.
 Note that actual models are not removed until the end of the phase.
 
@@ -401,6 +414,10 @@ The Target Number for this roll is the unit's Discipline value.
 For each successful roll, remove one Pin marker from the unit.
 
 ## Nerve Check
+
+When a unit takes a Nerve Check it checks whether its current number of Pins equal or exceed 6.
+If it does the unit fails the Nerve Check and is removed from the Battlefield.
+If it does not then it passes the Nerve Check
 
 After a unit takes a Rally Test, it performs a Nerve Check:  
 If the unit has 6 or more Pins it is removed from the Battlefield.
@@ -557,6 +574,10 @@ If a transporting unit is Suppressed, then any transported unit inside it is als
 ## Casualties During Transport
 
 If a transport model is removed as a casualty while transporting a unit, then immediately also remove a number of models from the transported unit up to the transport models Capacity.
+
+## Nerve Checks During Transport
+
+If a transport unit fails a Nerve Check and is removed, then any transported unit is also removed.
 
 # Indirect(X)
 
