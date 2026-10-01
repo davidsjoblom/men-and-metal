@@ -6,6 +6,17 @@ Men & Metal is a competitive 1v1 miniatures wargame set in a contemporary near-p
 It is designed ground-up for tournament play with a focus on watertight rules and strives to reward combined-arms tactics without overly restrictive army building.
 Men & Metal aims to be simple to learn, hard to break and rewarding to master.
 
+## What's fun!
+
+- Creating a personalized army and battlefield, then seeing it come to life
+- Building themed game boards to play on
+- Coming up with new novel tactics and ideas and trying them out 
+- Discussing unit combos and strategies with peers
+- Going to tournaments and facing new opponents, being challenged and experience novel ways to play the game
+- Contributing to the community through game balance feedback, creating custom content and hosting game nights
+- Tying conclusions made during games to real world principles of maneuver warfare
+- Having a reason to meet friends, old and new, face to face in a safe environment
+
 ## Design Pillars
 
 1. Unbreakable rules; rules should be watertight and at no point should players have to argue over rules interpretation.

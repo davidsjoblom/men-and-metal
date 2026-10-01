@@ -153,15 +153,21 @@ A unit's Movement Speed determines how fast a unit moves.
 
 A unit's Effective Range is the maximum distance that the unit can effectively attack.
 
-## Suppression and Lethality
+## Effective Range vs Vehicles
 
-Suppression is the Target Number to inflict a Pin on a Combat Test roll.
-Lethality is the Target Number to inflict a casualty on a Combat Test roll.
-These are separated by a '/' with the first value being Suppression and the second Lethality.
+A unit's Effective Range vs Vehicles is used instead of its regular Effective Range when targeting a Vehicle unit.
 
-## Suppression and Lethality vs Armored Targets
+## Soft Attack
 
-When targeting an Armored unit this second set of Suppression and Lethality is used instead.
+Soft Attack is the characteristic used to determine Target Numbers for Combat Tests.
+It is split into to components; Suppression and Lethality.
+Suppression is the Target Number on the Combat Test to successfully inflict a Pin and Lethality is the Target Number on the Combat Test to successfully inflict a Casualty.
+
+Soft Attack is written as a pair of values separated by '/', with the first being Suppression and the second Lethality (e.g. '5+/6+').
+
+## Hard Attack
+
+Hard Attack functions the same as Soft Attack but it's Suppression and Lethality values are used instead when targeting an Armored unit.
 
 ## Discipline
 
@@ -462,25 +468,25 @@ Models drawing Line of Sight to models inside Elevated Terrain may draw Line of 
 
 ## Buildings
 
-Buildings are unique Terrain Features which may be occupied by Infantry units.
+Buildings are Terrain Features which may be occupied by Infantry units.
 
 ### Entering Buildings
 
-A moving Infantry Unit with an Advance or Reposition Order may enter a building if each of its models could move into contact with the building during that move.
-Note that models don't have to be able to end their move in contact with the building.
-When occupying a building a unit is placed in or on top of the building.
-The exact position of occupying models is irrelevant.
+A moving Infantry Unit may enter a building if each of its models *could* move in such a way that their entire base would end up fully inside the buildings footprint, ignoring the building for the duration of this hypothetical move.
+Note that the hypothetical final position of a model may overlap with others of models in the same unit.
+A unit entering, and thus occupying, a building simply places all of its models on top of the building.
+The exact position of occupying models does not matter.
 
 An occupying unit's Unit Boundary is replaced with the building's footprint until it leaves the building.
 A unit may not enter and leave a building during the same move.
 
 ### Leaving Buildings
 
-An occupying unit with an Advance or Reposition Order may leave its building when making a move.
-When leaving a building, move each model as if it started its move with its base fully inside the footprint of the building, exact starting position chosen by the controlling player.
+An occupying unit may leave its building when making a move.
+When leaving a building, move each model, one at a time, as if it started its move with its base fully inside the footprint of the building, ignoring the building during the move.
+The exact starting position is chosen by the controlling player and subsequent leaving models may choose the same or an overlapping starting position as any previously moved leaving models.
 A unit may not leave and enter a building during the same move.
-Note that models don't need to be physically placed on top of the building.
-Move each leaving model one at a time.
+
 
 ### Buildings, Effective Range & Line of Sight
 
