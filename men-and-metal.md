@@ -151,11 +151,12 @@ A unit's Movement Speed determines how fast a unit moves.
 
 ## Effective Range
 
-A unit's Effective Range is the maximum distance that the unit can effectively attack.
+A unit's Effective Range is the maximum distance that the unit can effectively target and attack enemy units.
 
 ## Effective Range vs Vehicles
 
-A unit's Effective Range vs Vehicles is used instead of its regular Effective Range when targeting a Vehicle unit.
+Effective Range may have two values, separated by '/'.
+The first is then the value used when targeting non-Vehicle units and the second value is used when targeting Vehicle units.
 
 ## Soft Attack
 
@@ -167,16 +168,16 @@ Soft Attack is written as a pair of values separated by '/', with the first bein
 
 ## Hard Attack
 
-Hard Attack functions the same as Soft Attack but it's Suppression and Lethality values are used instead when targeting an Armored unit.
+Hard Attack is functionally the same as Soft Attack but it is used instead of Soft Attack when targeting an Armored unit.
 
 ## Discipline
 
 A unit's Discipline represents its ability to keep fighting under pressure and shake off suppression.
-Discipline determines the Target Number for Rally tests.
+Discipline determines the Target Number for Rally Tests and Nerve Checks.
 
-## Special Rules
+## Keywords
 
-Most units have one or more Special Rules that affect their capabilities.
+Most units have one or more Keywords that categorize them and affect how they function.
 
 ## Points Cost
 
@@ -212,13 +213,18 @@ Each Round consists of a sequence of phases:
 ### Issue Orders
 
 Both players begin the Command phase by secretly issuing all their units a single Order token each.
-There are 6 different Orders a unit may be issued; Advance, Overwatch, Sprint, Fight, Reposition and Regroup.
+There are 6 different Order tokens a unit may be issued; Advance, Overwatch, Sprint, Fight, Regroup and Rally.
 Order tokens are placed face down next to the unit issued them.
 
 #### Suppressed Units
 
 Units that begin the Round with 3 or more Pin markers are considered Suppressed until the end of the Round.
-Suppressed units may only be issued a Fight, Reposition or Regroup Order.
+Suppressed units may only be issued a Fight, Regroup or Rally Order token.
+
+#### Disordered Units
+
+Units that begin the Round with 6 or more Pin markers are considered Disordered until the end of the Round.
+Disordered units may only be issued a Rally Order token.
 
 ### Determine Starting Player
 
@@ -236,7 +242,7 @@ Any unit without an issued Order token after revealing orders is automatically i
 
 First the Starting player moves all their eligible units.
 Then the Second player moves all their eligible units.
-Eligible units are those with Advance, Sprint or Reposition Orders.
+Eligible units are those with Advance, Sprint or Regroup Orders.
 See the Movement section for details on how to move units.
 
 ## Overwatch Phase
@@ -255,10 +261,10 @@ See the Combat section for details on how to attack with units.
 
 ## Rally Phase
 
-Units with Regroup Orders take Rally tests, starting with the Starting Player.
-Then Nerve Checks are preformed for all units with Pins remaining.
+Units with Rally Orders take Rally tests, starting with the Starting Player.
+Then Nerve Checks are preformed by all units with 6 or more Pin markers.
 The Second player then does the same.
-See the Morale section for details on how to take Rally tests and do Nerve Checks.
+See the Morale section for details on how to take Rally tests and preform Nerve Checks.
 
 ## End Phase
 
@@ -284,11 +290,6 @@ After attacking remove the Overwatch Order token.
 A unit with a Sprint Order token may move during the Movement Phase up to twice its Movement Speed.
 After moving remove the Sprint Order token.
 
-## Reposition Order
-
-A unit with a Reposition Order token may move during the Movement Phase up to its Movement Speed.
-After moving remove the Reposition Order token.
-
 ## Fight Order
 
 A unit with a Fight Order token may attack in the Fight Phase.
@@ -296,8 +297,13 @@ After attacking remove the Fight Order token.
 
 ## Regroup Order
 
-A unit with a Regroup Order may take a Rally Test in the Rally Phase.
-After taking the Rally Test remove the Regroup Order.
+A unit with a Regroup Order may move during the Movement Phase up to its Movement Speed.
+After moving replace the Regroup Order token with a Rally Order token.
+
+## Rally Order
+
+A unit with a Rally Order may take a Rally Test in the Rally Phase.
+After taking the Rally Test remove the Rally Order.
 
 # Movement
 
@@ -346,6 +352,7 @@ The Second player then does the same.
 Targets are declared by verbally calling them out and placing Targeting arrows in front of each attacking unit pointing towards their target.
 
 A target is viable if at least one model in the attacking unit has Line of Sight to and is within Effective Range of one model in the target unit.
+Note that the unit's Effective Range may vary depending on if the target is a Vehicle unit or not.
 If there are no viable targets the unit does nothing and its Order token is removed.
 Each unit may only target one enemy unit.
 If there's at least one viable target, a unit has to declare a target.
@@ -368,7 +375,7 @@ Only those models can attack.
 ### Roll Combat Test
 
 Roll a number of dice equal to the number of models that can attack.
-The Target Number for this roll is the unit's Suppression and Lethality values.
+The Target Number for this roll is the Suppression and Lethality values of the unit's Soft Attack, or Hard Attack if the target is an Armored unit.
 
 ### Place Pin Markers
 
@@ -387,11 +394,8 @@ Note that actual models are not removed until the end of the phase.
 Opposing units within 1" of each other are in Close Quarters.
 An attacking unit in Close Quarters with its target gains the following benefits:
 
-- each success inflicts a casualty, instead of only those that rolled a 6; and
+- each success inflicts a casualty, regardless of Lethality TN; and
 - target models may not benefit from Cover.
-
-If the target unit has the Special Rule Armored then the attacker gains the Special Rule Armour Piercing instead of of causing casualties on every success.
-Note that successes that rolled a 6 still cause a casualty as normal.
 
 Vehicle and Weapon Team units do not gain these benefits.
 
@@ -421,12 +425,9 @@ For each successful roll, remove one Pin marker from the unit.
 
 ## Nerve Check
 
-When a unit takes a Nerve Check it checks whether its current number of Pins equal or exceed 6.
-If it does the unit fails the Nerve Check and is removed from the Battlefield.
-If it does not then it passes the Nerve Check
-
-After a unit takes a Rally Test, it performs a Nerve Check:  
-If the unit has 6 or more Pins it is removed from the Battlefield.
+When a unit preforms a Nerve Check, it rolls a single die with its Discipline characteristic as Target Number.
+If successful the unit passes the Nerve Check and remains on the Battlefield.
+If it fails the unit is removed from the Battlefield.
 
 # Terrain
 
@@ -526,7 +527,29 @@ An enemy unit inside a contested building may only be targeted by the friendly u
 | Perimeter Wall    | No    | Opaque        | Impassable | Impassable                   | Impassable |          |
 | Apartment Complex | Hard  | Opaque        | Impassable | Impassable                   | Impassable | Building |
 
-# Transport(X)
+
+
+
+
+# Keyword
+
+- Active Protection; once per round before removing models, a single casualty suffered may be ignored, chosen by the controlling player.
+- All-Terrain; this unit treats Terrain Features, for movement purposes, as if it had the Unit Type Light Mechanized.
+- Armored; attacks targeting this unit without the Armor Piercing rule cannot inflict any casualties and they only inflict Pins on rolls of 6 regardless of Fire Power.
+- Armor piercing; capable of inflicting casualties on Armored units as well as full pins.
+- Assault; when this unit finishes a Sprint Move, it replaces it's Sprint Order with a Fight Order instead of removing it.
+- ATGM; Once per game when declaring targets, this unit may choose to gain Armor Piercing until the end of the round.
+- Big Target; this unit can never benefit from Soft or Hard Cover.
+- Blast; models may not benefit from Soft Cover against an attacking model with Blast.
+- Ignores Cover; models may not benefit from Soft or Hard Cover against an attacking model with Ignores Cover.
+- Infiltrators; this unit may be deployed in the owner's Infiltrators Deployment Zone.
+- Large Caliber; when this unit takes a Combat test it adds 1 die to the roll and then discards the lowest result.
+- Move or Fire; this unit may not be issued an Advance Order.
+- Slow; this unit may not be issued a Sprint Order.
+- Spotter; units with Indirect may draw Line of Sight from this unit's models.
+- QRF; this unit may chose not to deploy regularly but be kept in reserve. It may enter the battlefield from any point along the long table edge in the owner's deployment zone when making a move during Round 2 and onwards.
+
+## Transport(X)
 
 Some units are capable of carrying other units into battle.
 These units have the Special Rule Transport(X).
@@ -534,28 +557,28 @@ Transport units are assigned to the unit they will carry in the Army List.
 A unit assigned a Transport unit start the game inside it as a transported unit.
 A transport unit may only carry a single transported unit.
 
-## Transported Units
+### Transported Units
 
 Transported units are not physically present on the board until they disembark.
 They may therefore not draw any Lines of Sight nor themselves be targeted.
 They are placed to the side of the Battlefield and their transporting unit is marked as carrying them.
 Transported units are still issued Orders as normal.
 
-## Transport Capacity X
+### Transport Capacity X
 
 The X value is the Transport Capacity of a single Transport model.
 The Total Transport Capacity of a Transport Unit is the product of its Model Number and Transport Capacity.
 A transported unit's Model Number may not exceed its transports Total Transport Capacity.
 
-## Entering Transports
+### Entering Transports
 
 Units may start the game inside transports.
 Transports may not be entered during the game.
 
-## Leaving Transports
+### Leaving Transports
 
 A transported unit may not disembark if its transporting unit has already moved this round.
-A transported unit with an Advance or Reposition Order may disembark when making a move.
+A transported unit may disembark when making a move.
 
 When a transported unit disembarks, each of its models leaves a transport model, spread as evenly as possible among the available transport models.
 The controlling player decides which transports to use in case the disembarking models cannot be spread evenly.
@@ -567,68 +590,50 @@ Move each disembarking model one at a time.
 Example: A unit of 3 Transport models with Capacity 2 is carrying a unit of 6 models.
 When disembarking the transported unit first moves 2 models from the first transport model, then 2 more from the second transport and the last 2 from the final transport.
 
-## Pinning During Transport
+### Pinning During Transport
 
 Transport units take and remove Pins as normal.
 Transported units do not take or remove Pins while being transported.
 Instead, immediately after a transported unit has disembarked, place an equal amount of Pin markers on the disembarking unit as the transport unit it disembarked from has.
 
-## Suppression During Transport
+### Suppression During Transport
 
 If a transporting unit is Suppressed, then any transported unit inside it is also Suppressed until the end of the Round.
 
-## Casualties During Transport
+### Casualties During Transport
 
 If a transport model is removed as a casualty while transporting a unit, then immediately also remove a number of models from the transported unit up to the transport models Capacity.
 
-## Nerve Checks During Transport
+### Nerve Checks During Transport
 
 If a transport unit fails a Nerve Check and is removed, then any transported unit is also removed.
 
-# Indirect(X)
+## Indirect(X)
 
 Some units are capable of attacking targets they cannot see themselves through coordination with friendly Spotter units.
 These units have the Special Rule Indirect(X).
 
-## Minimum Effective Range X
+### Minimum Effective Range X
 
 The X value is the Indirect unit's Minimum Effective Range.
 Any target model with its entire base within Minimum Effective Range of an Indirect model is considered out of Effective Range.
 
-## Indirect Line of Sight
+### Indirect Line of Sight
 
 Units with Indirect can and may only draw Line of Sight from friendly non-Suppressed units.
 When declaring targets, chose a single eligible Spotter unit, the Indirect unit will use this unit for Line of Sight purposes until the end of the round.
 Each eligible Spotter unit may only be chosen by a single Indirect unit per Round.
 
-## Indirect vs Moving Targets
+### Indirect vs Moving Targets
 
 An Indirect unit targeting an enemy unit which has moved this Round:
 
 - only inflicts Pins on rolls of 6, regardless of Fire Power; and
 - does not inflict any casualties.
 
-## Indirect vs Units in Close Quarters
+### Indirect vs Units in Close Quarters
 
 Indirect units may not target an enemy unit in Close Quarters with a friendly unit.
-
-# Special Rules
-
-- Active Protection; once per round before removing models, a single casualty suffered may be ignored, chosen by the controlling player.
-- All-Terrain; this unit treats Terrain Features, for movement purposes, as if it had the Unit Type Light Mechanized.
-- Armored; attacks targeting this unit without the Armor Piercing rule cannot inflict any casualties and they only inflict Pins on rolls of 6 regardless of Fire Power.
-- Armor piercing; capable of inflicting casualties on Armored units as well as full pins.
-- Assault; when this unit finishes a Sprint Move, it replaces it's Sprint Order with a Fight Order instead of removing it.
-- ATGM; Once per game when declaring targets, this unit may choose to gain Armor Piercing until the end of the round.
-- Big Target; this unit can never benefit from Soft or Hard Cover.
-- Blast; models may not benefit from Soft Cover against an attacking model with Blast.
-- Demolisher; models may not benefit from Hard Cover against an attacking model with Demolisher.
-- Infiltrators; this unit may be deployed in the owner's Infiltrators Deployment Zone.
-- Large Caliber; when this unit takes a Combat test it adds 1 die to the roll and then discards the lowest result.
-- Move or Fight; this unit may not be issued an Advance Order.
-- Slow; this unit may not be issued a Sprint Order.
-- Spotter; units with Indirect may draw Line of Sight from this unit's models.
-- QRF; this unit may chose not to deploy regularly but be kept in reserve. It may enter the battlefield from any point along the long table edge in the owner's deployment zone when making a move during Round 2 and onwards.
 
 # Stratagems
 
