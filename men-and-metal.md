@@ -131,12 +131,6 @@ There are 4 Unit Types:
 - Weapon Team
 - Vehicle
 
-### Armored Units
-
-Unit Types can be Armored, e.g. Armored Vehicle.
-If a unit has an Armored Unit Type it is an Armored unit.
-These units follow all the same rules as their non-armored equivalents.
-
 ## Model Number
 
 The number of models in the unit.
@@ -148,27 +142,30 @@ The diameter of the model's base.
 ## Movement Speed
 
 A unit's Movement Speed determines how fast a unit moves.
+A unit has two values for Movement Speed; one for moving during an Advance and Regroup Order and one for moving during a Sprint Order. 
+
+Movement Speed is denoted as two distance values separated by a '/', for example '4"/8" '.
 
 ## Effective Range
 
 A unit's Effective Range is the maximum distance that the unit can effectively target and attack enemy units.
+Effective Range may have two values; the first is then the value used when targeting non-Vehicle units and the second value is used when targeting Vehicle units.
 
-## Effective Range vs Vehicles
-
-Effective Range may have two values, separated by '/'.
-The first is then the value used when targeting non-Vehicle units and the second value is used when targeting Vehicle units.
+Effective Range is denoted as two distance values separated by a '/', for example '12"/18" '.
 
 ## Soft Attack
 
-Soft Attack is the characteristic used to determine Target Numbers for Combat Tests.
+Soft Attack is the characteristic used to determine Target Numbers for Combat Tests when targeting unarmored units.
 It is split into to components; Suppression and Lethality.
 Suppression is the Target Number on the Combat Test to successfully inflict a Pin and Lethality is the Target Number on the Combat Test to successfully inflict a Casualty.
 
-Soft Attack is written as a pair of values separated by '/', with the first being Suppression and the second Lethality (e.g. '5+/6+').
+Soft Attack is denoted as a pair of values separated by '/', with the first being Suppression and the second Lethality, for example '5+/6+'.
+
+If a unit does not have a Target Number for Lethality then it is unable to inflict any casualties.
 
 ## Hard Attack
 
-Hard Attack is functionally the same as Soft Attack but it is used instead of Soft Attack when targeting an Armored unit.
+Hard attack functions identically as Soft attack but is used when targeting Armored units.
 
 ## Discipline
 
@@ -277,7 +274,7 @@ Units are issued Orders at the start of the Round and dictate what actions they 
 
 ## Advance Order
 
-A unit with an Advance Order token may move during the Movement Phase up to its Movement Speed.
+A unit with an Advance Order token may move during the Movement Phase up to its Movement Speed value for Advance Orders.
 After moving remove the Advance Order token and replace it with a Fight Order token.
 
 ## Overwatch Order
@@ -287,7 +284,7 @@ After attacking remove the Overwatch Order token.
 
 ## Sprint Order
 
-A unit with a Sprint Order token may move during the Movement Phase up to twice its Movement Speed.
+A unit with a Sprint Order token may move during the Movement Phase up to its Movement Speed value for Sprint Orders.
 After moving remove the Sprint Order token.
 
 ## Fight Order
@@ -297,7 +294,7 @@ After attacking remove the Fight Order token.
 
 ## Regroup Order
 
-A unit with a Regroup Order may move during the Movement Phase up to its Movement Speed.
+A unit with a Regroup Order may move during the Movement Phase up to its Movement Speed value for Regroup Orders.
 After moving replace the Regroup Order token with a Rally Order token.
 
 ## Rally Order
@@ -533,21 +530,60 @@ An enemy unit inside a contested building may only be targeted by the friendly u
 
 # Keyword
 
-- Active Protection; once per round before removing models, a single casualty suffered may be ignored, chosen by the controlling player.
-- All-Terrain; this unit treats Terrain Features, for movement purposes, as if it had the Unit Type Light Mechanized.
-- Armored; attacks targeting this unit without the Armor Piercing rule cannot inflict any casualties and they only inflict Pins on rolls of 6 regardless of Fire Power.
-- Armor piercing; capable of inflicting casualties on Armored units as well as full pins.
-- Assault; when this unit finishes a Sprint Move, it replaces it's Sprint Order with a Fight Order instead of removing it.
-- ATGM; Once per game when declaring targets, this unit may choose to gain Armor Piercing until the end of the round.
-- Big Target; this unit can never benefit from Soft or Hard Cover.
-- Blast; models may not benefit from Soft Cover against an attacking model with Blast.
-- Ignores Cover; models may not benefit from Soft or Hard Cover against an attacking model with Ignores Cover.
-- Infiltrators; this unit may be deployed in the owner's Infiltrators Deployment Zone.
-- Large Caliber; when this unit takes a Combat test it adds 1 die to the roll and then discards the lowest result.
-- Move or Fire; this unit may not be issued an Advance Order.
-- Slow; this unit may not be issued a Sprint Order.
-- Spotter; units with Indirect may draw Line of Sight from this unit's models.
-- QRF; this unit may chose not to deploy regularly but be kept in reserve. It may enter the battlefield from any point along the long table edge in the owner's deployment zone when making a move during Round 2 and onwards.
+## Armored
+
+Units targeting an Armored unit use their Hard Attack instead of their Soft attack.
+
+## Blast
+
+Models may not benefit from Soft Cover against a model with Blast.
+
+## Ignore Cover
+
+Models may not benefit from any Cover against a model with Ignore Cover.
+
+## Indirect(X)
+
+Some units are capable of attacking targets they cannot see themselves through coordination with friendly Spotter units.
+These units have the Special Rule Indirect(X).
+
+### Minimum Effective Range X
+
+The X value is the Indirect unit's Minimum Effective Range.
+Any target model with its entire base within Minimum Effective Range of an Indirect model is considered out of Effective Range.
+
+### Indirect Line of Sight
+
+Units with Indirect can and may only draw Line of Sight from friendly non-Suppressed Spotter units.
+When declaring a target for an Indirect unit, chose a single non-Suppressed Spotter unit; until the end of the Round the Indirect unit's models are considered to be able to draw Line of Sight whatever the Spotter unit's models are able to draw Line of Sight to.
+Each Spotter unit may only be chosen by a single Indirect unit per Round.
+
+### Indirect vs Moving Targets
+
+An Indirect unit targeting an enemy unit which has moved this Round:
+
+- only inflicts Pins on rolls of 6, regardless of Fire Power; and
+- does not inflict any casualties.
+
+### Indirect vs Units in Close Quarters
+
+Indirect units may not target an enemy unit in Close Quarters with a friendly unit.
+
+## Infiltrators
+
+Units with Infiltrators may be deployed in the owner's Infiltrators Deployment Zone.
+
+## Move or Fire
+
+Units with Move or Fire may not be issued Advance Order tokens.
+
+## Single-use AT
+
+A unit with Single-use AT may once per game, when declaring a target for an attack, elect to replace its Hard Attack Lethality with the Target Number 6+.
+
+## Spotter
+
+Units with Spotter may be chosen by Indirect units to draw Line of Sight from.
 
 ## Transport(X)
 
@@ -608,32 +644,6 @@ If a transport model is removed as a casualty while transporting a unit, then im
 
 If a transport unit fails a Nerve Check and is removed, then any transported unit is also removed.
 
-## Indirect(X)
-
-Some units are capable of attacking targets they cannot see themselves through coordination with friendly Spotter units.
-These units have the Special Rule Indirect(X).
-
-### Minimum Effective Range X
-
-The X value is the Indirect unit's Minimum Effective Range.
-Any target model with its entire base within Minimum Effective Range of an Indirect model is considered out of Effective Range.
-
-### Indirect Line of Sight
-
-Units with Indirect can and may only draw Line of Sight from friendly non-Suppressed units.
-When declaring targets, chose a single eligible Spotter unit, the Indirect unit will use this unit for Line of Sight purposes until the end of the round.
-Each eligible Spotter unit may only be chosen by a single Indirect unit per Round.
-
-### Indirect vs Moving Targets
-
-An Indirect unit targeting an enemy unit which has moved this Round:
-
-- only inflicts Pins on rolls of 6, regardless of Fire Power; and
-- does not inflict any casualties.
-
-### Indirect vs Units in Close Quarters
-
-Indirect units may not target an enemy unit in Close Quarters with a friendly unit.
 
 # Stratagems
 
