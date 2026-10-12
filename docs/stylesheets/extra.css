@@ -1,0 +1,86 @@
+/* Men & Metal — dark military technical manual */
+
+:root {
+    --mm-olive: #879777;
+    --mm-olive-dark: #697a59;
+    --mm-charcoal: #252b29;
+    --mm-background: #191e1c;
+    --mm-surface: #222825;
+    --mm-paper: #e0e3dc;
+}
+
+/* Dark theme only */
+[data-md-color-scheme="slate"] {
+    color-scheme: dark;
+
+    --md-primary-fg-color: var(--mm-charcoal);
+    --md-primary-fg-color--dark: #191e1c;
+    --md-primary-fg-color--light: #343d35;
+
+    --md-accent-fg-color: #b2c49d;
+
+    --md-default-bg-color: var(--mm-background);
+    --md-default-bg-color--light: #202622;
+    --md-default-bg-color--lighter: #272e29;
+    --md-default-bg-color--lightest: #303832;
+
+    --md-default-fg-color: var(--mm-paper);
+    --md-default-fg-color--light: #c1c8bf;
+    --md-default-fg-color--lighter: #929b91;
+    --md-default-fg-color--lightest: #626c63;
+
+    --md-typeset-a-color: #b2c49d;
+}
+
+/* Headings */
+.md-typeset h1 {
+    font-weight: 750;
+    letter-spacing: -0.035em;
+}
+
+.md-typeset h2 {
+    border-bottom: 1px solid #39423b;
+    padding-bottom: 0.35em;
+    font-weight: 650;
+}
+
+/* Navigation */
+.md-tabs,
+.md-header {
+    background-color: #252b29;
+}
+
+/* Tables */
+.md-typeset table:not([class]) {
+    border: 1px solid #39423b;
+}
+
+.md-typeset table:not([class]) th {
+    background-color: #343d35;
+    color: #f0f2eb;
+    font-weight: 650;
+}
+
+.md-typeset table:not([class]) tr:hover {
+    background-color: #292f2b;
+}
+
+/* Buttons */
+.md-typeset .md-button--primary {
+    background-color: #697a59;
+    border-color: #697a59;
+    color: #fff;
+}
+
+.md-typeset .md-button--primary:hover {
+    background-color: #7d906b;
+    border-color: #7d906b;
+}
+
+/* Diagrams and images */
+.md-typeset img,
+.md-typeset svg {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+}

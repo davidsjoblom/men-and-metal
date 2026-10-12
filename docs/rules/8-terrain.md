@@ -83,7 +83,7 @@ An occupying unit and a unit outside but within 1" of the building are not consi
 
 An enemy unit inside a contested building may only be targeted by the friendly unit inside the same building.
 
-| Terrain Feature   | Cover | Line of Sight | Infantry   | Light Motorized/Weapon Teams | Vehicles   | Special  |
+| Terrain Feature   | Cover | Line of Sight | Infantry   | Light Mot./Wpn. Teams | Vehicles   | Special  |
 | ----------------- | ----- | ------------- | ---------- | ---------------------------- | ---------- | -------- |
 | Forest            | Soft  | Obscuring     | Open       | Difficult                    | Impassable |          |
 | Field             | Soft  | Clear         | Open       | Open                         | Difficult  |          |

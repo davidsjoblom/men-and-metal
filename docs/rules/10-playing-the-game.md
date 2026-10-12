@@ -50,7 +50,7 @@ Player with the most units within the enemy deployment zone at the end of the ga
 
 There are 2 Deployment Zones on the Battlefield, one along each long table edge.
 
-![Deployment Zones](./images/deployment-zones.svg)
+![Deployment Zones](../images/deployment-zones.svg)
 
 ### Choose Deployment Zones
 

@@ -5,23 +5,23 @@ The standard game length is 6 Rounds.
 Each Round consists of a sequence of phases:
 
 1. Command Phase
-   1. Issue Orders
-   2. Determine Starting player for the Round
-   3. Reveal Orders
+    1. Issue Orders
+    2. Determine Starting player for the Round
+    3. Reveal Orders
 2. Movement Phase
 3. Overwatch Phase
-   1. Declare targets
-   2. Resolve attacks
-   3. Remove casualties
+    1. Declare targets
+    2. Resolve attacks
+    3. Remove casualties
 4. Fight Phase
-   1. Declare targets
-   2. Resolve attacks
-   3. Remove casualties
+    1. Declare targets
+    2. Resolve attacks
+    3. Remove casualties
 5. Rally Phase
-   1. Rally Tests
-   2. Nerve Checks
+    1. Rally Tests
+    2. Nerve Checks
 6. End Phase
-   1. Score Victory Points
+    1. Score Victory Points
 
 ## Command Phase
 

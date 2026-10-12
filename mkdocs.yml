@@ -1,23 +1,42 @@
 site_name: Men & Metal
+
 theme:
   name: material
+  logo: images/tank.svg
+  favicon: images/tank.svg
+  language: en
+  font:
+    text: Roboto
+    code: Roboto Mono
 
   palette:
-      scheme: slate
-      toggle:
-        icon: material/weather-night
-        name: Dark mode
+    scheme: slate
+    primary: custom
+    accent: custom
+
+  features:
+    - navigation.top
+    - navigation.indexes
+    - navigation.tabs
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+extra_css:
+  - stylesheets/extra.css
 
 nav:
   - Home: index.md
   - Core Rules:
-    - General Principles: 1-general-principles.md
-    - Unit Characteristics: 2-unit-characteristics.md
-    - The Round: 3-the-round.md
-    - Orders: 4-orders.md
-    - Movement: 5-movement.md
-    - Combat: 6-combat.md
-    - Morale: 7-morale.md
-    - Terrain: 8-terrain.md
-    - Model Rules: 9-model-rules.md
-    - Playing the Game: 10-playing-the-game.md
+    - General Principles: rules/1-general-principles.md
+    - Unit Characteristics: rules/2-unit-characteristics.md
+    - The Round: rules/3-the-round.md
+    - Orders: rules/4-orders.md
+    - Movement: rules/5-movement.md
+    - Combat: rules/6-combat.md
+    - Morale: rules/7-morale.md
+    - Terrain: rules/8-terrain.md
+    - Model Rules: rules/9-model-rules.md
+    - Playing the Game: rules/10-playing-the-game.md
+  - Units:
+    - Generic Units: units/generic-units.md
