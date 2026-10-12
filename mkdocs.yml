@@ -1,0 +1,23 @@
+site_name: Men & Metal
+theme:
+  name: material
+
+  palette:
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+
+nav:
+  - Home: index.md
+  - Core Rules:
+    - General Principles: 1-general-principles.md
+    - Unit Characteristics: 2-unit-characteristics.md
+    - The Round: 3-the-round.md
+    - Orders: 4-orders.md
+    - Movement: 5-movement.md
+    - Combat: 6-combat.md
+    - Morale: 7-morale.md
+    - Terrain: 8-terrain.md
+    - Model Rules: 9-model-rules.md
+    - Playing the Game: 10-playing-the-game.md

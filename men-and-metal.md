@@ -528,7 +528,7 @@ An enemy unit inside a contested building may only be targeted by the friendly u
 
 
 
-# Keyword
+# Model Rules
 
 ## Armored
 
