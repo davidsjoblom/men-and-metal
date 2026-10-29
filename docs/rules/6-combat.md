@@ -4,10 +4,10 @@ Attacking during the Overwatch and Fight Phases follows the same sequence:
 
 1. _Declare Targets_
 2. _Resolve Attacks_
-   1. _Check Which Models Can Attack_
-   2. _Roll Combat Test_
-   3. _Place Pins_
-   4. _Mark Inflicted Casualties_
+    1. _Check Which Models Can Attack_
+    2. _Roll Combat Test_
+    3. _Place Pins_
+    4. _Mark Inflicted Casualties_
 3. _Remove Casualties_
 
 ## Declare Targets

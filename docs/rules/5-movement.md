@@ -16,11 +16,11 @@ Note that a unit which does not move is not required to maintain Unit Cohesion.
 
 ## Moving Through Friendly Units
 
-Models may move through friendly Unit Boundaries as long as the model has sufficient movement to clear them fully.
+Models may move through friendly models and Unit Boundaries as long as the model has sufficient movement to clear them fully.
 
 ## Moving Through Enemy Units
 
-Models may not move through enemy Unit Boundaries.
+Models may not move through enemy models or Unit Boundaries.
 
 ## Moving Through Terrain
 

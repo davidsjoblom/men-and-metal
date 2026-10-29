@@ -1,6 +1,7 @@
 # Orders
 
-Units are issued Orders at the start of the Round and dictate what actions they take.
+Units are issued Orders at the start of the Round.
+Orders dictate what actions a unit takes as well as when they take them during the Round.
 
 ## Advance Order
 

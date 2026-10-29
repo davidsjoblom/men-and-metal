@@ -14,8 +14,7 @@ The miniatures are purely decorative and only the base is used for Line of Sight
 
 ## Units
 
-A unit consists of a number of models moving and fighting together.
-Infantry and Light Motorized are typically organized into units of 6 while Vehicles and Weapon Teams are usually organized into units of 3.
+A unit consists of a number of models, typically three to six, that move and fight as a group.
 
 ## Unit Cohesion
 

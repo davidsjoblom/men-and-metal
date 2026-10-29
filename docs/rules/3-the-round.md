@@ -19,7 +19,7 @@ Each Round consists of a sequence of phases:
     3. Remove casualties
 5. Rally Phase
     1. Rally Tests
-    2. Nerve Checks
+    2. Nerve Tests
 6. End Phase
     1. Score Victory Points
 
@@ -55,14 +55,17 @@ Any unit without an issued Order token after revealing orders is automatically i
 
 ## Movement Phase
 
+Units with Advance, Sprint or Regroup Orders move during the Movement Phase.
+
 First the Starting player moves all their eligible units.
 Then the Second player moves all their eligible units.
-Eligible units are those with Advance, Sprint or Regroup Orders.
+Eligible units are those with Advance, Sprint or Regroup Order tokens.
 See the Movement section for details on how to move units.
 
 ## Overwatch Phase
 
 Units with Overwatch Orders attack during the Overwatch Phase.
+
 First both players declare targets for all their units with Overwatch Orders.
 Then the Starting player resolves all their attacks followed by the Second player doing the same.
 Finally eligible casualties are removed.
@@ -71,13 +74,15 @@ See the Combat section for details on how to attack with units.
 ## Fight Phase
 
 Units with Fight Orders attack during the Fight Phase.
+
 This phase follows the same sequence as the Overwatch Phase but applies to units with Fight Orders.
 See the Combat section for details on how to attack with units.
 
 ## Rally Phase
 
-Units with Rally Orders take Rally tests, starting with the Starting Player.
-Then Nerve Checks are preformed by all units with 6 or more Pin markers.
+Units with Rally Orders take Rally Tests and units with excessive Pins take Nerve Tests during the Rally Phase.
+
+The Starting Player preforms Rally Tests for all of their units with Rally Orders and then preforms Nerve Tests for all of their units with 6 or more Pin markers.
 The Second player then does the same.
 See the Morale section for details on how to take Rally tests and preform Nerve Checks.
 
