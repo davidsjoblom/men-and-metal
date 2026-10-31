@@ -44,7 +44,11 @@ Buildings are Terrain Features which may be occupied by Infantry units.
 
 A moving Infantry Unit may enter a building if each of its models *could* move in such a way that their entire base would end up fully inside the buildings footprint, ignoring the building for the duration of this hypothetical move.
 Note that the hypothetical final position of a model may overlap with others of models in the same unit.
-A unit entering, and thus occupying, a building simply places all of its models on top of the building.
+
+A moving Infantry unit may enter a building if all of its models are able to move into contact with the building during the move.
+Note that the unit does not have to be able to end its move in contact with the building, each model simply have to be able to reach it.
+
+A unit entering and occupying a building simply places all of its models on top of the building.
 The exact position of occupying models does not matter.
 
 An occupying unit's Unit Boundary is replaced with the building's footprint until it leaves the building.

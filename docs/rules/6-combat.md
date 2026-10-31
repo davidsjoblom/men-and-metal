@@ -40,7 +40,7 @@ Only those models can attack.
 ### Roll Combat Test
 
 Roll a number of dice equal to the number of models that can attack.
-The Target Number for this roll is the Suppression and Lethality values of the unit's Soft Attack, or Hard Attack if the target is an Armored unit.
+The Target Number for this roll is the Suppression and Lethality values of the unit's Soft Attack, or Hard Attack if the target is a Vehicle unit.
 
 ### Place Pin Markers
 
@@ -56,13 +56,13 @@ Note that actual models are not removed until the end of the phase.
 
 #### Close Quarters
 
-Opposing units within 1" of each other are in Close Quarters.
+Opposing Infantry or Light Motorized units within 1" of each other are in Close Quarters.
 An attacking unit in Close Quarters with its target gains the following benefits:
 
-- each success inflicts a casualty, regardless of Lethality TN; and
-- target models may not benefit from Cover.
+- target models may not benefit from Cover; and
+- the attacking unit improves its Lethality and Suppression TNs by 1 for this attack.
 
-Vehicle and Weapon Team units do not gain these benefits.
+Vehicle units are never considered to be in Close Quarters.
 
 ### Remove Casualties
 
@@ -78,4 +78,5 @@ If a unit suffered casualties from multiple attacking units, determine eligibili
 The owning player chooses which eligible models are removed, but must remove as many eligible models as possible, up to the number of casualties inflicted.
 
 After being removed as casualties, models continue to count as occupying their previous position for the purposes of Line of Sight, Effective Range, and determining casualty eligibility until the end of the phase.
+
 If the number of casualties inflicted by an attacking unit exceeds the number of models eligible to be removed for those casualties, the excess casualties are discarded.

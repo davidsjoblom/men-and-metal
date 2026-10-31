@@ -80,6 +80,20 @@ For example '5+' means that a result of 5 or 6 is a success while a result of 1,
 
 A Target Number of '-' means a roll is an automatic failure.
 
+### Target Number Modifiers
+
+A Target Number may have modifiers applied to it.
+
+Improving a Target Number means lowering the value a roll needs to succeed by a specified number of steps, e.g. improving a TN of 5+ by 1 results in a new TN of 4+.
+A TN may never be improved beyond 2+.
+
+Worsening a Target Number means raising the value a roll needs to succeed by a specified number of steps, e.g. worsening a TN of 5+ by 1 results in a new TN of 6+.
+A TN may never be worsened beyond 6+.
+
+A TN of '-' is not affected by modifiers.
+
+Should a TN be both improved and worsened then only the difference in steps is applied, e.g. improve by 1 and worsen by 2 results in a final modifier of worsen by 1.
+
 ## Tokens & Markers
 
 Tokens and markers are physical gaming aids used to indicate various game states.

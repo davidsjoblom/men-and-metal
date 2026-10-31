@@ -1,9 +1,5 @@
 # Model Rules
 
-## Armored
-
-Units targeting an Armored unit use their Hard Attack instead of their Soft attack.
-
 ## Blast
 
 Models may not benefit from Soft Cover against a model with Blast.
@@ -49,7 +45,11 @@ Units with Move or Fire may not be issued Advance Order tokens.
 
 ## Single-use AT
 
-A unit with Single-use AT may once per game, when declaring a target for an attack, elect to replace its Hard Attack Lethality with the Target Number 6+.
+A unit with Single-use AT may once per game, when declaring a target for an attack, elect to replace its Hard Attack Suppression and Lethality with '5+/6+' for the duration of that attack.
+
+## Soft-Skinned
+
+An attacking unit targeting a Soft-Skinned unit use whichever is better of its Soft or Hard Attack, regardless of Unit Type.
 
 ## Spotter
 
@@ -89,22 +89,17 @@ A transported unit may disembark when making a move.
 When a transported unit disembarks, each of its models leaves a transport model, spread as evenly as possible among the available transport models.
 The controlling player decides which transports to use in case the disembarking models cannot be spread evenly.
 
-Move each model as if it started its move with its center on the transport model's center it is disembarking from.
-Note that models don't need to be physically placed on top of the transport model.
+Move each model as if it started its move with its base fully within the base of the transport it is disembarking from.
 Move each disembarking model one at a time.
 
-Example: A unit of 3 Transport models with Capacity 2 is carrying a unit of 6 models.
-When disembarking the transported unit first moves 2 models from the first transport model, then 2 more from the second transport and the last 2 from the final transport.
+If the transport has a smaller base than the dismounting models start the disembark move concentric instead.
+
+Example: A unit of 4 Transport models with Capacity 2 is carrying a unit of 6 models.
+When disembarking 2 models each disembarks from 2 of the transports and 1 model each disembarks from the remaining 2 transports.
 
 ### Pinning During Transport
 
-Transport units take and remove Pins as normal.
 Transported units do not take or remove Pins while being transported.
-Instead, immediately after a transported unit has disembarked, place an equal amount of Pin markers on the disembarking unit as the transport unit it disembarked from has.
-
-### Suppression During Transport
-
-If a transporting unit is Suppressed, then any transported unit inside it is also Suppressed until the end of the Round.
 
 ### Casualties During Transport
 
@@ -113,3 +108,8 @@ If a transport model is removed as a casualty while transporting a unit, then im
 ### Nerve Checks During Transport
 
 If a transport unit fails a Nerve Check and is removed, then any transported unit is also removed.
+
+## Unarmed
+
+Unarmed Transport units are removed from the battlefield immediately after their transported unit has finished a disembark move.
+Unarmed Transport units are only considered destroyed if their transported unit is also destroyed.
