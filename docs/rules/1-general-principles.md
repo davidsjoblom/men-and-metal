@@ -29,6 +29,8 @@ All units have a Unit Boundary. The Boundary consists of the area occupied by th
 A corridor is the area between two parallel lines drawn from the opposing outermost points of the two bases.
 Note that a Unit Boundary may fragment, for example as a result of removing casualties.
 
+![Unit Boundary](../images/unit-boundary.svg)
+
 ## Armies
 
 An army consists of a number of units controlled by a single player.
@@ -53,6 +55,8 @@ Line of Sight to or from a model is never obstructed by other models in its unit
 
 The Unit Boundary of an intervening friendly or enemy unit obstructs Line of Sight.
 Certain Terrain Features obstruct Line of Sight, see Terrain section.
+
+![Line of Sight](../images/line-of-sight.svg)
 
 ## Measuring Distance
 
